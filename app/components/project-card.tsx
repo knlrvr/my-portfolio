@@ -3,12 +3,11 @@ import { LuLink } from "react-icons/lu";
 
 interface ProjectCardProps {
     title: string;
-    date: string,
     desc: string;
     url?: string;
 }
 
-export default function ProjectCard({ title, date, desc, url}: ProjectCardProps) {
+export default function ProjectCard({ title, desc, url}: ProjectCardProps) {
     return (
         <div className="group text-sm">
             <p className="font-medium tracking-tight">{title}</p>
