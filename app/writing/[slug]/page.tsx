@@ -153,7 +153,7 @@ export default async function PostPage({params}: {params: Params}) {
     }
 
     return (
-        <section className="max-w-2xl mx-auto pt-8">
+        <section className="max-w-2xl mx-auto pb-8">
             <script
                 type='application/ld+json'
                 suppressHydrationWarning
@@ -177,12 +177,12 @@ export default async function PostPage({params}: {params: Params}) {
                 <article className="mt-10
                                     blog prose prose-headings:text-[#111] prose-strong:text-[#111] max-w-full
                                     prose-sm prose-code:text-sm prose-pre:bg-[#151515] prose-pre:mb-1
-                                    prose-h6:text-xs prose-h6:text-neutral-400  prose-p:font-normal
+                                    prose-h6:text-xs prose-h6:text-neutral-400 prose-p:font-normal
                                     prose-h4:text-lg prose-h4:tracking-wide prose-h4:font-normal
                                     prose-h3:text-xl prose-h3:font-semibold prose-h3:tracking-normal
                                     prose-h2:font-semibold prose-h2:tracking-tighter prose-h2:text-2xl
                                     prose-hr:border-neutral-500
-                                    prose-img:rounded-sm
+                                    prose-img:rounded-sm prose-img:-mb-3
                                     prose-sup 
                 ">
                     <MDXRemote

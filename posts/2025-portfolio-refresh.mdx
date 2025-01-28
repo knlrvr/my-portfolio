@@ -1,0 +1,91 @@
+---
+title: 2025 Portfolio Refresh
+description: Changing my personal portfolio for the new year
+date: January 28, 2025
+tags: ['webdev', 'Next.js', 'Tailwind', 'MDX']
+---
+
+In the past few days, I updated my portfolio &mdash; including scrapping an entirely new design and starting over. I wanted to share the process as well as a few thoughts that I had along the way. 
+
+## Next.js 15
+
+My old portfolio was running on Next.js 14. Next.js 15 was officially stable on October 21, 2024, so it was time for the upgrade. The update was straight forward with only one *serious* change for me related to <InlineCode>params</InlineCode> on dynamic routes.
+
+### writing / [slug] / page.tsx
+```ts
+// Before
+interface PostPageProps {
+    params: {
+        slug: string;
+    }
+}
+
+export async function generateMetadata({ 
+    params
+}: any): Promise<Metadata | undefined> {
+    let post = getPostMetadata().find((post) => post.slug === params.slug);
+
+// After
+type Params = Promise<{slug: string}>
+
+export async function generateMetadata({ params }: { params: Params }) {
+    const { slug } = await params;
+    const post = getPostMetadata().find((post) => post.slug === slug);
+```
+###### before & after of 'writing / [slug] / page.tsx'
+
+### work / [url] / page.tsx
+```ts
+// Before
+export default async function WorksPage(
+{ params }: { params: { url: string };
+}) {
+    const projects = fetchWorksData(params.url);
+
+// After
+type Params = Promise<{url: string}>;
+
+export default async function WorksPage(
+{ params }: { params: Params }) {
+    const projects = fetchWorksData((await params).url);
+```
+###### before & after of 'work / [url] / page.tsx'
+
+Previously, params was a synchronous Dynamic API that relied on runtime information, but is now **asynchronous**. 
+
+The folders with square brackets are **dynamic segments** and are passed as the <InlineCode>params</InlineCode> prop to the <InlineCode>page</InlineCode> function. Basically, since <InlineCode>params</InlineCode> is now async, it just needs to be accessed a little differently. 
+
+## Tailwind v4.0
+
+I don't have any wild or out-of-the-box styling on my portfolio, but upgrading to Tailwind v4.0 was still exciting. Fewer dependencies, zero configuration, a single line of code in <InlineCode>globals.css</InlineCode>, faster builds, upgraded colors &mdash; the list goes on. 
+
+Tailwind v4.0 is a massive update to what was already a great framework. I'm so excited to see what's possible with it. 
+
+<Callout variant="default">
+I'm still working on dark mode styles, but a dark version of the site will be available soon (assuming you don't have a browser extension)! 
+</Callout>
+
+## Vibe-Driven Development
+
+I started browsing <BlogLink href="https://dribbble.com/">dribbble</BlogLink> to find inspiration for a new look. I found <BlogLink href="https://dribbble.com/shots/23531329-kawsar-design-2024">this design</BlogLink> and really liked it, so I went ahead and spent a day implementing it. You can find it <BlogLink href="https://portfolio-2025-three.vercel.app/">here</BlogLink>. The same day that I deployed it, I realized I didn't like it. It didn't feel like it was mine, and that bothered me. 
+
+So, I decided that I would just start coding and see what happened. What I made is what I stuck with. I think it looks a lot better than before but maintains it's simplicity so &mdash; ignoring the bias for a second &mdash; I love it. 
+
+I also created a new favicon and og image to go with the new design. 
+
+![screenshot](/blog-images/twitter-image.png)
+###### opengraph image
+
+## Thoughts About My Blog
+
+I almost decided to switch from a local directory <InlineCode>posts</InlineCode> to a database for my blog posts. I decided against this for a few reasons. 
+
+- **Scalability** &mdash;  I can't imagine having a large enough number of files to effect performance (500+). 
+- **Simplicity** &mdash; Storing files in a <InlineCode>posts</InlineCode> directory and using <InlineCode>fs</InlineCode> and <InlineCode>gray-matter</InlineCode> to read them is more appealing than worrying about database setup, hosting, backup, etc. I have full control of my content, which brings us to.. 
+- **Portability** &mdash; My portfolio is self-contained. Everything is one place and ready to move if needed. 
+
+## Conclusion
+
+Overall, the process was pretty easy. The upgrade guides from <BlogLink href="https://nextjs.org/docs/app/building-your-application/upgrading/version-15#params--searchparams">Next.js</BlogLink> & <BlogLink href="https://tailwindcss.com/docs/upgrade-guide">Tailwind</BlogLink> were a big help, and while I'm happy with the new site, I'm sure it won't be long before I decide to break it again. 
+
+Thanks for reading! Let me know what you think! & as always, **happy coding**! 
