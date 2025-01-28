@@ -4,7 +4,7 @@ import PageTop from "./components/page-top";
 
 export default function Home() {
   return (
-    <div className="flex flex-col space-y-4 max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto">
       <PageTop
         title="Kane Lariviere"
         desc="Software Developer"

@@ -13,6 +13,7 @@ import Edit from '@/app/components/blog/edit';
 import Link from 'next/link';
 
 import { RxArrowTopRight } from "react-icons/rx"; 
+import PageTop from "@/app/components/page-top";
 
 const getPostContent = (slug: string) => {
     const folder = "posts";
@@ -168,22 +169,13 @@ export default async function PostPage({params}: {params: Params}) {
                 }}
             />
             <div className="">
-                <div className="flex flex-col space-y-2 mb-8">
-
-                    <div className="text-sm">
-                        <p className="text-neutral-500">{post.data.date} <span className="text-neutral-400">({getTimeSincePost(post.data.date)})</span></p>
-                    </div>
-                    <div className="">
-                        <h1 className="text-3xl md:text-5xl font-medium tracking-tight">
-                            {post.data.title}
-                        </h1>                    
-                    </div>
-                    <div>
-                        <p className="text-sm text-neutral-500">{post.data.description}</p>
-                    </div>
-                </div>
-
-                <article className="blog prose prose-headings:text-[#111] prose-strong:text-[#111] max-w-full
+                <PageTop 
+                    title={`${post.data.title}`}
+                    desc={`${post.data.description}`}
+                    date={`${post.data.date}`}
+                />
+                <article className="mt-10
+                                    blog prose prose-headings:text-[#111] prose-strong:text-[#111] max-w-full
                                     prose-sm prose-code:text-sm prose-pre:bg-[#151515] prose-pre:mb-1
                                     prose-h6:text-xs prose-h6:text-neutral-400  prose-p:font-normal
                                     prose-h4:text-lg prose-h4:tracking-wide prose-h4:font-normal

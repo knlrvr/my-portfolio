@@ -10,7 +10,7 @@ export default function Work() {
                 desc="Experience & Selected Works"
             />
 
-            <div className="flex flex-col space-y-8 mt-4 text-sm pb-4">
+            <div className="flex flex-col space-y-8 mt-8 text-sm pb-4">
                 
                 <div className="space-y-1">
                     <span className="font-medium tracking-tight">Fenili Apparel</span>
@@ -39,17 +39,20 @@ export default function Work() {
                 <ProjectCard
                     title="Fenili Apparel"
                     desc="An ecommerce storefront for the Fenili apparel & lifestyle brand."
-                    url="fenili.store"
+                    date="2024 ~"
+                    url="/fenili"
                 />
                 <ProjectCard
                     title="Studico"
                     desc="A web-based music production assistance suite that empowers teams of all sizes to create, collaborate, and share their music."
-                    url="studico.vercel.app"
+                    date="2024 ~"
+                    url="/studico"
                 />
                 <ProjectCard
                     title="The Sky Is Fake"
                     desc="An image sharing platform dedicated to pictures of the sky that just don't seem real."
-                    url="theskyisfake.org"
+                    date="2024"
+                    url="/theskyisfake"
                 />
             </div>
             <Link href="https://github.com/knlrvr" target="_blank" className="flex items-center gap-1 text-sm text-neutral-500 group w-fit mt-4 mb-8">

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function About() {
     return (
-        <div className="text-sm mt-4">
+        <div className="text-sm my-8">
             <div className="flex flex-col gap-4 pb-4">
                 <span className="font-medium">Hello!</span>
                 <p className="text-neutral-500">

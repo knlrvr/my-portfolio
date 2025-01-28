@@ -4,21 +4,19 @@ import { LuLink } from "react-icons/lu";
 interface ProjectCardProps {
     title: string;
     desc: string;
+    date: string;
     url?: string;
 }
 
-export default function ProjectCard({ title, desc, url}: ProjectCardProps) {
+export default function ProjectCard({ title, desc, date, url}: ProjectCardProps) {
     return (
-        <div className="group text-sm">
-            <p className="font-medium tracking-tight">{title}</p>
-            <p className="text-neutral-500">{desc}</p>
-
-            <Link href={`https://${url}`} target="_blank"
-                className="w-fit text-xs flex items-center mt-2 gap-2 group transition-colors duration-150"
-            >
-                <LuLink />
-                <p className="text-xs underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">{url}</p>
-            </Link>
-        </div>
+      <Link key={title} className="flex flex-col text-sm group"
+        href={`work/${url}`}>
+        <p className="border-l-2 border-neutral-500 font-light text-neutral-500 pl-2 text-xs my-1">{date}</p>
+        <p className="font-medium tracking-tight">{title}</p>
+        <p className="text-neutral-500">{desc}</p>
+        
+        <span className="text-neutral-500 text-xs underline underline-offset-2 decoration-neutral-300 group-hover:decoration-neutral-500 transition-colors duration-150 mt-4">Learn More</span>
+      </Link>
     )
 }
