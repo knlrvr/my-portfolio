@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import PageTop from "../components/page-top";
+
+export const metadata: Metadata = {
+    title: 'Kane Lariviere | Uses',
+    description: 'Kane Lariviere • Software Developer • Uses',
+  }
 
 export default function Uses() {
     return (

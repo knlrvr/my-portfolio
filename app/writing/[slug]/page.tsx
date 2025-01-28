@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: { params: Params }) {
             description,
             type: 'article',
             publishedTime,
-            url: `https://knlrvr.dev/blog/${post.slug}`,
+            url: `https://knlrvr.dev/writing/${post.slug}`,
             images: [
                 {
                     url: ogImage,

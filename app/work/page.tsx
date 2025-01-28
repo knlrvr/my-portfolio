@@ -1,6 +1,12 @@
 import Link from "next/link";
 import PageTop from "../components/page-top";
 import ProjectCard from "../components/project-card";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Kane Lariviere | Work',
+    description: 'Kane Lariviere • Software Developer • Work',
+}
 
 export default function Work() {
     return (

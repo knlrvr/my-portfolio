@@ -6,8 +6,8 @@ import type { Metadata } from 'next'
 import { InfoSection } from '@/app/components/section';
 
 export const metadata: Metadata = {
-  title: 'Kane Lariviere | Works',
-  description: 'Kane Lariviere • Software Developer • Works',
+  title: 'Kane Lariviere | Work',
+  description: 'Kane Lariviere • Software Developer • Work',
 }
 
 import {

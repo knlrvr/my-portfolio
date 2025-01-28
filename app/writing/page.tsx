@@ -8,8 +8,8 @@ import PostPreview from "../components/postpreview";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Kane Lariviere | Blog',
-  description: 'Kane Lariviere • Software Developer • Blog',
+  title: 'Kane Lariviere | Writing',
+  description: 'Kane Lariviere • Software Developer • Writing',
 }
 
 export default function Writing() {

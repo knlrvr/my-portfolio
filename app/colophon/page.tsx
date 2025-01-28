@@ -1,5 +1,11 @@
 import Link from "next/link";
 import PageTop from "../components/page-top";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Kane Lariviere | Colophon',
+    description: 'Kane Lariviere • Software Developer • Colophon',
+  }
 
 export default function Colophon() {
     return (
