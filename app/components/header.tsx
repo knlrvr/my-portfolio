@@ -13,20 +13,15 @@ export default function PathHeader() {
     const pathname = usePathname()
     const pathSegments = pathname.split("/").filter((segment) => segment !== "")
 
-    let backHref = '/';
-    if(pathname.includes('/writing/')) {
-        backHref='/writing'
-    }
-
     return (
-        <header className="text-sm max-w-3xl mx-auto">
+        <header className="text-xs max-w-2xl mx-auto">
         <nav className="flex justify-between items-center">
             <ol className="flex flex-wrap items-center" aria-label="Breadcrumb">
             <li className="flex items-center">
                 <Link href="/" className="text-neutral-500">
                 knlrvr.dev
                 </Link>
-                <span className="mx-2">/</span>
+                <span className="mx-1">/</span>
             </li>
             {pathSegments.map((segment, index) => (
                 <li key={index} className="flex items-center">

@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 @theme {
   --color-background: var(--background);
@@ -24,3 +25,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
+.blog {
+  line-height: 1.75rem;
+}
