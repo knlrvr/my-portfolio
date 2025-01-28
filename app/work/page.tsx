@@ -38,19 +38,16 @@ export default function Work() {
 
                 <ProjectCard
                     title="Fenili Apparel"
-                    date="2024 ~"
                     desc="An ecommerce storefront for the Fenili apparel & lifestyle brand."
                     url="fenili.store"
                 />
                 <ProjectCard
                     title="Studico"
-                    date="2024 ~"
                     desc="A web-based music production assistance suite that empowers teams of all sizes to create, collaborate, and share their music."
                     url="studico.vercel.app"
                 />
                 <ProjectCard
                     title="The Sky Is Fake"
-                    date="2024 ~"
                     desc="An image sharing platform dedicated to pictures of the sky that just don't seem real."
                     url="theskyisfake.org"
                 />
