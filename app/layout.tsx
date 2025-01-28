@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
+
 import Header from "./components/header";
 import Footer from "./components/footer";
+
 import { Grain } from "./components/effects/grain";
 
 const geistSans = Geist({
@@ -35,6 +38,8 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+
+        <Analytics />
       </body>
     </html>
   );
