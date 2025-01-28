@@ -82,7 +82,7 @@ export default async function WorksPage(
 
             <div className="flex flex-col space-y-8 mt-8">
               <div className="font-light">
-                  <div key={projects?.title} className="blog text-sm text-neutral-500">
+                  <div key={projects?.title} className="blog text-sm">
                     {toParagraphs(projects?.overview)}
                   </div>
               </div>

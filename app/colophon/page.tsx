@@ -32,7 +32,7 @@ export default function Colophon() {
                     </p>
 
                     <div className="mt-3">
-                        <Link href="https://vercel.com" className="text-neutral-500 underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">GitHub Repo</Link>
+                        <Link href="https://github.com/knlrvr/my-portfolio" className="text-neutral-500 underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">GitHub Repo</Link>
                     </div>
                 </div>
 
