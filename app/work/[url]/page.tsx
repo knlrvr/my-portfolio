@@ -109,7 +109,7 @@ export default async function WorksPage(
                     {projects?.git && ( 
                       <Link href={`${projects?.git}`} target="_blank"
                         className="flex items-center group">
-                        <span className="font-light group-hover:underline underline-offset-4 transition duration-100">Open Code</span>
+                        <span className="font-light group-hover:underline underline-offset-2 transition duration-100">Open Code</span>
                         <RxArrowTopRight
                           className="ml-3 text-sm group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition duration-100"/>
                       </Link>
@@ -117,7 +117,7 @@ export default async function WorksPage(
                     {projects?.live && (
                       <Link href={`${projects?.live}`} target="_blank"
                         className="flex items-center group">
-                        <span className="font-light group-hover:underline underline-offset-4 transition duration-100">Open Live</span>
+                        <span className="font-light group-hover:underline underline-offset-2 transition duration-100">Open Live</span>
                         <RxArrowTopRight
                           className="ml-[1.17rem] text-sm group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition duration-200"/>
                       </Link>
