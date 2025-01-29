@@ -9,13 +9,13 @@ export const metadata: Metadata = {
 
 export default function Colophon() {
     return (
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto mb-12">
             <PageTop 
                 title="Kane Lariviere"
                 desc="Colophon"
             />
 
-            <div className="flex flex-col space-y-8 mt-4 text-sm">
+            <div className="flex flex-col space-y-8 my-4 text-sm">
                 
                 <div className="">
                     <span className="font-medium tracking-tight">Ethos</span>
