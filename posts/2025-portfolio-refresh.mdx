@@ -65,6 +65,21 @@ Tailwind v4.0 is a massive update to what was already a great framework. I'm so 
 I'm still working on dark mode styles, but a dark version of the site will be available soon (assuming you don't have a browser extension)! 
 </Callout>
 
+## Removing The Guestbook
+
+In previous iterations of my portfolio, I had a guestbook that visitors could sign. It used <BlogLink href="https://clerk.com/">Clerk</BlogLink> for authentication and <BlogLink href="https://www.convex.dev/">Convex</BlogLink> as the backend, storing users' names and entries. 
+
+I was a big fan of the guestbook, but not many people were signing it. For every 100 visits to the site, less than 1 person signed. It felt like I was holding space for something that was turning out to be less useful than I'd hoped. Because of this, I'm moving forward in 2025 without a guestbook, but I appreciate everyone who signed while it was available! 
+
+
+## Thoughts About My Blog
+
+I almost decided to switch from a local directory <InlineCode>posts</InlineCode> to a database for my blog posts. I decided against this for a few reasons. 
+
+- **Scalability** &mdash;  I can't imagine having a large enough number of files to meaningfully effect performance (~500+). 
+- **Simplicity** &mdash; Storing files in a <InlineCode>posts</InlineCode> directory and using <InlineCode>fs</InlineCode> and <InlineCode>gray-matter</InlineCode> to read them is more appealing than worrying about database setup, hosting, backup, etc. I have full control of my content, which brings us to.. 
+- **Portability** &mdash; My portfolio is self-contained. Everything is in one place and ready to move if needed. 
+
 ## Vibe-Driven Development
 
 I started browsing <BlogLink href="https://dribbble.com/">dribbble</BlogLink> to find inspiration for a new look. I found <BlogLink href="https://dribbble.com/shots/23531329-kawsar-design-2024">this design</BlogLink> and really liked it, so I went ahead and spent a day implementing it. You can find it <BlogLink href="https://portfolio-2025-three.vercel.app/">here</BlogLink>. The same day that I deployed it, I realized I didn't like it. It didn't feel like it was mine, and that bothered me. 
@@ -76,13 +91,10 @@ I also created a new favicon and og image to go with the new design.
 ![screenshot](/blog-images/twitter-image.png)
 ###### opengraph image
 
-## Thoughts About My Blog
+## What Didn't Change
 
-I almost decided to switch from a local directory <InlineCode>posts</InlineCode> to a database for my blog posts. I decided against this for a few reasons. 
+Other than removing the guestbook, my portfolio functions exactly the same. It uses TypeScript (obviously) with Next.js, Tailwind for styling, and MDX to render blog posts. The only changes were upgrading dependencies, navigating a few smaller breaking changes, and a complete design overhaul. 
 
-- **Scalability** &mdash;  I can't imagine having a large enough number of files to effect performance (500+). 
-- **Simplicity** &mdash; Storing files in a <InlineCode>posts</InlineCode> directory and using <InlineCode>fs</InlineCode> and <InlineCode>gray-matter</InlineCode> to read them is more appealing than worrying about database setup, hosting, backup, etc. I have full control of my content, which brings us to.. 
-- **Portability** &mdash; My portfolio is self-contained. Everything is in one place and ready to move if needed. 
 
 ## Conclusion
 

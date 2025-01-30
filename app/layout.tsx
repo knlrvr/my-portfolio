@@ -7,6 +7,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 
 import { Grain } from "./components/effects/grain";
+import { ConsoleAsciiArt } from "./components/console-ascii";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased p-8`}
       >
           <Grain />
+          <ConsoleAsciiArt />
 
           <Header />
           {children}
