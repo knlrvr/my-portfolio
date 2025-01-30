@@ -8,9 +8,9 @@ export default function About() {
                 <p className="text-neutral-500">
                     I&apos;m a <span className="underline underline-offset-2 decoration-neutral-300">software developer</span>,
                     artist, and d&d nerd living in Charlotte, NC.
-                    I&apos;m currently working at <span className="underline underline-offset-2 decoration-neutral-300">Fenili Apparel</span> as a software developer.
+                    I&apos;m currently working at <Link href="/work/fenili" className="underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">Fenili Apparel</Link> as a software developer.
                     Crafting engaging and memorable experiences while exploring sustainability and advocating 
-                    for a greener web.  <Link href="https://github.com/knlrvr" className="underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">Always shipping</Link>.
+                    for a greener web. <Link href="https://github.com/knlrvr" className="underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">Always shipping</Link>.
                 </p>
             </div>
 

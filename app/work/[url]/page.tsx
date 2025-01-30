@@ -151,7 +151,7 @@ const fetchWorksData = (url: string): Work => {
           alt: 'fenili logo',
           width: 1000,
           height: 1000,
-          className: 'w-full h-full'
+          className: 'w-full h-full rounded-md'
         },
         num: '01',
         live: 'https://fenili.store/',
@@ -170,7 +170,7 @@ const fetchWorksData = (url: string): Work => {
           alt: 'studico logo',
           width: 1000,
           height: 1000,
-          className: 'w-full h-full'
+          className: 'w-full h-full rounded-md'
         },
         num: '02',
         git: 'https://github.com/knlrvr/studico',
@@ -190,7 +190,7 @@ const fetchWorksData = (url: string): Work => {
           alt: 'The Sky Is Fake',
           width: 1000,
           height: 1000,
-          className: 'w-full h-full'
+          className: 'w-full h-full rounded-md'
         },
         num: '03',
         git: 'https://github.com/knlrvr/theskyisfake',
@@ -210,7 +210,7 @@ const fetchWorksData = (url: string): Work => {
           alt: 'knlrvr',
           width: 1000,
           height: 1000,
-          className: 'w-full h-full'
+          className: 'w-full h-full rounded-md'
         },
         num: '04',
         git: 'https://github.com/knlrvr/portfolio-2024',
