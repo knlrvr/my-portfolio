@@ -14,7 +14,7 @@ export default function Work() {
         <div className="max-w-2xl mx-auto">
             <PageTop 
                 title="Kane Lariviere"
-                desc="Experience & Selected Works"
+                desc="Experience & Selected Work"
             />
 
             <div className="flex flex-col space-y-12 mt-8 text-sm">
@@ -61,7 +61,7 @@ export default function Work() {
                     />
                 </div>
             </div>
-            <Link href="https://github.com/knlrvr" target="_blank" className="flex items-center gap-1 text-sm text-neutral-500 group w-fit mt-4 mb-8">
+            <Link href="https://github.com/knlrvr" target="_blank" className="flex items-center gap-1 text-sm text-neutral-500 group w-fit mt-16 mb-8">
                 <span className="text-xs underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">View More on GitHub</span>
             </Link>
         </div>

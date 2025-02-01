@@ -63,6 +63,7 @@ export default async function WorksPage(
         <PageTop 
             title={`${projects?.title}`}
             desc={`${projects?.category}`}
+            date={`${projects.year}`}
         />
           
           {projects?.brand && (
