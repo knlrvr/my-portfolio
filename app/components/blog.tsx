@@ -1,6 +1,6 @@
 import Link from "next/link";
 import getPostMetadata from "../utils/PostMetadata";
-import PostPreview from "./postpreview";
+import PostPreview from "./post-preview";
 import Section from "./section";
 
 export default function Blog() {

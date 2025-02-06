@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { LuLink } from "react-icons/lu";
 
 interface ProjectCardProps {
   img: string;

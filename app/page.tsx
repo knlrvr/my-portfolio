@@ -1,5 +1,6 @@
 import About from "./components/about";
 import Blog from "./components/blog";
+import PageList from "./components/page-list";
 import PageTop from "./components/page-top";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       />
       <About />
       <Blog />
+      <PageList />
     </div>
   );
 }

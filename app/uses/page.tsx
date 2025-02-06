@@ -14,7 +14,7 @@ export default function Uses() {
                 desc="Tech That I Use"
             />
 
-        <div className="py-8 space-y-8 max-w-3xl mx-auto text-sm">
+        <div className="py-8 space-y-16 max-w-3xl mx-auto text-sm">
             <div className="flex flex-col gap-2">
                 <p className="font-medium tracking-tight">Office</p>
                 <ul className="*:text-neutral-500">

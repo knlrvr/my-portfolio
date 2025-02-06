@@ -6,7 +6,6 @@ import Link from "next/link"
 const items = [
     {label: 'work', href: '/work'},
     {label: 'writing', href: '/writing'},
-    {label: 'uses', href: '/uses'},
 ]
 
 export default function PathHeader() {

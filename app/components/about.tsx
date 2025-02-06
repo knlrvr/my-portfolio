@@ -5,7 +5,7 @@ export default function About() {
         <div className="text-sm my-8">
             <div className="flex flex-col gap-4 pb-4">
                 <span className="font-medium">Hello!</span>
-                <p className="text-neutral-600">
+                <p className="text-neutral-600 blog">
                     I&apos;m a <span className="underline underline-offset-2 decoration-neutral-300">software developer</span>,
                     artist, and d&d nerd living in Charlotte, NC.
                     I&apos;m currently working at <Link href="/work/fenili" className="underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">Fenili Apparel</Link> as a software developer.

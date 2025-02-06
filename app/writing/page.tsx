@@ -3,7 +3,7 @@ import PageTop from "../components/page-top";
 import React from 'react'
 
 import getPostMetadata from '../utils/PostMetadata';
-import PostPreview from "../components/postpreview";
+import PostPreview from "../components/post-preview";
 
 import type { Metadata } from 'next';
 
@@ -25,7 +25,7 @@ export default function Writing() {
                 title="Kane Lariviere"
                 desc="Writing"
             />
-            <div className="space-y-8 my-8">
+            <div className="space-y-16 my-8">
                 {postPreviews}  
             </div>
         </div>
