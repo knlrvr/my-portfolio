@@ -14,7 +14,7 @@ export default function WorkCard({ org, role, start, end, desc}: WorkCardProps) 
                 <p className="font-light">{role}</p>
                 <p className="text-neutral-500 font-light">{start} &mdash; {end}</p>
             </div>
-            <p className="text-neutral-500">
+            <p className="text-neutral-500 blog">
                 {desc}
             </p>
         </div>
