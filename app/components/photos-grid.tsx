@@ -8,11 +8,11 @@ const images = [
   { id: 4, src: "/gallery/4.jpeg", alt: "Blue sky with sparse clouds", href: "/photos/image-four" },
   { id: 5, src: "/gallery/5.jpeg", alt: "Violet sky", href: "/photos/image-five" },
   { id: 6, src: "/gallery/6.jpeg", alt: "Hill at sunset", href: "/photos/image-six" },
-  { id: 7, src: "/gallery/7.jpg", alt: "Asheville sky", href: "/photos/image-seven" },
-  { id: 8, src: "/gallery/8.jpg", alt: "Sky with many clouds", href: "/photos/image-eight" },
+  { id: 7, src: "/gallery/7.jpeg", alt: "Asheville sky", href: "/photos/image-seven" },
+  { id: 8, src: "/gallery/8.jpeg", alt: "Sky with many clouds", href: "/photos/image-eight" },
   { id: 9, src: "/gallery/9.jpeg", alt: "Appalachia", href: "/photos/image-nine" },
   { id: 10, src: "/gallery/10.jpeg", alt: "Frozen waterfall", href: "/photos/image-ten" },
-  { id: 11, src: "/gallery/11.jpg", alt: "Tree with green leaves", href: "/photos/image-eleven" },
+  { id: 11, src: "/gallery/11.jpeg", alt: "Tree with green leaves", href: "/photos/image-eleven" },
   { id: 12, src: "/gallery/12.jpeg", alt: "Foggy sky over the ocean", href: "/photos/image-twelve" },
 ]
 
