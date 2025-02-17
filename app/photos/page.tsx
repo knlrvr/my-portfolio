@@ -8,7 +8,6 @@ export default function Photos() {
                 title="Kane Lariviere"
                 desc="Photos"
             />
-
             <PhotosGrid />
         </div>
     )
