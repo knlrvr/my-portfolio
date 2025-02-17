@@ -27,7 +27,7 @@ export default function Colophon() {
                 <div className="">
                     <span className="font-medium tracking-tight">Typography</span>
                     <p className="text-neutral-500 blog">
-                        This site uses Inter typeface because it looks <em>great</em> and is less for me to worry about.
+                        This site uses the Inter typeface because it looks <em>great</em> and is less for me to worry about.
                     </p>
                 </div>
 
