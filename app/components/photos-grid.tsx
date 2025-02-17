@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 const images = [
-  { id: 1, src: "/gallery/image-one.jpeg", alt: "plants", href: "/photos/image-one" },
+  { id: 1, src: "/gallery/image-one.jpeg", alt: "near the congaree", href: "/photos/image-one" },
   { id: 2, src: "/gallery/image-two.jpeg", alt: "the field & the shed", href: "/photos/image-two" },
   { id: 3, src: "/gallery/image-three.jpeg", alt: "the northern lights over the south", href: "/photos/image-three" },
   { id: 4, src: "/gallery/image-four.jpeg", alt: "the frozen waterfall", href: "/photos/image-four" },

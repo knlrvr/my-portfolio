@@ -26,12 +26,12 @@ export const metadata: Metadata = {
 async function fetchPhotoData(url: string): Promise<PhotoData | null> {
   const photosDataMap: { [key: string]: PhotoData } = {
     "image-one": {
-      title: "Plants",
-      location: "North Carolina",
+      title: "Near The Congaree",
+      location: "South Carolina",
       num: '1',
       taken: "iPhone 13 Pro Max",
       specs: "Wide Camera — 26mm ƒ1.5",
-      date: "Mar 18, 2022",
+      date: "Sep 20, 2022",
       prev: "image-five",
       curr: "image-one",
       next: "image-two"
