@@ -21,7 +21,7 @@ export default function Work() {
                 
                 <WorkCard 
                     org="Fenili Apparel"
-                    role="Software Developer"
+                    role="Software Engineer"
                     start="2024"
                     end="Present"
                     desc="Lead the design & development of e-commerce storefront & admin tools. Collaborating closely with CEO & Product Team to track objectives & ship frequently."
@@ -29,7 +29,7 @@ export default function Work() {
 
                 <WorkCard
                     org="Freelance"
-                    role="Software Developer"
+                    role="Software Engineer"
                     start="2022"
                     end="2024"
                     desc="Worked with a range of small to medium businesses, agencies, start-ups, and individuals to build products, experiences, and improve technical direction."
