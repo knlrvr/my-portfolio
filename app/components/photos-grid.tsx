@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const images = [
   { id: 1, src: "/gallery/near-the-congaree.jpeg", alt: "near the congaree", href: "/photos/near-the-congaree" },
-  { id: 2, src: "/gallery/frozen-waterfall.jpeg", alt: "the frozen waterfall", href: "/photos/frozen-waterfall" },
+  { id: 2, src: "/gallery/frozen-waterfall.jpeg", alt: "the frozen waterfall", href: "/photos/the-frozen-waterfall" },
   { id: 3, src: "/gallery/moss-from-an-oak.jpeg", alt: "mossy oak tree", href: "/photos/moss-from-an-oak" },
   { id: 4, src: "/gallery/clear-autumn.jpeg", alt: "clear autumn sky", href: "/photos/clear-autumn" },
 
