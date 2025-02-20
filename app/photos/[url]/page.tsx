@@ -140,11 +140,10 @@ export default async function PhotoPage({
 
 export async function generateStaticParams() {
   return [
-    { url: "image-one" },
-    { url: "image-two" },
-    { url: "image-three" },
-    { url: "image-four" },
-    { url: "image-five" },
+    { url: "near-the-congaree" },
+    { url: "the-frozen-waterfall" },
+    { url: "moss-from-an-oak" },
+    { url: "clear-autumn" },
   ]
 }
 
