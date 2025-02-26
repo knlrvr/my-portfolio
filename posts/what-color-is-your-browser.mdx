@@ -1,0 +1,156 @@
+---
+title: What Color Is Your Browser?
+description: The existence of color mathematically and experientially, and why I don't use them
+date: February 26, 2025
+tags: ['webdev', 'color theory']
+---
+
+I'm color blind. I have **Deuteranomaly**<sup>[1]</sup>, the most common type of *red/green color blindness*, which affects the way I perceive various colors, not just red and green. It's a big reason why there's *nearly* no color on this site. I *could* say that it's because black and white reflect a fundamental part of who I am given my color vision deficiency, but to be completely honest, I just didn't want to worry about a color scheme when I wouldn't see it for what it was. After all, it's *my* site, right? 
+
+But recently, someone said something that got me thinking. "Your portfolio would look so much better with a splash of color!" 
+
+So, I decided to experiment. I played with a lot of color themes and changes but I could never settle on something I was particularly proud of or happy with. In frustration, I started researching chromatics, and specifically, color theory. 
+
+This research ultimately led to a lot of learning, a lot of interesting conclusions, and a blog post. 
+
+Which brings us to the question &mdash; **what color is your browser?** 
+
+## Colors In Pixels
+
+When you opened this page, photons of light traveled from your screen to your eyes at approximately 299,792,458 meters per second. But what color were those photons? 
+
+Right now, you're either reading black text on a white background or white text on a black background. Or are you? What we perceive as "white" is actually your screen's pixels firing away at full intensity &mdash; red, green, and blue subpixels working in perfect harmony to create the illusion of colorlessness<sup>[2]</sup>. And the "black" text or background? It's (typically) not black &mdash; It's simply the absence of emitted light<sup>[2]</sup>. Your browser isn't really creating black at all &mdash; it's creating nothing. 
+
+But how do browsers "see" color? 
+
+## How Browsers See Color
+
+There are several ways to tell browsers to display a specific color. 
+
+### Hexadecimal 
+
+```css
+#FF0000 
+││ │ └── Blue (00 = no blue)
+││ └── Green (00 = no green) 
+│└── Red (FF = maximum red)
+└── Prefix indicating hex color
+
+```
+###### Hexadecimal color
+
+Hexadecimal<sup>[3]</sup> codes might be the most recognizable &mdash; six characters where each pair of digits represents red, green, and blue values in base-16 (0 - F). 
+
+### RGB
+
+```css
+rgba(255, 0, 0, 0.5)
+	 │    │  │  └── Alpha (0.5 = 50% opacity)
+	 │    │  └── Blue (0 = no blue)
+	 │    └── Green (0 = no green)
+	 └── Red (255 = maximum red)
+```
+###### RGB Color
+
+RGB<sup>[4]</sup> takes numbers from 0 - 255, or percentages from 0% to 100%, where each number controls how much of that color is present. The last (optional) value, 0.0 - 1.0, controls the transparency. 
+
+### HSL 
+
+```css
+hsla(0, 100%, 50%, 0.5)
+	 │  │     │    └── Alpha (0.5 = 50% opacity)
+	 │  │     └── Lightness (50% = normal)
+	 │  └── Saturation (100% = full color)
+	 └── Hue (0 = red)
+```
+###### HSL Color     
+
+HSL<sup>[5]</sup> is a little more intuitive for humans, at least in readability. Instead of mixing red, green, and blue values, you choose the color directly (based on a color wheel, where 0 is red, 120 is green, and 240 is blue) and adjust its properties accordingly. 
+
+
+## Where Does Color Exist?
+
+Here's where it gets fun.  
+
+If I asked you to point to where these colors exist, where would you point? At your screen? In the computer's memory? In your brain? The truth is, color doesn't exist in any of these places &mdash; at least not in the way we think it does. Color, as we perceive it, is actually a biological interpretation of electromagnetic radiation<sup>[6]</sup>. 
+
+## The Science of Seeing Color
+
+Earlier when I asked about the color of the photons of light traveling from your screen to your eyes &mdash; it was a trick question. 
+
+**Photons don't have "color"** &mdash; they have energy that corresponds to specific wavelengths of electromagnetic radiation. What we call "red" is our brain's interpretation of photons with wavelengths around 700 nanometers. "Blue" is our interpretation of wavelengths around 450 nanometers<sup>[7]</sup>. 
+
+## 
+
+Here's what happens when you see color on your screen &mdash;
+
+1. A developer writes <InlineCode>color: #FF0000</InlineCode> 
+2. Your browser converts this into instructions for your graphics card
+3. The graphics card tells specific pixels to filter light in precise ways
+4. These pixels excite electrons in your screen's display
+5. Those electrons release photons of specific wavelengths
+6. These photons interact with specialized proteins in your retinal cone cells
+7. Your cone cells trigger a cascade of neural signals
+8. Your visual cortex processes these signals
+9. Your brain constructs the experience we call "red"
+
+The profound thing isn't just that colors don't exist in photons<sup>[8]</sup> &mdash; it's that the entire experience of color is your brain's interpretation of wavelength data, shaped by millions of years of evolution.
+
+## The Superhuman Spectrum
+
+Did you know that some people can see colors that don't exist for the rest of us? Tetrachromats<sup>[9]</sup> have four types of cone cells in their retinas instead of the usual three. This means they can *potentially* distinguish up to an *estimated 100 million* colors, compared to the 1 million colors the rest of us can see. 
+
+Similarly, your browser can work with color spaces that go beyond traditional displays. Modern standards like <BlogLink href="https://en.wikipedia.org/wiki/Rec._2020">Rec. 2020</BlogLink> and <BlogLink href="https://en.wikipedia.org/wiki/DCI-P3">Display P3</BlogLink> define broader ranges of colors mathematically, enabling more vibrant and saturated colors than standard sRGB displays can show.
+
+```css
+.vivid-color {
+	color: color(display-p3 1 0 0);
+}
+```
+###### CSS code to utilize the Display P3 color space
+
+This represents the intersection where mathematical precision meets the limits of human perception &mdash; reminding us that color exists both as precise numbers in code and as deeply subjective experiences in our minds. 
+
+## The Evolution of Digital Color
+
+Browsers haven't always been able to process so many colors, though. The colors we see on our screens today would have been impossible to create 30 years ago. Without going into too much detail about color depth, resolution, and VRAM &mdash; limitations led to the use of 8-bit color, allowing for only 256 different colors<sup>[2]</sup>. Of these 256 colors, only 216 were designated as "web-safe" colors. Why 216? *Why not all 256*? The colors were selected to ensure consistent display across different operating systems and devices, avoiding visual discrepancies caused by dithering or limited palettes.   
+
+But now? Your browser can theoretically display millions of colors. I say theoretically because your eyes can't distinguish them all. The difference between <InlineCode>#FF0000</InlineCode> and <InlineCode>#FF0001</InlineCode> is imperceptible to human vision. Yet to your browser, these are as different as red and blue are to you. 
+
+## The Browser as an Interface
+
+We've explored photons, pixels, and perception shaping our experiences of color, but there's another layer worth examining &mdash; the browser itself as an interface between the mathematical and the experiential. 
+
+Your browser is simultaneously &mdash;
+- A translator that converts hexadecimal values into pixel instructions
+- An interpreter that bridges the gap between human-readable CSS and machine-level operations
+- One of many windows through which we experience the digital world
+
+The browser's capabilities, settings, and limitations shape how we experience the web. The colors we see aren't just filtered through our biology &mdash; they're filtered through layers of software abstraction and interpretation. 
+
+## Color, Consciousness, and Computation
+
+So &mdash; again &mdash; **what color is your browser**?
+
+The answer depends on what we mean by color, and what we mean by "is". Your browser simultaneously sees more colors than you ever could, and sees no colors at all. It is both colorblind and color-omniscient. It processes mathematical abstractions that our brains interpret as color, but it never experiences **qualia** &mdash; the subjective experience &mdash; of color itself. 
+
+What if consciousness, the very ability to perceive and experience color, is just another form of computation? Perhaps, in the same way a browser processes pixel data mathematically to render a color, our brains process sensory information computationally to create the vibrant, subjective experience of the world. If that’s the case, could consciousness itself be understood as a highly sophisticated form of computation, with each of us interpreting the world through the lens of our own neural processes?
+
+And maybe that's what makes color so fascinating. It exists at the intersection of physics, biology, technology, and consciousness. It's both precisely definable and inherently subjective. Your browser might process color with perfect mathematical precision, but only your consciousness can transform those calculations into a specific experience of color that makes it so beautiful.
+
+Also, no &mdash; I will not be adding any color to my site.
+
+Thanks for reading! Let me know what you think. & as always, **happy coding**! 
+
+---
+### References
+
+1 : <BlogLink href="https://en.wikipedia.org/wiki/Color_blindness#Red%E2%80%93green_color_blindness">Red-Green Color blindness & Other Color Vision Deficiencies</BlogLink>     
+2 : <BlogLink href="https://rmit.pressbooks.pub/colourtheory1/chapter/how-digital-screens-display-colour/"> How Digital Screens Display Colour</BlogLink>     
+3 : <BlogLink href="https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color">Hexadecimal color notation</BlogLink>     
+4 : <BlogLink href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb"> rgba() color notation </BlogLink>     
+5 :  <BlogLink href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl"> hsla() color notation </BlogLink>     
+6 : <BlogLink href="https://www.britannica.com/science/color/The-visible-spectrum">The Visible Spectrum: Britannica</BlogLink>     
+7 : <BlogLink href="https://en.wikipedia.org/wiki/Visible_spectrum">The Visible Spectrum: Wikipedia</BlogLink>     
+8 : <BlogLink href="https://en.wikipedia.org/wiki/Photon"> Photons: Wikipedia </BlogLink>   
+9 : <BlogLink href="https://en.wikipedia.org/wiki/Tetrachromacy">Tetrachromacy</BlogLink>       
