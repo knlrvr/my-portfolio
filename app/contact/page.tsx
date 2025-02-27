@@ -68,17 +68,17 @@ export default function Contact() {
                             </Link>
                         </li>
                         <li className="flex justify-between items-center">
-                           <p>Music</p>
+                           <p>Spotify</p>
                             <Link className="text-neutral-500 underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150" 
                                 href="https://open.spotify.com/track/6mKFrX61Q81ie7KA5iXVcu?si=71e3bdf3b35a4879">
-                                spotify
+                                glasslight
                             </Link>
                         </li>
                         <li className="flex justify-between items-center">
-                           <p>Music</p>
+                           <p>Apple Music</p>
                             <Link className="text-neutral-500 underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150" 
                                 href="https://music.apple.com/us/album/seasonal-single/1676331337">
-                                apple music
+                                glasslight
                             </Link>
                         </li>
                     </ul>
