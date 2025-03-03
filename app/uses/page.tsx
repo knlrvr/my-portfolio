@@ -3,7 +3,7 @@ import PageTop from "../components/page-top";
 
 export const metadata: Metadata = {
     title: 'Kane Lariviere | Uses',
-    description: 'Kane Lariviere • Software Developer • Uses',
+    description: 'Kane Lariviere • Software Engineer • Uses',
   }
 
 export default function Uses() {

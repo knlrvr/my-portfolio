@@ -6,7 +6,7 @@ import WorkCard from "../components/work-card";
 
 export const metadata: Metadata = {
     title: 'Kane Lariviere | Work',
-    description: 'Kane Lariviere • Software Developer • Work',
+    description: 'Kane Lariviere • Software Engineer • Work',
 }
 
 export default function Work() {

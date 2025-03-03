@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Kane Lariviere",
-  description: "Kane Lariviere • Software Developer • Portfolio",
+  description: "Kane Lariviere • Software Engineer • Portfolio",
 };
 
 export default function RootLayout({

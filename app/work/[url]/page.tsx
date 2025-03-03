@@ -7,7 +7,7 @@ import { InfoSection } from '@/app/components/section';
 
 export const metadata: Metadata = {
   title: 'Kane Lariviere | Work',
-  description: 'Kane Lariviere • Software Developer • Work',
+  description: 'Kane Lariviere • Software Engineer • Work',
 }
 
 import {

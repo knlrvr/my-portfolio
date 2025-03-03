@@ -9,7 +9,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Kane Lariviere | Writing',
-  description: 'Kane Lariviere • Software Developer • Writing',
+  description: 'Kane Lariviere • Software Engineer • Writing',
 }
 
 export default function Writing() {

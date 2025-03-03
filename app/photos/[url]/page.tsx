@@ -20,8 +20,8 @@ interface PhotoData {
 
 export const metadata: Metadata = {
     title: 'Kane Lariviere | Photos',
-    description: 'Kane Lariviere • Software Developer • Photos',
-  }
+    description: 'Kane Lariviere • Software Engineer • Photos',
+}
 
 async function fetchPhotoData(url: string): Promise<PhotoData | null> {
   const photosDataMap: { [key: string]: PhotoData } = {

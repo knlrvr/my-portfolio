@@ -8,7 +8,7 @@ export default function Home() {
     <div className="max-w-2xl mx-auto">
       <PageTop
         title="Kane Lariviere"
-        desc="Software Developer"
+        desc="Software Engineer"
       />
       <About />
       <Blog />

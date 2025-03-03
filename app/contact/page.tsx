@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: 'Kane Lariviere | Contact',
-    description: 'Kane Lariviere • Software Developer • Contact',
+    description: 'Kane Lariviere • Software Engineer • Contact',
   }
 
 export default function Contact() {
