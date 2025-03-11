@@ -182,8 +182,7 @@ export default async function PostPage({params}: {params: Params}) {
                                     prose-h3:text-xl prose-h3:font-semibold prose-h3:tracking-normal
                                     prose-h2:font-semibold prose-h2:tracking-tighter prose-h2:text-2xl
                                     prose-hr:border-neutral-500
-                                    prose-img:rounded-sm prose-img:-mb-3
-                                    prose-sup 
+                                    prose-sup prose-img:rounded-sm prose-img:-mb-1
                 ">
                     <MDXRemote
                         source={post.content}
