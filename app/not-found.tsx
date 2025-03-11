@@ -12,7 +12,7 @@ export default function NotFound() {
 
         <div className="my-8">
             <p className="text-sm text-neutral-600">
-                <span className="underline underline-offset-2 decoration-neutral-300">Sorry about that</span>! There doesn&apos;t seem to be anything here. You can check the URL and try again, or click one of the links below,
+                <span className="underline underline-offset-2 decoration-neutral-300">Sorry about that</span>! There doesn&apos;t seem to be anything here. You can check the URL and try again, click one of the links below,
                 or return to the <Link href="/" className="underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">home page</Link>.
             </p>
         </div>
