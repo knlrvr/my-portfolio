@@ -90,7 +90,7 @@ function BlogLink({ href, children }: BlogLinkProps) {
     if (href.startsWith('/')) {
         return (
             <Link href={href}
-                className='inline-flex items-center underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150'>
+                className='inline-flex items-center underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 dark:decoration-neutral-500 dark:hover:decoration-neutral-300 transition-colors duration-150'>
                 {children}
             </Link>
         )
@@ -98,7 +98,7 @@ function BlogLink({ href, children }: BlogLinkProps) {
 
     return (
         <Link href={href} target='_blank' rel="noopener noreferrer" 
-            className="hunderline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">
+            className="underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 dark:decoration-neutral-500 dark:hover:decoration-neutral-300 transition-colors duration-150">
             {children} 
             <RxArrowTopRight className="inline-block" />
         </Link>
@@ -174,14 +174,15 @@ export default async function PostPage({params}: {params: Params}) {
                     desc={`${post.data.description}`}
                     date={`${post.data.date}`}
                 />
-                <article className="mt-10
-                                    blog prose prose-headings:text-[#111] prose-strong:text-[#111] max-w-full
-                                    prose-sm prose-code:text-sm prose-pre:bg-[#151515] prose-pre:mb-1
-                                    prose-h6:text-xs prose-h6:text-neutral-400 prose-p:font-normal
+                <article className="mt-10 dark:text-neutral-300
+                                    blog prose prose-headings:text-[#111] dark:prose-headings:text-neutral-200 
+                                    prose-strong:text-[#111] dark:prose-strong:text-neutral-200 max-w-full
+                                    prose-sm prose-code:text-sm prose-pre:bg-neutral-500/10 prose-pre:text-neutral-700 dark:prose-pre:text-neutral-300 dark:prose-pre:bg-[#151515] prose-pre:mb-1
+                                    prose-h6:text-xs prose-h6:text-neutral-400 dark:prose-h6:text-neutral-600 prose-p:font-normal
                                     prose-h4:text-lg prose-h4:tracking-wide prose-h4:font-normal
                                     prose-h3:text-xl prose-h3:font-semibold prose-h3:tracking-normal
                                     prose-h2:font-semibold prose-h2:tracking-tighter prose-h2:text-2xl
-                                    prose-hr:border-neutral-500
+                                    prose-hr:border-neutral-500 dark:prose-a:text-neutral-300
                                     prose-sup prose-img:rounded-sm prose-img:-mb-1
                 ">
                     <MDXRemote

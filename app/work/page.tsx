@@ -62,7 +62,7 @@ export default function Work() {
                 </div>
             </div>
             <Link href="https://github.com/knlrvr" target="_blank" className="flex items-center gap-1 text-sm text-neutral-500 group w-fit mt-16 mb-8">
-                <span className="text-xs underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">View More on GitHub</span>
+                <span className="text-xs text-neutral-500 underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 dark:decoration-neutral-500 dark:hover:decoration-neutral-300 transition duration-100">View More on GitHub</span>
             </Link>
         </div>
     )

@@ -94,12 +94,12 @@ export default async function WorksPage(
               <div className="grid grid-cols-3 mb-4">
 
                 <InfoSection title="Year">
-                  <span className="font-light">{projects?.year}</span>
+                  <span className="font-light text-neutral-600 dark:text-neutral-400">{projects?.year}</span>
                 </InfoSection>
 
                 <InfoSection title="Tech">
                   {projects?.tags && projects?.tags.map((tag, index) => (
-                    <span key={index} className="mb-1 text-sm flex font-light">
+                    <span key={index} className="mb-1 text-sm flex font-light text-neutral-600 dark:text-neutral-400">
                       {tag}
                     </span>
                   ))}
@@ -109,16 +109,16 @@ export default async function WorksPage(
                   <div className="space-y-1">
                     {projects?.git && ( 
                       <Link href={`${projects?.git}`} target="_blank"
-                        className="flex items-center group">
-                        <span className="font-light group-hover:underline underline-offset-2 transition duration-100">Open Code</span>
+                        className="flex items-center group text-neutral-600 dark:text-neutral-400">
+                        <span className="font-light group-hover:underline underline-offset-2 decoration-neutral-300 group-hover:decoration-neutral-500 dark:decoration-neutral-500 dark:group-hover:decoration-neutral-300 transition duration-100">Open Code</span>
                         <RxArrowTopRight
                           className="ml-3 text-sm group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition duration-100"/>
                       </Link>
                     )}
                     {projects?.live && (
                       <Link href={`${projects?.live}`} target="_blank"
-                        className="flex items-center group">
-                        <span className="font-light group-hover:underline underline-offset-2 transition duration-100">Open Live</span>
+                        className="flex items-center group text-neutral-600 dark:text-neutral-400">
+                        <span className="font-light group-hover:underline underline-offset-2 decoration-neutral-300 group-hover:decoration-neutral-500 dark:decoration-neutral-500 dark:group-hover:decoration-neutral-300  transition duration-100">Open Live</span>
                         <RxArrowTopRight
                           className="ml-[1.17rem] text-sm group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition duration-200"/>
                       </Link>

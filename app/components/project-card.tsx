@@ -22,9 +22,10 @@ export default function ProjectCard({ img, title, desc, date, url}: ProjectCardP
         />
         <p className="border-l-2 border-neutral-500 font-light text-neutral-500 pl-2 text-xs my-1">{date}</p>
         <p className="font-medium tracking-tight">{title}</p>
-        <p className="text-neutral-500 blog">{desc}</p>
+        <p className="dark:text-neutral-300 blog">{desc}</p>
         
-        <span className="text-neutral-500 text-xs underline underline-offset-2 decoration-neutral-300 group-hover:decoration-neutral-500 transition-colors duration-150 mt-4">Learn More</span>
+        <span className="text-neutral-400 text-xs underline underline-offset-2 decoration-neutral-300 group-hover:decoration-neutral-500 dark:decoration-neutral-500 dark:group-hover:decoration-neutral-300 transition-colors duration-150 mt-4">Learn More</span>
       </Link>
     )
 }
+

@@ -17,7 +17,7 @@ export default function Uses() {
         <div className="py-8 space-y-16 max-w-3xl mx-auto text-sm">
             <div className="flex flex-col gap-2">
                 <p className="font-medium tracking-tight">Office</p>
-                <ul className="*:text-neutral-500">
+                <ul className="*:text-neutral-600 dark:*:text-neutral-300">
                     <li>M1 Macbook Air (2020)</li>
                     <li>M1 Mac Mini (2020)</li>
                     <li>Apple Magic Keyboard</li>
@@ -30,7 +30,7 @@ export default function Uses() {
 
             <div className="flex flex-col gap-2">
                 <p className="font-medium tracking-tight">Coding</p>
-                <ul className="*:text-neutral-500">
+                <ul className="*:text-neutral-600 dark:*:text-neutral-300">
                     <li><strong>Editor</strong>: VSCode & Neovim</li>
                     <li><strong>Terminal</strong>: Ghostty with tmux</li>
                 </ul>
@@ -38,7 +38,7 @@ export default function Uses() {
 
             <div className="flex flex-col gap-2">
                 <p className="font-medium tracking-tight">Productivity</p>
-                <ul className="*:text-neutral-500">
+                <ul className="*:text-neutral-600 dark:*:text-neutral-300">
                     <li>Raycast</li>
                     <li>Obsidian</li>
                     <li>Notion <em>(sometimes)</em></li>
@@ -47,7 +47,7 @@ export default function Uses() {
 
             <div className="flex flex-col gap-2">
                 <p className="font-medium tracking-tight">Gaming</p>
-                <ul className="*:text-neutral-500">
+                <ul className="*:text-neutral-600 dark:*:text-neutral-300">
                     <li>Windows 10</li>
                     <li>Intel Core i5 9400F</li>
                     <li>MSI MAG B365M MORTAR</li>
@@ -61,7 +61,7 @@ export default function Uses() {
 
             <div className="flex flex-col gap-2">
                 <p className="font-medium tracking-tight">Audio / Video</p>
-                <ul className="*:text-neutral-500">
+                <ul className="*:text-neutral-600 dark:*:text-neutral-300">
                     <li>PreSonus Eris 3.5 Monitors</li>
                     <li>Scarlett 4i4 Interface</li>
                     <li>Mackie HM-4 Headphone Amplifier</li>
@@ -75,7 +75,7 @@ export default function Uses() {
 
             <div className="flex flex-col gap-2">
                 <p className="font-medium tracking-tight">Music</p>
-                <ul className="*:text-neutral-500">
+                <ul className="*:text-neutral-600 dark:*:text-neutral-300">
                     <li>Gibson Les Paul</li>
                     <li>Orange Crush Pro 120 Amp Head + Orange FS2</li>
                     <li>Peavey 5150 4 x 12 Cabinet</li>

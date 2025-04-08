@@ -9,6 +9,7 @@ import Footer from "./components/footer";
 
 import { Grain } from "./components/effects/grain";
 import { ConsoleAsciiArt } from "./components/console-ascii";
+import { ThemeProvider } from "./components/theme/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,15 +36,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased p-8`} 
       >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Grain />
           <ConsoleAsciiArt />
 
           <Header />
-          {children}
+            {children}
           <Footer />
 
           <Analytics />
           <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   );

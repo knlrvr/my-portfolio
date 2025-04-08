@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation"
 import Link from "next/link"
+import { Toggle } from "./theme/toggle"
 
 const items = [
     {label: 'work', href: '/work'},
@@ -48,6 +49,9 @@ export default function PathHeader() {
                         </Link>
                     </li>
                 ))}
+                <li>
+                    <Toggle />
+                </li>
             </ol>
         </nav>
         </header>
