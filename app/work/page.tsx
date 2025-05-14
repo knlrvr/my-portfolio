@@ -1,6 +1,5 @@
 import Link from "next/link";
 import PageTop from "../components/page-top";
-import ProjectCard from "../components/project-card";
 import { Metadata } from "next";
 import WorkCard from "../components/work-card";
 
@@ -20,18 +19,18 @@ export default function Work() {
             <div className="flex flex-col space-y-12 mt-8 text-sm">
                 
                 <WorkCard 
-                    org="eraWorks"
-                    role="Founder + Software Engineer"
+                    org="Rather Outdoors"
+                    role="QA Analyst"
                     start="2025"
                     end="Present"
-                    desc="Leading the design & development of web projects &mdash; helping businesses express themselves online."
+                    desc="Design and execute test plans, write and maintain automated and manual test cases, and work closely with development team to ensure software meets functional, performance, and usability standards."
                 />
 
                 <WorkCard
-                    org="Freelance"
+                    org="eraWorks Studio"
                     role="Software Engineer"
                     start="2022"
-                    end="Present"
+                    end="2025"
                     desc="Worked with a range of small to medium businesses, agencies, start-ups, and individuals to build products, experiences, and improve technical direction."
                 />
 
