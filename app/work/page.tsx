@@ -28,7 +28,7 @@ export default function Work() {
 
                 <WorkCard
                     org="eraWorks Studio"
-                    role="Software Engineer"
+                    role="Software Engineer + Product"
                     start="2022"
                     end="2025"
                     desc="Worked with a range of small to medium businesses, agencies, start-ups, and individuals to build products, experiences, and improve technical direction."
