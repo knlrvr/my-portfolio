@@ -1,20 +1,35 @@
+import Image from "next/image";
+
 interface WorkCardProps {
     org: string;
+    img: string;
     role: string;
     start: string;
     end: string;
     desc: string;
 }
 
-export default function WorkCard({ org, role, start, end, desc}: WorkCardProps) {
+export default function WorkCard({ org, img, role, start, end, desc}: WorkCardProps) {
     return (
-        <div className="space-y-1">
-            <span className="font-medium tracking-tight">{org}</span>
-            <div className="flex items-center justify-between">
-                <p className="font-light text-neutral-500">{role}</p>
-                <p className="text-neutral-500 font-light">{start} &mdash; {end}</p>
+        <div className="flex flex-col">
+            <div className="flex gap-2">
+                <Image
+                    src={img}
+                    alt={`${org} logo`}
+                    width={1000}
+                    height={1000}
+                    className="w-10 h-10 rounded-full border-2 border-neutral-100/50 dark:border-[#111]"
+                />
+                <div className="flex flex-col w-full">
+                    <p className="font-medium">{role}</p>
+                    <div className="flex items-center justify-between w-full">
+                        <p className="font-light text-neutral-500">{org}</p>
+                        <p className="text-neutral-500 font-light">{start} &mdash; {end}</p>
+                    </div>
+                </div>
+                
             </div>
-            <p className="blog dark:text-neutral-300">
+            <p className="pt-6 blog dark:text-neutral-300">
                 {desc}
             </p>
         </div>

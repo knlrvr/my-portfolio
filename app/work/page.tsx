@@ -20,6 +20,7 @@ export default function Work() {
                 
                 <WorkCard 
                     org="Rather Outdoors"
+                    img="/ro-logo.png"
                     role="QA Analyst"
                     start="2025"
                     end="Present"
@@ -28,6 +29,7 @@ export default function Work() {
 
                 <WorkCard
                     org="eraWorks Studio"
+                    img="/era-logo.png"
                     role="Software Engineer + Product"
                     start="2022"
                     end="2025"
