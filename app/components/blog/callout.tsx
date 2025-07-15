@@ -17,7 +17,7 @@ const variantStyles: Record<Variant, { icon: React.ReactElement; color: string }
     'destructive': { icon: <RxCross2 />, color: 'text-red-500' },
     'disclaimer': { icon: <RxExclamationTriangle />, color: 'text-orange-500' },
     'neutral': { icon: <RxCube />, color: 'text-blue-500' },
-    'edit': { icon: <RxPencil1 />, color: 'text-[#111]' }
+    'edit': { icon: <RxPencil1 />, color: 'text-[#111] dark:text-neutral-200' }
 };
 
 export default function Callout({ variant, children }: { variant: Variant; children: React.ReactNode }) {
