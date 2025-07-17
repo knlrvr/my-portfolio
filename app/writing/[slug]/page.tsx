@@ -14,6 +14,7 @@ import Link from 'next/link';
 
 import { RxArrowTopRight } from "react-icons/rx"; 
 import PageTop from "@/app/components/page-top";
+import Sticker from "@/app/components/blog/sticker";
 
 const getPostContent = (slug: string) => {
     const folder = "posts";
@@ -168,12 +169,15 @@ export default async function PostPage({params}: {params: Params}) {
                     })
                 }}
             />
-            <div className="">
-                <PageTop 
-                    title={`${post.data.title}`}
-                    desc={`${post.data.description}`}
-                    date={`${post.data.date}`}
-                />
+            <div className="relative">
+                <div className="relative">
+                    <PageTop 
+                        title={`${post.data.title}`}
+                        desc={`${post.data.description}`}
+                        date={`${post.data.date}`}
+                    />
+                    <Sticker src={`${post.data.sticker}`}/>
+                </div>
                 <article className="mt-10 dark:text-neutral-300
                                     blog prose prose-headings:text-[#111] dark:prose-headings:text-neutral-200 
                                     prose-strong:text-[#111] dark:prose-strong:text-neutral-200 max-w-full
