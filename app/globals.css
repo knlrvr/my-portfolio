@@ -13,6 +13,31 @@
   }
 }
 
+:root {
+  --sh-class: #427b58;
+  --sh-identifier: #3c3836;
+  --sh-sign: #665c54;
+  --sh-property: #b57614;
+  --sh-entity: #076678;
+  --sh-jsxliterals: #8f3f71;
+  --sh-string: #79740e;
+  --sh-keyword: #9d0006;
+  --sh-comment: #928374;
+}
+
+.dark {
+  --sh-class: #8ec07c;
+  --sh-identifier: #ebdbb2;
+  --sh-sign: #928374;
+  --sh-property: #fabd2f;
+  --sh-entity: #83a598;
+  --sh-jsxliterals: #d3869b;
+  --sh-string: #b8bb26;
+  --sh-keyword: #fb4934;
+  --sh-comment: #928374;
+}
+
+
 html {
   scroll-behavior: smooth !important;
 }

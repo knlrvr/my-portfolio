@@ -5,8 +5,8 @@ import fs from 'fs'
 import matter from "gray-matter";
 
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import { Code } from "@/app/components/blog/code";
 
-import { CodeBlock } from "@/app/components/blog/codeblock";
 import Callout from '@/app/components/blog/callout';
 import Edit from '@/app/components/blog/edit';
 
@@ -120,9 +120,7 @@ export default async function PostPage({params}: {params: Params}) {
     const post = getPostContent(slug);
 
     const components = {
-        code: ({ node, inline, className, children, ...props }: any) => (
-            <CodeBlock language={props.language} value={children} />
-        ),
+        code: Code,
         Callout,
         Edit,
         BlogLink,
@@ -181,7 +179,7 @@ export default async function PostPage({params}: {params: Params}) {
                 <article className="mt-10 dark:text-neutral-300
                                     blog prose prose-headings:text-[#111] dark:prose-headings:text-neutral-200 
                                     prose-strong:text-[#111] dark:prose-strong:text-neutral-200 max-w-full
-                                    prose-sm prose-code:text-sm prose-pre:bg-neutral-500/10 prose-pre:text-neutral-700 dark:prose-pre:text-neutral-300 dark:prose-pre:bg-[#151515] prose-pre:mb-1
+                                    prose-sm prose-code:text-sm prose-pre:text-neutral-700 prose-pre:bg-neutral-100 dark:prose-pre:bg-[#151515] dark:prose-pre:text-neutral-300 prose-pre:mb-1
                                     prose-h6:text-xs prose-h6:text-neutral-400 dark:prose-h6:text-neutral-600 prose-p:font-normal
                                     prose-h4:text-lg prose-h4:tracking-wide prose-h4:font-normal
                                     prose-h3:text-xl prose-h3:font-semibold prose-h3:tracking-normal
