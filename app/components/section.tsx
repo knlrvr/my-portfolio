@@ -4,7 +4,7 @@ export default function Section({
     children: React.ReactNode,
 }) {
     return (
-        <section>
+        <section className="max-w-2xl mx-auto">
             <hr className="border-neutral-400" />
             <div className="mt-4">
                 {children}
