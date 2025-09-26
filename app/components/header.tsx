@@ -19,7 +19,7 @@ export default function PathHeader() {
             <ol className="flex flex-wrap items-center" aria-label="Breadcrumb">
             <li className="flex items-center">
                 <Link href="/" className="text-neutral-500">
-                knlrvr.dev
+                    knlrvr.dev
                 </Link>
                 <span className="mx-1">/</span>
             </li>
