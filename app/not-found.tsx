@@ -16,10 +16,6 @@ export default function NotFound() {
                 or return to the <Link href="/" className="underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">home page</Link>.
             </p>
         </div>
-
-        <PageList />
-
-
     </div>
 )
 }
