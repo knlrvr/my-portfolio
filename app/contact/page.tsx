@@ -18,7 +18,7 @@ export default function Contact() {
             <div className="flex flex-col space-y-16 my-4 text-sm">
                 
                 <div className="">
-                    <span className="font-black tracking-tight">Personal</span>
+                    <span className="font-bold tracking-tight">Personal</span>
                     <ul className="mt-1">
                         <li className="flex justify-between items-center text-neutral-600 dark:text-neutral-400">
                            <p>Email <em>(preferred)</em></p>
@@ -31,7 +31,7 @@ export default function Contact() {
                 </div>
 
                 <div className="">
-                    <span className="font-black tracking-tight">Work</span>
+                    <span className="font-bold tracking-tight">Work</span>
                     <ul className="mt-1 space-y-1">
                         <li className="flex justify-between items-center">
                            <p className="text-neutral-600 dark:text-neutral-400">LinkedIn</p>
@@ -51,7 +51,7 @@ export default function Contact() {
                 </div>
 
                 <div className="">
-                    <span className="font-black tracking-tight">Misc</span>
+                    <span className="font-bold tracking-tight">Misc</span>
                     <ul className="mt-1 space-y-1">
                         <li className="flex justify-between items-center">
                            <p className="text-neutral-600 dark:text-neutral-400">Twitch</p>

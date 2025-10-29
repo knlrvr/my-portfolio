@@ -183,7 +183,7 @@ export default async function PostPage({params}: {params: Params}) {
                                     prose-h6:text-xs prose-h6:text-neutral-400 dark:prose-h6:text-neutral-600 prose-p:font-normal
                                     prose-h4:text-lg prose-h4:tracking-wide prose-h4:font-normal
                                     prose-h3:text-xl prose-h3:font-bold prose-h3:tracking-normal
-                                    prose-h2:font-black prose-h2:tracking-tighter prose-h2:text-2xl
+                                    prose-h2:font-bold prose-h2:tracking-tighter prose-h2:text-2xl
                                     prose-hr:border-neutral-500 dark:prose-a:text-neutral-300
                                     prose-sup prose-img:rounded-sm prose-img:-mb-1
                 ">
