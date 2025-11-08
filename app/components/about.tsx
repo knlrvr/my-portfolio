@@ -1,23 +1,23 @@
+"use client"
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function About() {
 
-    const getGreeting = () => {
-        const currentHour = new Date().getHours();
+  const [greeting, setGreeting] = useState("");
 
-        if (currentHour >= 0 && currentHour < 12) {
-            return "Good morning!";
-        } else if (currentHour >= 12 && currentHour < 18) {
-            return "Good afternoon!";
-        } else {
-            return "Good evening!";
-        }
-    }
+  useEffect(() => {
+    const currentHour = new Date().getHours();
+    if (currentHour < 12) setGreeting("Good morning!");
+    else if (currentHour < 18) setGreeting("Good afternoon!");
+    else setGreeting("Good evening!");
+  }, []);
 
     return (
         <div className="text-sm my-8">
             <div className="flex flex-col gap-4 pb-4">
-                <span className="font-bold">{getGreeting()}</span>
+                <span className="font-bold">{greeting}</span>
                 <p className="text-neutral-600 dark:text-neutral-400 blog">
                     I&apos;m a <span className="underline underline-offset-2 decoration-neutral-500">software engineer</span>,
                     artist, and d&d nerd living in North Carolina. Currently working as a <span className="underline underline-offset-2 decoration-neutral-500">QA Analyst</span>.
