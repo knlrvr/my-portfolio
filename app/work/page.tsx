@@ -21,10 +21,10 @@ export default function Work() {
                 <WorkCard 
                     org="@ Rather Outdoors"
                     img="/ro-logo.png"
-                    role="QA Analyst"
+                    role="QA Automation Engineer"
                     start="2025"
                     end="Present"
-                    desc="Design and execute test plans, write and maintain automated and manual test cases, and work closely with development team to ensure software meets functional, performance, and usability standards."
+                    desc="Design and develop automated testing frameworks and tools to ensure reliable, high-quality software."
                 />
 
                 <WorkCard
