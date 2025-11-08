@@ -23,7 +23,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
-    "react-syntax-highlighter": "^15.6.1",
+    "reading-time": "^1.5.0",
     "sugar-high": "^0.9.3"
   },
   "devDependencies": {

@@ -1,5 +1,6 @@
 import fs from 'fs'
 import matter from "gray-matter";
+import readingTime from "reading-time"
 
 export interface PostMetadata {
     title: string,
@@ -8,6 +9,7 @@ export interface PostMetadata {
     tags: string[],
     slug: string,
     image?: string,
+    readTime: string;
 }
 
 const getPostMetadata = (): PostMetadata[] => {
@@ -20,12 +22,15 @@ const getPostMetadata = (): PostMetadata[] => {
       const fileContents = fs.readFileSync(`./posts/${fileName}`, 'utf8');
       const matterResult = matter(fileContents);
   
+      const readTime = readingTime(matterResult.content).text;
+
       return {
         title: matterResult.data.title,
         date: matterResult.data.date,
         description: matterResult.data.description,
         tags: matterResult.data.tags,
-        slug: fileName.replace(".mdx", "")
+        slug: fileName.replace(".mdx", ""),
+        readTime,
       }
     });
   

@@ -19,7 +19,7 @@ export default function Work() {
             <div className="flex flex-col space-y-12 mt-8 text-sm">
                 
                 <WorkCard 
-                    org="Rather Outdoors"
+                    org="@ Rather Outdoors"
                     img="/ro-logo.png"
                     role="QA Analyst"
                     start="2025"
@@ -28,7 +28,7 @@ export default function Work() {
                 />
 
                 <WorkCard
-                    org="eraWorks Studio"
+                    org="@ eraWorks Studio"
                     img="/era-logo.png"
                     role="Software Engineer + Product"
                     start="2022"

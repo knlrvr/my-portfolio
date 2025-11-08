@@ -15,13 +15,16 @@ import Link from 'next/link';
 import { RxArrowTopRight } from "react-icons/rx"; 
 import PageTop from "@/app/components/page-top";
 import Sticker from "@/app/components/blog/sticker";
+import readingTime from "reading-time";
 
 const getPostContent = (slug: string) => {
     const folder = "posts";
     const file = `${folder}/${slug}.mdx`;
     const content = fs.readFileSync(file, 'utf8');
     const matterResult = matter(content);
-    return matterResult;
+    const readTime = readingTime(matterResult.content).text;
+    
+    return { ...matterResult, readTime };
 }
 
 export const generateStaticParams = async () => {
@@ -131,26 +134,6 @@ export default async function PostPage({params}: {params: Params}) {
         notFound;
     }
 
-    function getTimeSincePost(postDate: string): string {
-        const currentDate = new Date();
-        const postDateObj = new Date(postDate);
-        const timeDifference = currentDate.getTime() - postDateObj.getTime();
-
-        const millisecondsPerDay = 1000 * 60 * 60 * 24;
-        const daysDifference = Math.floor(timeDifference / millisecondsPerDay);
-        if (daysDifference < 30) {
-            return `${daysDifference}d ago`
-        }
-
-        const monthsDifference = Math.floor(daysDifference / 30.44);
-        if (monthsDifference < 12) {
-            return `${monthsDifference}m ago`
-        }
-
-        const yearsDifference = Math.floor(daysDifference / 365.25); 
-        return `${yearsDifference}y ago`;
-    }
-
     return (
         <section className="max-w-2xl mx-auto pb-8">
             <script
@@ -172,14 +155,14 @@ export default async function PostPage({params}: {params: Params}) {
                     <PageTop 
                         title={`${post.data.title}`}
                         desc={`${post.data.description}`}
-                        date={`${post.data.date}`}
+                        date={`${post.data.date} • ${post.readTime}`}
                     />
                     <Sticker src={`${post.data.sticker}`}/>
                 </div>
                 <article className="mt-10 dark:text-neutral-300
                                     blog prose prose-headings:text-[#111] dark:prose-headings:text-neutral-200 
                                     prose-strong:text-[#111] dark:prose-strong:text-neutral-200 max-w-full
-                                    prose-sm prose-code:text-sm prose-pre:text-neutral-700 prose-pre:bg-neutral-100 dark:prose-pre:bg-[#151515] dark:prose-pre:text-neutral-300 prose-pre:mb-1
+                                    prose-sm prose-code:text-xs prose-pre:text-neutral-700 prose-pre:bg-neutral-100 dark:prose-pre:bg-[#151515] dark:prose-pre:text-neutral-300 prose-pre:mb-1
                                     prose-h6:text-xs prose-h6:text-neutral-400 dark:prose-h6:text-neutral-600 prose-p:font-normal
                                     prose-h4:text-lg prose-h4:tracking-wide prose-h4:font-normal
                                     prose-h3:text-xl prose-h3:font-bold prose-h3:tracking-normal
