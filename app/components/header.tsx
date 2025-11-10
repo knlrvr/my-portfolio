@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { Toggle } from "./theme/toggle"
 
-import { BiBookAlt, BiChevronRight, BiCoffeeTogo, BiEnvelope, BiFile, BiHome, BiImage, BiPen, BiSmile } from "react-icons/bi"
+import { BiBookAlt, BiBriefcase, BiChevronRight, BiCoffeeTogo, BiEnvelope, BiFile, BiHome, BiImage, BiPen, BiSmile } from "react-icons/bi"
 
 const items = [
     {label: 'work', href: '/work'},
@@ -13,7 +13,7 @@ const items = [
 
 const navItems = [
     { icon: <BiHome />, href: "/" },
-    { icon: <BiSmile />, href: "/work" },
+    { icon: <BiBriefcase />, href: "/work" },
     { icon: <BiBookAlt />, href: "/writing" },
     { icon: <BiImage />, href: "/photos" },
     { icon: <BiCoffeeTogo />, href: "/uses" },
