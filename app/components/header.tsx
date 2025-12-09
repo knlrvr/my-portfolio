@@ -20,7 +20,6 @@ import {
 const items = [
     {label: 'work', href: '/work'},
     {label: 'writing', href: '/writing'},
-    {label: 'visitors', href: '/visitors'}
 ]
 
 const navItems = [
