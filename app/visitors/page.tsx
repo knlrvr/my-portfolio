@@ -9,6 +9,7 @@ import { api } from "@/convex/_generated/api";
 import { useState } from "react";
 import { SignInButton, SignOutButton, useClerk, useUser } from "@clerk/clerk-react";
 import { RxArrowRight } from "react-icons/rx";
+import { usePathname } from "next/navigation";
 
 // export const metadata: Metadata = {
 //     title: 'Kane Lariviere | Colophon',
@@ -22,6 +23,7 @@ export default function Colophon() {
     const [text, setText] = useState<string>('');
 
     const { user } = useUser();
+    const pathname = usePathname();
 
     return (
         <div className="max-w-2xl mx-auto mb-12">
@@ -34,7 +36,7 @@ export default function Colophon() {
 
             {!user && (
                 <div className="rounded-full text-sm mb-[2.15rem] w-fit">
-                    <SignInButton mode='modal' forceRedirectUrl={window.location.pathname}>
+                    <SignInButton mode='modal' forceRedirectUrl={pathname}>
                         <div className="group cursor-pointer flex items-center gap-2">
                             <span className="text-neutral-500 text-xs underline underline-offset-2 decoration-neutral-300 group-hover:decoration-neutral-500 dark:decoration-neutral-500 dark:group-hover:decoration-neutral-300 transition-colors duration-150">Sign In To Leave A Message</span>
                             <span className="text-neutral-500 group-hover:translate-x-1 transition-all duration-150">
