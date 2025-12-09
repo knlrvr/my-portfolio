@@ -16,6 +16,11 @@ export default function PageList() {
                     >
                         writing
                     </Link></li>
+                    <li><Link href="/visitors"
+                        className="text-neutral-600 dark:text-neutral-300 underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 dark:decoration-neutral-500 dark:hover:decoration-neutral-300 transition-colors duration-150 mt-4"
+                    >
+                        visitors
+                    </Link></li>
                     <li><Link href="/uses"
                         className="text-neutral-600 dark:text-neutral-300 underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 dark:decoration-neutral-500 dark:hover:decoration-neutral-300 transition-colors duration-150 mt-4"
                     >

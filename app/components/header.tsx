@@ -4,11 +4,23 @@ import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { Toggle } from "./theme/toggle"
 
-import { BiBookAlt, BiBriefcase, BiChevronRight, BiCoffeeTogo, BiEnvelope, BiFile, BiHome, BiImage, BiPen, BiSmile } from "react-icons/bi"
+import { 
+    BiBookAlt, 
+    BiBriefcase, 
+    BiChevronRight, 
+    BiCoffeeTogo, 
+    BiEnvelope, 
+    BiFile, 
+    BiHome, 
+    BiImage, 
+    BiMessage, 
+    BiPen, 
+} from "react-icons/bi"
 
 const items = [
     {label: 'work', href: '/work'},
     {label: 'writing', href: '/writing'},
+    {label: 'visitors', href: '/visitors'}
 ]
 
 const navItems = [
@@ -18,7 +30,8 @@ const navItems = [
     { icon: <BiImage />, href: "/photos" },
     { icon: <BiCoffeeTogo />, href: "/uses" },
     { icon: <BiEnvelope />, href: "/contact" },
-    { icon: <BiPen />, href: "/colophon" }
+    { icon: <BiPen />, href: "/colophon" },
+    { icon: <BiMessage />, href: "/visitors"}
 ]
 
 export default function PathHeader() {
