@@ -13,7 +13,7 @@
   }
 }
 
-/* :root {
+:root {
   --sh-class: #427b58;
   --sh-identifier: #3c3836;
   --sh-sign: #665c54;
@@ -35,7 +35,7 @@
   --sh-string: #b8bb26;
   --sh-keyword: #fb4934;
   --sh-comment: #928374;
-} */
+}
 
 
 html {
