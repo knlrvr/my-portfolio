@@ -8,7 +8,7 @@ export default function Footer() {
             <hr className="border-neutral-400" />
 
             <div className="mt-4 flex justify-between items-center">
-                <p>&copy; 2025 Kane Lariviere.</p>
+                <p>&copy; 2026 Kane Lariviere.</p>
             </div>
         </footer>
     )
