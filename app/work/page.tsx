@@ -24,7 +24,7 @@ export default function Work() {
                     role="QA Analyst"
                     start="2025"
                     end="Present"
-                    desc="Design and develop automated testing frameworks and tools to ensure reliable, high-quality software."
+                    desc="Architecting the systems that make shipping boring — testing infrastructure, developer tools, and the automation that lets teams move fast without breaking things."
                 />
 
                 <WorkCard
