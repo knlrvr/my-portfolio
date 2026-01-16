@@ -18,12 +18,10 @@ export default function Uses() {
             <div className="flex flex-col gap-2">
                 <p className="font-bold tracking-tight">Office</p>
                 <ul className="*:text-neutral-600 dark:*:text-neutral-400">
-                    <li>M1 Macbook Air (2020)</li>
-                    <li>M1 Mac Mini (2020)</li>
-                    <li>Apple Magic Keyboard</li>
-                    <li>Apple Magic Mouse</li>
+                    <li>M4 Macbook Air</li>
                     <li>27&quot; Samsung Curved Monitor</li>
                     <li>24&quot; Dell Monitor</li>
+                    <li>55&quot; Adjustable Standing Desk</li>
                     <li>Secretlab TITAN Evo Chair</li>
                 </ul>
             </div>
