@@ -43,7 +43,7 @@ export function Toggle() {
 
       {showImage && (
         <div
-          className={`absolute z-[9999] w-32 h-fit right-0 top-8 transition-opacity duration-300 ease-out ${
+          className={`absolute z-9999 w-32 h-fit right-0 top-8 transition-opacity duration-300 ease-out ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
