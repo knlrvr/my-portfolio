@@ -5,7 +5,7 @@ export default function Section({
 }) {
     return (
         <section className="max-w-2xl mx-auto">
-            <hr className="border-neutral-400" />
+            <hr className="border-neutral-200 dark:border-neutral-800" />
             <div className="mt-4">
                 {children}
             </div>

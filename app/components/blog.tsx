@@ -3,6 +3,7 @@ import getPostMetadata from "../utils/PostMetadata";
 import PostPreview from "./post-preview";
 import Section from "./section";
 import { RxArrowRight } from "react-icons/rx";
+import { LuArrowRight } from "react-icons/lu";
 
 export default function Blog() {
 
@@ -22,7 +23,7 @@ export default function Blog() {
                         <p className="text-xs underline underline-offset-2 decoration-neutral-300 group-hover:decoration-neutral-500 dark:decoration-neutral-500 dark:group-hover:decoration-neutral-300 transition-colors duration-150">
                             All Posts
                         </p>
-                        <RxArrowRight />
+                        <LuArrowRight className="mt-0.5" />
                     </Link>
                 </div>
             </div>
