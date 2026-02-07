@@ -21,7 +21,7 @@ export default function Blog() {
                     <div className="space-y-16">{postPreviews}</div>
                     <Link href="/writing" className="group flex items-center gap-1 text-sm text-neutral-500 group w-fit mt-16">
                         <p className="text-xs underline underline-offset-2 decoration-neutral-300 group-hover:decoration-neutral-500 dark:decoration-neutral-500 dark:group-hover:decoration-neutral-300 transition-colors duration-150">
-                            All Posts
+                            All Posts 
                         </p>
                         <LuArrowRight className="mt-0.5" />
                     </Link>
