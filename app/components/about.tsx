@@ -18,7 +18,7 @@ export default function About() {
     return (
         <div className="text-sm my-8">
             <div className="flex flex-col gap-4 pb-4">
-                <span className="font-bold text-neutral-500">{greeting}</span>
+                <span className="font-bold">{greeting}</span>
                 <p className="blog">
                     I&apos;m a <span className="text-neutral-600 dark:text-neutral-400 underline underline-offset-4 decoration-neutral-500">software engineer</span>,
                     artist, and d&d nerd living in North Carolina. Currently working as a <span className="text-neutral-600 dark:text-neutral-400 underline underline-offset-4 decoration-neutral-500">QA Analyst</span>.
