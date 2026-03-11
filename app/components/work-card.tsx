@@ -29,7 +29,7 @@ export default function WorkCard({ org, img, role, start, end, desc}: WorkCardPr
                 </div>
                 
             </div>
-            <p className="pt-6 blog text-neutral-600 dark:text-neutral-400">
+            <p className="pt-6 blog">
                 {desc}
             </p>
         </div>

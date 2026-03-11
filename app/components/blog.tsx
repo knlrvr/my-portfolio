@@ -23,7 +23,7 @@ export default function Blog() {
                         <p className="text-xs underline underline-offset-2 decoration-neutral-300 group-hover:decoration-neutral-500 dark:decoration-neutral-500 dark:group-hover:decoration-neutral-300 transition-colors duration-150">
                             All Posts 
                         </p>
-                        <LuArrowRight className="mt-0.5" />
+                        <LuArrowRight className="mt-0.5 text-xs" />
                     </Link>
                 </div>
             </div>
