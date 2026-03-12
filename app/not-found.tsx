@@ -1,5 +1,4 @@
 import Link from "next/link";
-import PageList from "./components/page-list";
 import PageTop from "./components/page-top";
 
 export default function NotFound() { 
