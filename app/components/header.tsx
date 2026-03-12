@@ -18,8 +18,8 @@ import {
 } from "react-icons/bi"
 
 const items = [
-    {label: 'work', href: '/work'},
     {label: 'writing', href: '/writing'},
+    {label: 'uses', href: '/uses'},
 ]
 
 const navItems = [

@@ -1,37 +1,50 @@
 import Image from "next/image";
 
 interface WorkCardProps {
-    org: string;
-    img: string;
-    role: string;
-    start: string;
-    end: string;
-    desc: string;
+  img: string;
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+  tags?: string[];
+  featured?: boolean;
 }
 
-export default function WorkCard({ org, img, role, start, end, desc}: WorkCardProps) {
-    return (
-        <div className="flex flex-col">
-            <div className="flex gap-2">
-                <Image
-                    src={img}
-                    alt={`${org} logo`}
-                    width={1000}
-                    height={1000}
-                    className="w-10 h-10 rounded-full border-2 border-neutral-100/50 dark:border-[#111]"
-                />
-                <div className="flex flex-col w-full">
-                    <p className="font-bold">{role}</p>
-                    <div className="flex items-center justify-between w-full">
-                        <p className="text-neutral-500">{org}</p>
-                        <p className="text-neutral-500">{start} &mdash; {end}</p>
+export default function WorkCard({
+  img,
+  role,
+  company,
+  period,
+  description,
+  tags,
+  featured,
+}: WorkCardProps) {
+
+  return (
+    <div className="text-sm flex flex-col gap-4 mb-12">
+        <div className="flex gap-2">
+            <Image
+                src={img}
+                alt="Company image"
+                width={1000}
+                height={1000}
+                className="h-10 w-10 rounded-full"
+            />
+            <div className="flex items-end justify-between w-full">
+                <div className="flex flex-col">
+                    <div className="flex gap-4">
+                        <p className="font-bold tracking-tight">{role}</p>
                     </div>
+                    <p className="text-neutral-500">{company}</p>
                 </div>
-                
+                <div className="">
+                    <p className="font-mono text-xs text-neutral-500">{period}</p>
+                </div>
             </div>
-            <p className="pt-6 blog">
-                {desc}
-            </p>
         </div>
-    )
+        <div className="">
+            <p className="blog text-neutral-700 dark:text-neutral-300">{description}</p>
+        </div>
+    </div>
+  );
 }

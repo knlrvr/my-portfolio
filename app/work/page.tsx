@@ -18,23 +18,25 @@ export default function Work() {
 
             <div className="flex flex-col space-y-12 mt-8 text-sm">
                 
-                <WorkCard 
-                    org="@ Rather Outdoors"
-                    img="/ro-logo.png"
-                    role="QA Analyst"
-                    start="2025"
-                    end="Present"
-                    desc="Architecting the systems that make shipping boring — testing infrastructure, developer tools, and the automation that lets teams move fast without breaking things."
-                />
+            <WorkCard
+                img="/ro-logo.png"
+                role="QA Engineer"
+                company="@ Rather Outdoors"
+                period="2025 - Present"
+                description="Architecting the systems that make shipping boring — testing infrastructure, developer tools, and the automation that lets teams move fast without breaking things."
+                tags={[]}
+                featured={true}
+            />
 
-                <WorkCard
-                    org="@ eraWorks Studio"
-                    img="/era-logo.png"
-                    role="Software Engineer + Product"
-                    start="2022"
-                    end="2025"
-                    desc="Worked with a range of small to medium businesses, agencies, start-ups, and individuals to build products, experiences, and improve technical direction."
-                />
+            <WorkCard
+                img="/era-logo.png"
+                role="Software Engineer + Product"
+                company="@ eraWorks Studio"
+                period="2022 - 2025"
+                description="Worked with a range of small to medium businesses, agencies, start-ups, and individuals to build products, experiences, and improve technical direction."
+                tags={[]}
+                featured={false}
+            />
 
             </div>
 
