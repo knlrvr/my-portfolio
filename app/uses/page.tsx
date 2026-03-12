@@ -19,7 +19,7 @@ export default function Uses() {
 
                 <div>
                     <SectionBreakSmall label="Office" />
-                    <ul className="*:text-neutral-600 dark:*:text-neutral-400">
+                    <ul className="">
                         <li>M4 Macbook Air</li>
                         <li>27&quot; Samsung Curved Monitor</li>
                         <li>24&quot; Dell Monitor</li>
@@ -30,7 +30,7 @@ export default function Uses() {
 
                 <div>
                     <SectionBreakSmall label="Coding" />
-                    <ul className="*:text-neutral-600 dark:*:text-neutral-400">
+                    <ul className="">
                         <li><strong>Editor</strong>: VSCode & Neovim</li>
                         <li><strong>Terminal</strong>: Ghostty with tmux</li>
                     </ul>
@@ -38,7 +38,7 @@ export default function Uses() {
 
                 <div>
                     <SectionBreakSmall label="Productivity" />
-                    <ul className="*:text-neutral-600 dark:*:text-neutral-400">
+                    <ul className="">
                         <li>Raycast</li>
                         <li>Obsidian</li>
                         <li>Notion <em>(sometimes)</em></li>
@@ -47,7 +47,7 @@ export default function Uses() {
 
                 <div>
                     <SectionBreakSmall label="Gaming" />
-                    <ul className="*:text-neutral-600 dark:*:text-neutral-400">
+                    <ul className="">
                         <li>Windows 10</li>
                         <li>Intel Core i5 9400F</li>
                         <li>MSI MAG B365M MORTAR</li>
@@ -61,7 +61,7 @@ export default function Uses() {
 
                 <div>
                     <SectionBreakSmall label="Audio/Video" />
-                    <ul className="*:text-neutral-600 dark:*:text-neutral-400">
+                    <ul className="">
                         <li>PreSonus Eris 3.5 Monitors</li>
                         <li>Scarlett 4i4 Interface</li>
                         <li>Mackie HM-4 Headphone Amplifier</li>
@@ -75,7 +75,7 @@ export default function Uses() {
 
                 <div>
                     <SectionBreakSmall label="Music" />
-                    <ul className="*:text-neutral-600 dark:*:text-neutral-400">
+                    <ul className="">
                         <li>Gibson Les Paul</li>
                         <li>Orange Crush Pro 120 Amp Head + Orange FS2</li>
                         <li>Peavey 5150 4 x 12 Cabinet</li>

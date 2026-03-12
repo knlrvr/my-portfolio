@@ -52,7 +52,7 @@ export default function Contact() {
                 </div>
 
                 <div className="">
-                    <SectionBreakSmall label="Misc" />
+                    <SectionBreakSmall label="Social" />
                     <ul className="mt-1 space-y-1">
                         <li className="flex justify-between items-center">
                            <p className="text-neutral-600 dark:text-neutral-400">Twitch</p>
@@ -68,6 +68,12 @@ export default function Contact() {
                                 @knlrvr.dev
                             </Link>
                         </li>
+                    </ul>
+                </div>
+
+                <div className="">
+                    <SectionBreakSmall label="Music" />
+                    <ul className="mt-1 space-y-1">
                         <li className="flex justify-between items-center">
                            <p className="text-neutral-600 dark:text-neutral-400">Spotify</p>
                             <Link className="text-neutral-500 underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 dark:decoration-neutral-500 dark:hover:decoration-neutral-300 transition duration-100" 

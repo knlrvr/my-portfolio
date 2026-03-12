@@ -10,7 +10,7 @@ export default function PageTop({ title, desc, date }: PageTopProps) {
       <h1 className="text-[clamp(2rem,5vw,3.25rem)] font-medium tracking-[-0.045em] leading-[1.08]">
         {title}
       </h1>
-      <p className="text-[0.9375rem] text-neutral-500 mt-2 leading-relaxed max-w-[480px]">
+      <p className="text-[0.9375rem] text-mist-600 dark:text-mist-400 mt-2 leading-relaxed max-w-[480px]">
         {desc}
       </p>
       {date && (

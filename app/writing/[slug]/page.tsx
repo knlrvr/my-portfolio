@@ -160,7 +160,7 @@ export default async function PostPage({params}: {params: Params}) {
                     <Sticker src={`${post.data.sticker}`}/>
                 </div>
                 <article className="mt-10 dark:text-neutral-100
-                                    blog prose prose-headings:text-[#111] dark:prose-headings:text-neutral-200 
+                                    blog prose prose-headings:text-neutral-800 dark:prose-headings:text-neutral-200
                                     prose-strong:text-[#111] dark:prose-strong:text-neutral-200 max-w-full
                                     prose-sm prose-code:text-xs prose-pre:text-neutral-700 prose-pre:bg-neutral-100 dark:prose-pre:bg-[#151515] dark:prose-pre:text-neutral-300 prose-pre:mb-1
                                     prose-h6:text-xs prose-h6:text-neutral-400 dark:prose-h6:text-neutral-600 prose-p:font-normal

@@ -35,13 +35,13 @@ export default function WorkCard({
                     <div className="flex items-center gap-4">
                         <p className="font-medium tracking-tight">{role}</p>
                         {featured && (
-                            <span className="text-[0.625rem] font-mono uppercase font-bold bg-[#FF2D20]/5 text-[#FF2D20] rounded-md px-2 py-1">current</span>
+                            <span className="text-[0.625rem] font-mono uppercase font-bold bg-mist-400/20 text-mist-500 rounded-md px-2 py-1">current</span>
                         )}
                     </div>
-                    <p className="text-neutral-500">{company}</p>
+                    <p className="text-mist-500">{company}</p>
                 </div>
                 <div className="">
-                    <p className="font-mono text-[11px] text-neutral-500">{period}</p>
+                    <p className="font-mono text-[11px] text-mist-500">{period}</p>
                 </div>
             </div>
         </div>

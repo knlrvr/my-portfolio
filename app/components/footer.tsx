@@ -22,7 +22,7 @@ export default function Footer() {
     <footer className="pt-16 pb-12 max-w-2xl mx-auto">
       <div className="relative h-px mb-12">
         <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-800" />
-        <div className="absolute top-0 right-0 w-12 h-px bg-[#FF2D20]" />
+        <div className="absolute top-0 right-0 w-12 h-px bg-mist-500" />
       </div>
 
       <div className="grid grid-cols-3 gap-8 mb-12">
@@ -32,7 +32,7 @@ export default function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-xs text-neutral-600 dark:text-neutral-400 hover:text-[#FF2D20] font-base no-underline tracking-wide transition-colors duration-150 w-fit"
+                className="text-xs text-neutral-600 dark:text-neutral-400 hover:text-mist-500 font-base no-underline tracking-wide transition-colors duration-150 w-fit"
               >
                 {link.label}
               </Link>
