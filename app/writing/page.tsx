@@ -22,10 +22,10 @@ export default function Writing() {
     return (
         <div className="max-w-2xl mx-auto">
             <PageTop 
-                title="Kane Lariviere"
-                desc="Writing"
+                title="Writing"
+                desc="Thoughts on tech, tooling, and building things that work."
             />
-            <div className="space-y-16 my-8">
+            <div className="divide-y divide-neutral-200 dark:divide-neutral-800">
                 {postPreviews}  
             </div>
         </div>

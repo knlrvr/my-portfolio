@@ -1,18 +1,23 @@
 interface PageTopProps {
-    title: string,
-    desc: string,
-    date?: string,
+  title: string;
+  desc: string;
+  date?: string;
 }
 
-export default function PageTop({title, desc, date}: PageTopProps) {
-    return (
-        <>
-        <div className="my-36 -space-y-1">
-            <p className="font-bold tracking-tight text-sm">{title}</p>
-            <p className="font-light text-neutral-600 dark:text-neutral-400 text-sm my-2">{desc}</p>
-            <p className="border-l-2 border-neutral-500 font-light text-neutral-500 pl-2 text-xs">{date}</p>
-        </div>
-        <hr className="border-neutral-200 dark:border-neutral-800" />
-        </>
-    )
+export default function PageTop({ title, desc, date }: PageTopProps) {
+  return (
+    <div className="pt-28 pb-14">
+      <h1 className="text-[clamp(2rem,5vw,3.25rem)] font-medium tracking-[-0.045em] leading-[1.08]">
+        {title}
+      </h1>
+      <p className="text-[0.9375rem] text-neutral-500 mt-2 leading-relaxed max-w-[480px]">
+        {desc}
+      </p>
+      {date && (
+        <p className="text-[0.6875rem] text-neutral-400 mt-2 font-mono tracking-wide border-l-2 pl-2 border-neutral-200 dark:border-neutral-800">
+          {date}
+        </p>
+      )}
+    </div>
+  );
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 import PageTop from "../components/page-top";
 import { Metadata } from "next";
 import WorkCard from "../components/work-card";
+import { LuArrowUpRight } from "react-icons/lu";
 
 export const metadata: Metadata = {
     title: 'Kane Lariviere | Work',
@@ -12,11 +13,11 @@ export default function Work() {
     return (
         <div className="max-w-2xl mx-auto">
             <PageTop 
-                title="Kane Lariviere"
-                desc="Work"
+                title="Work"
+                desc="Shipping things that matter."
             />
 
-            <div className="flex flex-col space-y-12 mt-8 text-sm">
+            <div className="flex flex-col text-sm">
                 
             <WorkCard
                 img="/ro-logo.png"
@@ -40,8 +41,11 @@ export default function Work() {
 
             </div>
 
-            <Link href="https://github.com/knlrvr" target="_blank" className="flex items-center gap-1 text-sm text-neutral-500 group w-fit my-16">
-                <span className="text-xs text-neutral-500 underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 dark:decoration-neutral-500 dark:hover:decoration-neutral-300 transition duration-100">View My GitHub</span>
+            <Link href="https://github.com/knlrvr" className="group flex items-center gap-1 text-xs group w-fit mt-8 border border-neutral-300 dark:border-neutral-700 px-4 py-1 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-150">
+                <p className="text-neutral-700 dark:text-neutral-300">
+                    View My GitHub
+                </p>
+                <LuArrowUpRight className="mt-0.5 text-[#FF2D20] group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150" />
             </Link>
 
         </div>

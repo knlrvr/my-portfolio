@@ -16,13 +16,19 @@ export default function About() {
   }, []);
 
     return (
-        <div className="text-sm my-8">
+        <div className="text-sm">
             <div className="flex flex-col gap-4 pb-4">
-                <span className="font-bold">{greeting}</span>
-                <p className="blog">
-                    I&apos;m a <span className="text-neutral-600 dark:text-neutral-400 underline underline-offset-4 decoration-neutral-500">software engineer</span>,
-                    artist, and d&d nerd living in North Carolina. Currently working as a <span className="text-neutral-600 dark:text-neutral-400 underline underline-offset-4 decoration-neutral-500">QA Engineer</span>, building tools that make teams faster.&nbsp;
-                    <Link href="https://github.com/knlrvr" className="text-neutral-600 dark:text-neutral-400 inline-flex items-center gap-0.5 underline underline-offset-4 decoration-neutral-500 hover:decoration-neutral-300 transition-colors duration-150">Always Shipping<LuArrowUpRight className="mt-0.5" /></Link>.
+
+                <p className="text-sm">
+                    <span className="inline-flex tracking-tight font-medium">{greeting}</span> <br />
+                    I&apos;m a software engineer,
+                    artist, and d&d nerd living in North Carolina. Currently working as a QA Engineer, building tools that make teams faster.&nbsp;
+                    <Link href="https://github.com/knlrvr" className="group inline-flex items-center gap-1 text-xs group w-fit border border-neutral-300 dark:border-neutral-700 px-2 py-0.5 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-150">
+                        <span className="text-neutral-700 dark:text-neutral-300">
+                            Always Shipping
+                        </span>
+                        <LuArrowUpRight className="mt-0.5 text-[#FF2D20] group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150" />
+                    </Link>                
                 </p>
             </div>
         </div>

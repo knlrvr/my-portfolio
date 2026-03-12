@@ -11,8 +11,8 @@ export default function Photos() {
     return (
         <div className="max-w-2xl mx-auto">
             <PageTop
-                title="Kane Lariviere"
-                desc="Photos"
+                title="Photos"
+                desc="Some of my favorite photos."
             />
             <PhotosGrid />
         </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PageTop from "../components/page-top";
 import { Metadata } from "next";
+import { SectionBreakSmall } from "../components/section-break";
 
 export const metadata: Metadata = {
     title: 'Kane Lariviere | Contact',
@@ -11,14 +12,14 @@ export default function Contact() {
     return (
         <div className="max-w-2xl mx-auto mb-12">
             <PageTop 
-                title="Kane Lariviere"
-                desc="Contact"
+                title="Contact"
+                desc="How to get in touch with me."
             />
 
-            <div className="flex flex-col space-y-16 my-4 text-sm">
+            <div className="flex flex-col text-sm ">
                 
                 <div className="">
-                    <span className="font-bold tracking-tight">Personal</span>
+                    <SectionBreakSmall label="Personal" />
                     <ul className="mt-1">
                         <li className="flex justify-between items-center text-neutral-600 dark:text-neutral-400">
                            <p>Email <em>(preferred)</em></p>
@@ -31,7 +32,7 @@ export default function Contact() {
                 </div>
 
                 <div className="">
-                    <span className="font-bold tracking-tight">Work</span>
+                    <SectionBreakSmall label="Professional" />
                     <ul className="mt-1 space-y-1">
                         <li className="flex justify-between items-center">
                            <p className="text-neutral-600 dark:text-neutral-400">LinkedIn</p>
@@ -51,7 +52,7 @@ export default function Contact() {
                 </div>
 
                 <div className="">
-                    <span className="font-bold tracking-tight">Misc</span>
+                    <SectionBreakSmall label="Misc" />
                     <ul className="mt-1 space-y-1">
                         <li className="flex justify-between items-center">
                            <p className="text-neutral-600 dark:text-neutral-400">Twitch</p>

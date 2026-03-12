@@ -28,12 +28,15 @@ export default function WorkCard({
                 alt="Company image"
                 width={1000}
                 height={1000}
-                className="h-10 w-10 rounded-full border border-neutral-200 dark:border-neutral-800 shadow-sm"
+                className="h-10 w-10 rounded-full border-4 border-neutral-100 dark:border-neutral-700"
             />
             <div className="flex items-end justify-between w-full">
                 <div className="flex flex-col">
-                    <div className="flex gap-4">
-                        <p className="font-bold tracking-tight">{role}</p>
+                    <div className="flex items-center gap-4">
+                        <p className="font-medium tracking-tight">{role}</p>
+                        {featured && (
+                            <span className="text-[0.625rem] font-mono uppercase font-bold bg-[#FF2D20]/5 text-[#FF2D20] rounded-md px-2 py-1">current</span>
+                        )}
                     </div>
                     <p className="text-neutral-500">{company}</p>
                 </div>
@@ -43,7 +46,7 @@ export default function WorkCard({
             </div>
         </div>
         <div className="">
-            <p className="blog text-neutral-700 dark:text-neutral-300">{description}</p>
+            <p className="text-neutral-700 dark:text-neutral-300 text-sm ">{description}</p>
         </div>
     </div>
   );

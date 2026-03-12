@@ -5,6 +5,7 @@ import readingTime from "reading-time"
 export interface PostMetadata {
     title: string,
     date: string,
+    prevDate: string,
     description: string,
     tags: string[],
     slug: string,
@@ -27,6 +28,7 @@ const getPostMetadata = (): PostMetadata[] => {
       return {
         title: matterResult.data.title,
         date: matterResult.data.date,
+        prevDate: matterResult.data.prevDate,
         description: matterResult.data.description,
         tags: matterResult.data.tags,
         slug: fileName.replace(".mdx", ""),

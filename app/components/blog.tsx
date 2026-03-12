@@ -1,9 +1,18 @@
 import Link from "next/link";
 import getPostMetadata from "../utils/PostMetadata";
 import PostPreview from "./post-preview";
-import Section from "./section";
-import { RxArrowRight } from "react-icons/rx";
-import { LuArrowRight } from "react-icons/lu";
+import { LuArrowUpRight } from "react-icons/lu";
+
+function AllPostsButton() {
+    return (
+        <Link href="/writing" className="group flex items-center gap-1 text-xs group w-fit mt-8 border border-neutral-300 dark:border-neutral-700 px-4 py-1 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-150">
+            <p className="text-neutral-700 dark:text-neutral-300">
+                All Posts 
+            </p>
+            <LuArrowUpRight className="mt-0.5 text-[#FF2D20] group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150" />
+        </Link>
+    )
+}
 
 export default function Blog() {
 
@@ -15,18 +24,9 @@ export default function Blog() {
     ));
 
     return (
-        <Section>
-            <div className="py-6 h-fit">
-                <div className="max-w-2xl mx-auto">
-                    <div className="space-y-16">{postPreviews}</div>
-                    <Link href="/writing" className="group flex items-center gap-1 text-sm text-neutral-500 group w-fit mt-16">
-                        <p className="text-xs underline underline-offset-2 decoration-neutral-300 group-hover:decoration-neutral-500 dark:decoration-neutral-500 dark:group-hover:decoration-neutral-300 transition-colors duration-150">
-                            All Posts 
-                        </p>
-                        <LuArrowRight className="mt-0.5 text-xs" />
-                    </Link>
-                </div>
-            </div>
-        </Section>
+        <div className="max-w-2xl mx-auto">
+            <div className="divide-y divide-neutral-200 dark:divide-neutral-800">{postPreviews}</div>
+            <AllPostsButton />
+        </div>
     )
 }

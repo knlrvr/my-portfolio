@@ -91,8 +91,8 @@ export default async function PhotoPage({
   return (
     <div className="max-w-2xl mx-auto">
         <PageTop 
-            title='Kane Lariviere' 
-            desc={`${photo.title}`}
+            title={`${photo.title}`} 
+            desc={`${photo.location}`}
         />
 
       <div className="my-8">
