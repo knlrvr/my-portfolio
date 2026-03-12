@@ -2,7 +2,8 @@ import WorkCard from "./work-card";
 
 export default function WorkGrid() {
     return (
-        <div>
+        <div className="pb-4">
+            <hr className="border-neutral-200 dark:border-neutral-800 pt-16" />
 
             <WorkCard
                 img="/ro-logo.png"

@@ -22,13 +22,13 @@ export default function WorkCard({
 
   return (
     <div className="text-sm flex flex-col gap-4 mb-12">
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
             <Image
                 src={img}
                 alt="Company image"
                 width={1000}
                 height={1000}
-                className="h-10 w-10 rounded-full"
+                className="h-10 w-10 rounded-full border border-neutral-200 dark:border-neutral-800 shadow-sm"
             />
             <div className="flex items-end justify-between w-full">
                 <div className="flex flex-col">
@@ -38,7 +38,7 @@ export default function WorkCard({
                     <p className="text-neutral-500">{company}</p>
                 </div>
                 <div className="">
-                    <p className="font-mono text-xs text-neutral-500">{period}</p>
+                    <p className="font-mono text-[11px] text-neutral-500">{period}</p>
                 </div>
             </div>
         </div>
