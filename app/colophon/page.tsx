@@ -41,11 +41,11 @@ export default function Colophon() {
                     </p>
 
                     <div className="mt-6">
-                        <Link href="https://github.com/knlrvr/my-portfolio" className="group inline-flex items-center gap-1 text-xs group w-fit border border-mist-500 px-2 py-0.5 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-150">
+                        <Link href="https://github.com/knlrvr/my-portfolio" className="group inline-flex items-center gap-1 text-xs group w-fit border border-mist-400 dark:border-mist-700 px-2 py-0.5 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-150">
                             <span className="text-neutral-700 dark:text-neutral-300">
                                 GitHub Repo
                             </span>
-                            <LuArrowUpRight className="mt-0.5 text-mist-500 group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150" />
+                            <LuArrowUpRight className="mt-0.5 text-mist-400 dark:text-mist-700 group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150" />
                         </Link>
                     </div>
                 </div>
