@@ -17,7 +17,7 @@ export default function Work() {
                 desc="Shipping things that matter."
             />
 
-            <div className="flex flex-col text-sm">
+            <div className="flex flex-col text-sm divide-y divide-neutral-200 dark:divide-neutral-800">
                 
             <WorkCard
                 img="/ro-logo.png"
@@ -41,7 +41,7 @@ export default function Work() {
 
             </div>
 
-            <Link href="https://github.com/knlrvr" className="group flex items-center gap-1 text-xs group w-fit mt-8 border border-mist-400 dark:border-mist-700 px-4 py-1 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-150">
+            <Link href="https://github.com/knlrvr" className="group flex items-center gap-1 text-xs group w-fit mt-8 border border-mist-400 dark:border-mist-700 px-4 py-2 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-150">
                 <p className="text-neutral-700 dark:text-neutral-300">
                     View My GitHub
                 </p>

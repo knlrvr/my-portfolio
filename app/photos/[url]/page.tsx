@@ -101,25 +101,25 @@ export default async function PhotoPage({
           alt={photo.title}
           width={1000}
           height={1000}
-          className="w-full h-auto pb-8"
+          className="w-full h-auto rounded-md"
         />
-
-        <div className="text-neutral-400 text-xs flex justify-end items-center gap-2 mb-8">
-            <Link href={`/photos/${photo.prev}`}>
-                <BsArrowLeft />            
-            </Link>
-            <span>
-                0{photo.num} / 04
-            </span>
-            <Link href={`/photos/${photo.next}`}>
-                <BsArrowRight />            
-            </Link>
-        </div>
 
         <Section>
             <div className="mt-8 text-sm">
-                <div className="flex justify-between items-center">
-                    <p className="font-bold tracking-tight">{photo.title}</p>
+
+                <div className="flex justify-between items-center mt-8">
+                    <p className="font-bold tracking-tight text-sm">{photo.title}</p>
+                    <div className="text-mist-500 flex justify-end items-center gap-2 font-mono text-[11px]">
+                      <Link href={`/photos/${photo.prev}`}>
+                          <BsArrowLeft />            
+                      </Link>
+                      <span>
+                          0{photo.num} / 04
+                      </span>
+                      <Link href={`/photos/${photo.next}`}>
+                          <BsArrowRight />            
+                      </Link>
+                  </div>
                 </div>
                 <div className="flex justify-between items-center">
                     <p className="text-mist-600 dark:text-mist-400 my-1">{photo.location}</p>

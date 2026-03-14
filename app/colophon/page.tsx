@@ -40,8 +40,8 @@ export default function Colophon() {
                         This site is built with <Link href="https://nextjs.org/" className="underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">Next.js</Link> with TypeScript and <Link href="https://tailwindcss.com/" className="underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">Tailwind </Link> v4. It&apos;s hosted on <Link href="https://vercel.com" className="underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 transition-colors duration-150">Vercel</Link>. 
                     </p>
 
-                    <div className="mt-6">
-                        <Link href="https://github.com/knlrvr/my-portfolio" className="group inline-flex items-center gap-1 text-xs group w-fit border border-mist-400 dark:border-mist-700 px-2 py-0.5 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-150">
+                    <div className="my-4">
+                        <Link href="https://github.com/knlrvr/my-portfolio" className="group inline-flex items-center gap-1 text-xs group w-fit border border-mist-400 dark:border-mist-700 px-4 py-2 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-150">
                             <span className="text-neutral-700 dark:text-neutral-300">
                                 GitHub Repo
                             </span>

@@ -21,7 +21,21 @@ export default function WorkCard({
 }: WorkCardProps) {
 
   return (
-    <div className="text-sm flex flex-col gap-4 mb-12">
+    <>
+    <div className="py-4 text-sm space-y-1">
+        <div className="flex justify-between items-center">
+            <div className="flex items-center gap-2">
+                <p className="font-medium tracking-tighter">{company}</p>
+                {featured && (
+                    <span className="text-[0.625rem] font-mono uppercase font-bold bg-mist-400/20 text-mist-500 rounded-md px-2 py-1">current</span>
+                )}
+            </div>
+            <p className="text-mist-500 font-mono text-[11px] text-right">{period}</p>
+        </div>
+        <p className="text-neutral-700 dark:text-neutral-300">{role}</p>
+    </div>
+
+    {/* <div className="text-sm flex flex-col gap-4 mb-12">
         <div className="flex items-center gap-2">
             <Image
                 src={img}
@@ -48,6 +62,7 @@ export default function WorkCard({
         <div className="">
             <p className="text-neutral-700 dark:text-neutral-300 text-sm ">{description}</p>
         </div>
-    </div>
+    </div> */}
+    </>
   );
 }

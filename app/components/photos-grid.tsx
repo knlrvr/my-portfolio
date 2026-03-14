@@ -12,7 +12,7 @@ const images = [
 export default function PhotosGrid() {
   return (
     <div className="my-8">
-      <div className="grid grid-cols-1 gap-16">
+      <div className="grid grid-cols-1 gap-8">
         {images.map((image) => (
           <Link key={image.id} href={image.href} className="block">
             <Image
@@ -20,7 +20,7 @@ export default function PhotosGrid() {
               alt={image.alt}
               width={1000}
               height={1000}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover rounded-md"
             />
           </Link>
         ))}
