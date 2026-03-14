@@ -122,15 +122,15 @@ export default async function PhotoPage({
                     <p className="font-bold tracking-tight">{photo.title}</p>
                 </div>
                 <div className="flex justify-between items-center">
-                    <p className="text-neutral-600 dark:text-neutral-400 my-1">{photo.location}</p>
+                    <p className="text-mist-600 dark:text-mist-400 my-1">{photo.location}</p>
                 </div>
                 <div className="">
-                  <p className="border-l-2 border-neutral-600 text-neutral-500 pl-2 text-xs">{photo.date}</p>
+                  <p className="border-l-2 border-mist-400 text-mist-400 dark:border-mist-600 dark:text-mist-600 pl-2 text-xs">{photo.date}</p>
                 </div>
-                <div className="flex mt-4 text-xs text-neutral-500 gap-2">
+                <div className="flex mt-4 text-xs text-mist-600 dark:text-mist-400 gap-2">
                     <p>{photo.taken}</p>
                     <span>|</span>
-                    <p>{photo.specs}</p>
+                    <p className="">{photo.specs}</p>
                 </div>
             </div>
         </Section>

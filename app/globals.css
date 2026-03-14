@@ -24,7 +24,7 @@
   --sh-keyword: #9d0006;
   --sh-comment: #928374;
   ::selection {
-    background-color: oklch(88% 0.011 106.6);
+    background-color: oklch(87.2% 0.007 219.6);
   }
 }
 
@@ -40,7 +40,7 @@
   --sh-keyword: #fb4934;
   --sh-comment: #928374;
   ::selection {
-    background-color: oklch(46.6% 0.025 107.3);
+    background-color: oklch(72.3% 0.014 214.4);
   }
 }
 
