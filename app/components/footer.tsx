@@ -18,6 +18,14 @@ const columns = [
 ];
 
 export default function Footer() {
+
+  const sha = process.env.COMMIT_SHA;
+  const shortSha = sha?.slice(0, 7);
+  const commitUrl =
+    sha && sha !== 'dev'
+      ? `${process.env.REPO_URL}/commit/${sha}`
+      : null;
+
   return (
     <footer className="pt-16 pb-12 max-w-2xl mx-auto">
       <div className="relative h-px mb-12">
@@ -41,9 +49,30 @@ export default function Footer() {
         ))}
       </div>
 
-      <p className="font-mono text-[0.625rem] text-neutral-500 tracking-wider">
-        © 2026 Kane Lariviere
-      </p>
+      <div className="flex items-center gap-2">
+        <p className="font-mono text-[0.625rem] text-mist-500 tracking-wider">
+          © 2026 Kane Lariviere
+        </p>
+        <p className="text-neutral-500 mb-0.5">&bull;</p>
+
+        {sha && (
+          commitUrl ? (
+            <Link
+              href={commitUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[0.625rem] text-mist-500 hover:text-mist-400 tracking-wider transition-colors duration-150"
+            >
+              {shortSha}
+            </Link>
+          ) : (
+            <span className="font-mono text-[0.625rem] text-mist-500 tracking-wider">
+              f00f00
+            </span>
+          )
+        )}
+        
+      </div>
     </footer>
   );
 }
