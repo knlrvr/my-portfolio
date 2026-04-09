@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Work() {
     return (
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-lg mx-auto">
             <PageTop 
                 title="Work"
                 desc="Shipping things that matter."

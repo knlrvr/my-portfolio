@@ -89,7 +89,7 @@ export default async function PhotoPage({
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-lg mx-auto">
         <PageTop 
             title={`${photo.title}`} 
             desc={`${photo.location}`}

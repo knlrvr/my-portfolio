@@ -27,7 +27,7 @@ export default function Footer() {
       : null;
 
   return (
-    <footer className="pt-16 pb-12 max-w-2xl mx-auto">
+    <footer className="pt-16 pb-12 max-w-lg mx-auto">
       <div className="relative h-px mb-12">
         <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-800" />
         <div className="absolute top-0 right-0 w-12 h-px bg-mist-500" />

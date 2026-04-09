@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Contact() {
     return (
-        <div className="max-w-2xl mx-auto mb-12">
+        <div className="max-w-lg mx-auto mb-12">
             <PageTop 
                 title="Contact"
                 desc="How to get in touch with me."

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Photos() {
     return (
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-lg mx-auto">
             <PageTop
                 title="Photos"
                 desc="Some of my favorite photos."

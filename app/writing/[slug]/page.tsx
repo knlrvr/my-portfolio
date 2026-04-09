@@ -135,7 +135,7 @@ export default async function PostPage({params}: {params: Params}) {
     }
 
     return (
-        <section className="pb-6 max-w-2xl mx-auto">
+        <section className="pb-6 max-w-lg mx-auto">
             <script
                 type='application/ld+json'
                 suppressHydrationWarning
