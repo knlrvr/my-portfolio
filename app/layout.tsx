@@ -10,6 +10,7 @@ import Footer from "./components/footer";
 import { Grain } from "./components/effects/grain";
 import { ConsoleAsciiArt } from "./components/console-ascii";
 import { ThemeProvider } from "./components/theme/theme-provider";
+import Edges from "./components/effects/edges";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Grain />
+            <Edges />
             <ConsoleAsciiArt />
 
             <Header />

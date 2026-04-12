@@ -14,6 +14,7 @@
 }
 
 :root {
+  --edge: oklch(97% 0 0);
   --sh-class: #427b58;
   --sh-identifier: #3c3836;
   --sh-sign: #665c54;
@@ -30,6 +31,7 @@
 
 .dark {
   background-color: #111;
+  --edge: #111;
   --sh-class: #8ec07c;
   --sh-identifier: #ebdbb2;
   --sh-sign: #928374;
