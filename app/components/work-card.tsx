@@ -2,7 +2,6 @@ interface WorkCardProps {
   role: string;
   company: string;
   period: string;
-  desc: string;
   featured?: boolean;
 }
 
@@ -11,7 +10,6 @@ export default function WorkCard({
   company,
   period,
   featured,
-  desc,
 }: WorkCardProps) {
 
   return (
@@ -28,7 +26,6 @@ export default function WorkCard({
             <p className="text-mist-500 font-mono text-[11px] text-right">{period}</p>
         </div>
         <p className="text-neutral-700 dark:text-neutral-300">{role}</p>
-        <p>{desc}</p>
     </div>
     </>
   );
