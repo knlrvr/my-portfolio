@@ -7,7 +7,7 @@ interface PageTopProps {
 export default function PageTop({ title, desc, date }: PageTopProps) {
   return (
     <div className="pt-28 pb-14">
-      <h1 className="text-4xl leading-[1.05] tracking-[-0.02em] font-medium">
+      <h1 className="text-5xl leading-[1.05] tracking-[-0.02em] font-light">
         {title}
       </h1>
       <p className="text-[0.9375rem] text-mist-600 dark:text-mist-400 mt-2 leading-relaxed max-w-120">

@@ -22,7 +22,7 @@ export default function About() {
                 <p className="text-sm">
                     <span className="inline-flex tracking-tight font-medium text-mist-600 dark:text-mist-400">{greeting}</span> <br />
                     I&apos;m a software engineer,
-                    artist, and d&d nerd living in North Carolina. Currently working as a QA Engineer, building tools that make teams faster.&nbsp;              
+                    artist, and d&d nerd living in North Carolina. Currently working as a QA Engineer, building tools that help teams ship faster.&nbsp;              
                 </p>
 
                 <Link href="https://github.com/knlrvr" className="group flex items-center gap-1 text-xs group w-fit mt-8 border border-mist-400 dark:border-mist-700 px-4 py-2 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-150">
