@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Reveal } from "./effects/reveal";
 
 const columns = [
   [
@@ -34,43 +35,48 @@ export default function Footer() {
       <div className="grid grid-cols-3 gap-8 mb-12">
         {columns.map((col, i) => (
           <div key={i} className="flex flex-col gap-2.5">
-            {col.map((link) => (
-              <Link
+            {col.map((link, index) => (
+              <Reveal
                 key={link.label}
-                href={link.href}
-                className="text-xs text-neutral-600 dark:text-neutral-400 hover:text-mist-500 font-base no-underline tracking-wide transition-colors duration-150 w-fit"
+                delay={0.08 * (index)}
               >
-                {link.label}
-              </Link>
+                <Link
+                  href={link.href}
+                  className="text-xs text-neutral-600 dark:text-neutral-400 hover:text-mist-500 font-base no-underline tracking-wide transition-colors duration-150 w-fit"
+                >
+                  {link.label}
+                </Link>
+              </Reveal>
             ))}
           </div>
         ))}
       </div>
 
-      <div className="flex items-center gap-2">
-        <p className="font-mono text-[0.625rem] text-mist-500 tracking-wider">
-          © 2026 Kane Lariviere
-        </p>
-        <p className="text-neutral-500 mb-0.5">&bull;</p>
+      <Reveal delay={0.16}>
+        <div className="flex items-center gap-2">
+          <p className="font-mono text-[0.625rem] text-mist-500 tracking-wider">
+            © 2026 Kane Lariviere
+          </p>
+          <p className="text-neutral-500 mb-0.5">&bull;</p>
 
-        {sha && (
-          commitUrl ? (
-            <Link
-              href={commitUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-mono text-[0.625rem] text-mist-500 hover:text-mist-400 tracking-wider transition-colors duration-150"
-            >
-              {shortSha}
-            </Link>
-          ) : (
-            <span className="font-mono text-[0.625rem] text-mist-500 tracking-wider">
-              f00f00
-            </span>
-          )
-        )}
-        
-      </div>
+          {sha && (
+            commitUrl ? (
+              <Link
+                href={commitUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[0.625rem] text-mist-500 hover:text-mist-400 tracking-wider transition-colors duration-150"
+              >
+                {shortSha}
+              </Link>
+            ) : (
+              <span className="font-mono text-[0.625rem] text-mist-500 tracking-wider">
+                f00f00
+              </span>
+            )
+          )}
+        </div>
+      </Reveal>
     </footer>
   );
 }

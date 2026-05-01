@@ -18,7 +18,6 @@ import {
 } from "react-icons/bi"
 
 const items = [
-    {label: 'work', href: '/work'},
     {label: 'writing', href: '/writing'},
 ]
 
@@ -49,7 +48,7 @@ export default function PathHeader() {
                 <nav className="flex justify-between items-center">
                     <ol className="flex flex-wrap items-center" aria-label="Breadcrumb">
                         <li className="flex items-center">
-                            <Link href="/" className="text-mist-500">
+                            <Link href="/" className="">
                                 knlrvr.dev
                             </Link>
                         </li>

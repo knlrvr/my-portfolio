@@ -6,6 +6,7 @@ import getPostMetadata from '../utils/PostMetadata';
 import PostPreview from "../components/post-preview";
 
 import type { Metadata } from 'next';
+import { Reveal } from "../components/effects/reveal";
 
 export const metadata: Metadata = {
   title: 'Kane Lariviere | Writing',
@@ -15,8 +16,10 @@ export const metadata: Metadata = {
 export default function Writing() {
 
     const postMetadata = getPostMetadata().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    const postPreviews = postMetadata.map((post) => (
-      <PostPreview key={post.slug} {...post}/>
+    const postPreviews = postMetadata.map((post, index) => (
+    <Reveal key={post.slug} delay={0.16 * (index + 1)}>
+        <PostPreview {...post} />
+    </Reveal>
     ));
 
     return (

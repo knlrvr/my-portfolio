@@ -1,3 +1,5 @@
+import { Reveal } from "./effects/reveal";
+
 interface WorkCardProps {
   role: string;
   company: string;
@@ -15,8 +17,6 @@ export default function WorkCard({
 }: WorkCardProps) {
 
   return (
-    <>
-
     <div className="py-4 text-sm space-y-1">
         <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
@@ -30,6 +30,5 @@ export default function WorkCard({
         <p className="text-neutral-700 dark:text-neutral-300">{role}</p>
         <p className="text-mist-600 dark:text-mist-400">{desc}</p>
     </div>
-    </>
   );
 }
