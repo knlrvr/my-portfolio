@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LuArrowUpRight } from "react-icons/lu";
 
 const columns = [
   [
@@ -12,8 +13,8 @@ const columns = [
     { label: "colophon", href: "/colophon" },
   ],
   [
-    { label: "github", href: "https://github.com/knlrvr" },
-    { label: "linkedin", href: "https://www.linkedin.com/in/kane-lariviere" },
+    { label: "github", href: "https://github.com/knlrvr"},
+    { label: "linkedin", href: "https://www.linkedin.com/in/kane-lariviere"},
   ],
 ];
 

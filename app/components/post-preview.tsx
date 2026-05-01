@@ -9,8 +9,11 @@ const PostPreview = (props: PostMetadata) => {
         key={props.slug} 
         href={`/writing/${props.slug}`}
         className="group text-sm flex flex-col space-y-1 py-4">
+          {props.tags.map((tag) => (
+            <span key={tag} className="w-fit text-[0.625rem] font-mono uppercase font-bold bg-mist-400/20 text-mist-600 dark:text-mist-400 rounded-md px-2 py-1">{tag}</span>
+          ))}
           <div className="flex items-center justify-between">
-            <p className="font-medium tracking-tighter group-hover:text-mist-400 transition-colors duration-150">{props.title}</p>
+              <p className="font-medium tracking-tighter group-hover:text-mist-400 transition-colors duration-150">{props.title}</p>
             <LuArrowRight className='group-hover:text-mist-500 group-hover:translate-x-1 transition-all duration-150'/>
           </div>
           <div className="flex items-center justify-between text-sm gap-4">
