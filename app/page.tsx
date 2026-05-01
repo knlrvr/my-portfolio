@@ -1,5 +1,6 @@
 import About from "./components/about";
 import Blog from "./components/blog";
+import Contact from "./components/contact";
 import PageTop from "./components/page-top";
 import SectionBreak from "./components/section-break";
 import WorkGrid from "./components/work-grid";
@@ -20,6 +21,9 @@ export default function Home() {
 
       <SectionBreak label="Writing" />
       <Blog />
+
+      <SectionBreak label="Contact" />
+      <Contact />
     </div>
   );
 }

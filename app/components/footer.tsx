@@ -1,15 +1,12 @@
 import Link from "next/link";
-import { LuArrowUpRight } from "react-icons/lu";
 
 const columns = [
   [
     { label: "work", href: "/work" },
     { label: "writing", href: "/writing" },
-    { label: "uses", href: "/uses" },
   ],
   [
-    { label: "photos", href: "/photos" },
-    { label: "contact", href: "/contact" },
+    { label: "uses", href: "/uses" },
     { label: "colophon", href: "/colophon" },
   ],
   [
