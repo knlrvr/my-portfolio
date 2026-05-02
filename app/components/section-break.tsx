@@ -10,8 +10,8 @@ export default function SectionBreak({ label }: SectionBreakProps) {
       <div className="mt-20 mb-6">
         <div className="flex items-center gap-2 text-mist-500">
           {/* <p className=" font-mono mb-0.5">*</p> */}
-          <span className="font-mono text-[0.625rem] font-bold uppercase tracking-wide">
-            [{label}]
+          <span className="font-mono text-[0.625rem] font-light uppercase tracking-wide">
+            / {label}
           </span>
         </div>
       </div>
@@ -25,8 +25,8 @@ export function SectionBreakSmall({ label }: SectionBreakProps) {
       <div className="mt-12 mb-4">
         <div className="flex items-center gap-2 text-mist-500">
           {/* <p className="font-mono mb-0.5">*</p> */}
-          <span className="font-mono text-[0.625rem] font-bold uppercase tracking-wide">
-            [{label}]
+          <span className="font-mono text-[0.625rem] font-light uppercase tracking-wide">
+            / {label}
           </span>
         </div>
       </div>

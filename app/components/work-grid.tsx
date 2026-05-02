@@ -11,7 +11,7 @@ export default function WorkGrid() {
                     company="Rather Outdoors"
                     period="2025 - Present"
                     featured={true}
-                    desc="Building infrastructure & tools that help teams ship faster."
+                    desc="Building infrastructure & tools that help teams trust what they ship."
                 />
             </Reveal>
 

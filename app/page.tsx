@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <div className="max-w-lg mx-auto">
       <PageTop
-        title={`Kane Lariviere`}
-        desc={`Software Engineer`}
+        title={`Hi, I'm Kane`}
+        desc={`Software Engineer • NC, USA`}
       />
 
       <SectionBreak label="About" />
