@@ -9,6 +9,7 @@ export default function WorkGrid() {
                 <WorkCard
                     role="QA Engineer"
                     company="Rather Outdoors"
+                    img="/ro-logo.png"
                     period="2025 - Present"
                     featured={true}
                     desc="Building infrastructure & tools that help teams trust what they ship."

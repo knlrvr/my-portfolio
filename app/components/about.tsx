@@ -29,11 +29,11 @@ export default function About() {
                 </Reveal>
 
                 <Reveal delay={0.24}>
-                    <Link href="https://github.com/knlrvr" className="group flex items-center gap-1 text-xs group w-fit mt-8 border border-mist-400 dark:border-mist-700 px-4 py-2 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-150">
-                        <span className="text-neutral-700 dark:text-neutral-300">
+                    <Link href="https://github.com/knlrvr" className="group flex items-center gap-1 text-xs w-fit mt-8 rounded-md px-4 py-2 bg-mist-600 dark:bg-mist-400 hover:bg-mist-600/80 dark:hover:bg-mist-400/80 transition-colors duration-150">
+                        <span className="text-mist-100 dark:text-mist-900">
                             Always Shipping
                         </span>
-                        <LuArrowUpRight className="mt-0.5 text-mist-400 dark:text-mist-700 group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150" />
+                        <LuArrowUpRight className="mt-0.5 text-mist-100 dark:text-mist-900 group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150" />
                     </Link>  
                 </Reveal>
             </div>

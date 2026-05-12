@@ -1,8 +1,10 @@
+import Image from "next/image";
 import { Reveal } from "./effects/reveal";
 
 interface WorkCardProps {
   role: string;
   company: string;
+  img?: string;
   period: string;
   featured?: boolean;
   desc: string;
@@ -11,6 +13,7 @@ interface WorkCardProps {
 export default function WorkCard({
   role,
   company,
+  img,
   period,
   featured,
   desc
@@ -20,6 +23,15 @@ export default function WorkCard({
     <div className="py-4 text-sm space-y-1">
         <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
+                {img && (
+                <Image
+                  src={img}
+                  alt="logo"
+                  width={250}
+                  height={250}
+                  className="h-3 w-fit invert dark:filter-none -mr-3"
+                />
+                )}
                 <p className="font-medium tracking-tighter">{company}</p>
                 {featured && (
                     <span className="text-[0.625rem] font-mono uppercase font-bold bg-mist-400/20 text-mist-600 dark:text-mist-400 rounded-md px-2 py-1">current</span>
