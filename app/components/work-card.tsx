@@ -22,19 +22,19 @@ export default function WorkCard({
   return (
     <div className="py-4 text-sm space-y-1">
         <div className="flex justify-between items-center">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1">
                 {img && (
                 <Image
                   src={img}
                   alt="logo"
                   width={250}
                   height={250}
-                  className="h-3 w-fit invert dark:filter-none -mr-3"
+                  className="w-4 h-fit invert dark:filter-none"
                 />
                 )}
                 <p className="font-medium tracking-tighter">{company}</p>
                 {featured && (
-                    <span className="text-[0.625rem] font-mono uppercase font-bold bg-mist-400/20 text-mist-600 dark:text-mist-400 rounded-md px-2 py-1">current</span>
+                    <span className="ml-2 text-[0.625rem] font-mono uppercase font-bold bg-mist-400/20 text-mist-600 dark:text-mist-400 rounded-md px-2 py-1">current</span>
                 )}
             </div>
             <p className="text-mist-500 font-mono text-[11px] text-right">{period}</p>
