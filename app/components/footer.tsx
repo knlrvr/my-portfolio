@@ -3,16 +3,16 @@ import { Reveal } from "./effects/reveal";
 
 const columns = [
   [
-    { label: "work", href: "/work" },
     { label: "writing", href: "/writing" },
-  ],
-  [
     { label: "uses", href: "/uses" },
-    { label: "colophon", href: "/colophon" },
   ],
   [
+    { label: "colophon", href: "/colophon" },
     { label: "github", href: "https://github.com/knlrvr"},
+  ],
+  [
     { label: "linkedin", href: "https://www.linkedin.com/in/kane-lariviere"},
+    { label: "twitch", href: "https://twitch.tv/knlrvr"}
   ],
 ];
 
