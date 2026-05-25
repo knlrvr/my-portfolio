@@ -17,6 +17,7 @@ import PageTop from "@/app/components/page-top";
 import Sticker from "@/app/components/blog/sticker";
 import readingTime from "reading-time";
 import { Reveal } from "@/app/components/effects/reveal";
+import { LuArrowLeft } from "react-icons/lu";
 
 const getPostContent = (slug: string) => {
     const folder = "posts";
@@ -159,6 +160,13 @@ export default async function PostPage({params}: {params: Params}) {
                         date={`${post.data.date} • ${post.readTime}`}
                     />
                     <Sticker src={`${post.data.sticker}`}/>
+                    <Link 
+                        href="/writing"
+                        className="group absolute top-16 flex items-center gap-2"    
+                    >
+                        <LuArrowLeft size={11} className="group-hover:text-mist-500 group-hover:-translate-x-0.5 transition-all duration-150" />                            
+                        <p className="text-xs text-mist-600 dark:text-mist-400">All Posts</p>
+                    </Link>
                 </div>
                 <Reveal delay={0.24}>
                     <article className="mt-10 dark:text-neutral-100
