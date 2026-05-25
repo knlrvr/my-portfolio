@@ -95,7 +95,7 @@ function BlogLink({ href, children }: BlogLinkProps) {
     if (href.startsWith('/')) {
         return (
             <Link href={href}
-                className='inline-flex items-center underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 dark:decoration-neutral-500 dark:hover:decoration-neutral-300 transition-colors duration-150'>
+                className='inline-flex items-center underline underline-offset-2 decoration-mist-300 hover:decoration-mist-500 dark:decoration-mist-500 dark:hover:decoration-mist-300 transition-colors duration-150'>
                 {children}
             </Link>
         )
@@ -103,7 +103,7 @@ function BlogLink({ href, children }: BlogLinkProps) {
 
     return (
         <Link href={href} target='_blank' rel="noopener noreferrer" 
-            className="underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500 dark:decoration-neutral-500 dark:hover:decoration-neutral-300 transition-colors duration-150">
+            className="underline underline-offset-2 decoration-mist-300 hover:decoration-mist-500 dark:decoration-mist-500 dark:hover:decoration-mist-300 transition-colors duration-150">
             {children} 
             <RxArrowTopRight className="inline-block" />
         </Link>
@@ -113,7 +113,7 @@ function BlogLink({ href, children }: BlogLinkProps) {
 function InlineCode({ children }: { children: React.ReactNode}) {
     return (
         <>
-            <span className="border border-neutral-500 font-mono rounded-sm px-1.5 py-0.5 text-xs">{children}</span>
+            <span className="font-mono text-xs text-mist-700 dark:text-mist-300">`{children}`</span>
         </>
     )
 }

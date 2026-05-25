@@ -6,7 +6,7 @@ import { Reveal } from "./effects/reveal"
 
 export default function Contact() {
     return (
-        <div className="pt-4 divide-y divide-neutral-200 dark:divide-neutral-800 text-sm *:py-4">
+        <div className="divide-y divide-neutral-200 dark:divide-neutral-800 text-sm *:py-4">
             <Reveal delay={0.16}>
                 <Link
                     href="mailto:hello@knlrvr.dev"
