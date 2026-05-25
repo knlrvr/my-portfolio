@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Uses() {
     return (
-        <div className="max-w-lg mx-auto">
+        <div className="max-w-sm mx-auto">
             <PageTop
                 title="Uses"
                 desc="The tools behind my day-to-day."

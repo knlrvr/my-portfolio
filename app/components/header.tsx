@@ -44,7 +44,7 @@ export default function PathHeader() {
     // On home page, just show "knlrvr.dev"
     if (pathSegments.length === 0) {
         return (
-            <header className="text-xs max-w-lg mx-auto">
+            <header className="text-xs max-w-sm mx-auto">
                 <nav className="flex justify-between items-center">
                     <ol className="flex flex-wrap items-center" aria-label="Breadcrumb">
                         <li className="flex items-center">
@@ -73,7 +73,7 @@ export default function PathHeader() {
 
     // For non-home pages, show breadcrumb with icons
     return (
-        <header className="text-xs max-w-lg mx-auto">
+        <header className="text-xs max-w-sm mx-auto">
             <nav className="flex justify-between items-center">
                 <ol className="flex flex-wrap items-center" aria-label="Breadcrumb">
                     {/* Home icon */}

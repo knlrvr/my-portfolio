@@ -22,7 +22,7 @@ export default function About() {
 
                 <Reveal delay={0.16}>
                     <p className="text-sm">
-                        <span className="inline-flex tracking-tighter font-medium">{greeting}</span> <br />
+                        <span className="inline-flex tracking-tighter font-medium mb-1">{greeting}</span> <br />
                         I&apos;m a software engineer,
                         artist, and d&d nerd living in North Carolina. Currently working as a QA Engineer, building tools that help teams trust what they ship.&nbsp;              
                     </p>

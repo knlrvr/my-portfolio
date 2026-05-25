@@ -23,7 +23,7 @@ export default function Writing() {
     ));
 
     return (
-        <div className="max-w-lg mx-auto">
+        <div className="max-w-sm mx-auto">
             <PageTop 
                 title="Writing"
                 desc="Thoughts on tech, tooling, and building things that work."
