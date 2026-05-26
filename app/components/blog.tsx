@@ -30,8 +30,8 @@ export default function Blog() {
     ));
 
     return (
-        <div className="max-w-2xl mx-auto">
-            <div className="divide-y divide-neutral-200 dark:divide-neutral-800">{postPreviews}</div>
+        <div className="max-w-sm mx-auto">
+            <div className="">{postPreviews}</div>
             <AllPostsButton />
         </div>
     )

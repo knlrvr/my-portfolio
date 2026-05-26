@@ -28,7 +28,7 @@ export default function Writing() {
                 title="Writing"
                 desc="Thoughts on tech, tooling, and building things that work."
             />
-            <div className="divide-y divide-neutral-200 dark:divide-neutral-800">
+            <div>
                 {postPreviews}  
             </div>
         </div>
