@@ -20,27 +20,29 @@ export default function WorkCard({
 }: WorkCardProps) {
 
   return (
-    <div className="flex flex-col gap-1">
-      <div className="flex justify-between items-center">
-        <div className="flex items-center gap-1">
-          <Image 
-              src={img}
-              alt={`${company} logo`}
-              width={250} 
-              height={250} 
-              className="w-4 h-fit inline-flex dark:invert"
-          />
-          <p className="font-medium tracking-tighter text-sm">{company}</p>
-          {featured && (
-              <span className="ml-2 text-[0.625rem] font-mono uppercase font-bold bg-mist-400/20 text-mist-600 dark:text-mist-400 rounded-md px-2 py-1">current</span>
-          )}
+    <div className="flex">
+      <div className="flex items-start gap-2 w-full">
+        <Image 
+            src={img}
+            alt={`${company} logo`}
+            width={250} 
+            height={250} 
+            className="w-8 h-fit inline-flex mt-1 dark:invert"
+        />
+        <div className="flex flex-col gap-1 w-full">
+          <div className="flex items-center gap-2">
+            <span className="text-sm tracking-tighter font-medium">{company}</span>
+            {featured && (
+              <span className="ml-2 text-[0.625rem] font-mono uppercase font-bold bg-violet-500/10 text-violet-400 rounded-md px-2 py-1">current</span>
+            )}
+          </div>
+          <div className="flex items-center justify-between text-neutral-700 dark:text-neutral-300">
+            <p className="tracking-tighter font-medium">{role}</p>
+            <p className="text-xs">{period}</p>
+          </div>
+          <p className="text-neutral-500">{desc}</p>
         </div>
-        <p className="text-xs text-mist-500">{period}</p>
       </div>
-      <div className="flex flex-col gap-1 text-sm">
-        <p className="">{role}</p>
-      </div>
-      <p className="text-mist-600 dark:text-mist-400 text-sm">{desc}</p>
     </div>
   );
 }

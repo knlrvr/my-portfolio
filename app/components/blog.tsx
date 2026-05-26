@@ -1,17 +1,18 @@
 import Link from "next/link";
 import getPostMetadata from "../utils/PostMetadata";
 import PostPreview from "./post-preview";
-import { LuArrowUpRight } from "react-icons/lu";
+import { LuArrowUpRight, LuPen, LuPencilLine } from "react-icons/lu";
 import { Reveal } from "./effects/reveal";
+import { Container } from "./container";
 
 function AllPostsButton() {
     return (
         <Reveal delay={0.24}>
-            <Link href="/writing" className="group flex items-center gap-1 text-xs w-fit mt-8 rounded-md px-4 py-2 bg-mist-600 dark:bg-mist-400 hover:bg-mist-600/80 dark:hover:bg-mist-400/80 transition-colors duration-150">
-                <span className="text-mist-100 dark:text-mist-900">
+            <Link href="/writing" className="group flex items-center gap-1 text-xs w-fit mt-8 rounded-md px-4 py-2 bg-orange-400 transition-colors duration-150">
+                <span className="text-[#111]">
                     All Posts
                 </span>
-                <LuArrowUpRight className="mt-0.5 text-mist-100 dark:text-mist-900 group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150" />
+                <LuArrowUpRight className="mt-0.5 text-[#111] group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150" />
             </Link>  
         </Reveal>
 
@@ -31,8 +32,14 @@ export default function Blog() {
 
     return (
         <div className="max-w-sm mx-auto">
-            <div className="">{postPreviews}</div>
-            <AllPostsButton />
+            <Container
+                title="Writing"
+                icon={<LuPencilLine size={20} />}
+                iconColor="text-orange-400"
+            >
+                {postPreviews}
+                <AllPostsButton />
+            </Container>
         </div>
     )
 }

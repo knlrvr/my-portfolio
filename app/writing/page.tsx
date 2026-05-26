@@ -1,5 +1,3 @@
-import PageTop from "../components/page-top";
-
 import React from 'react'
 
 import getPostMetadata from '../utils/PostMetadata';
@@ -7,6 +5,8 @@ import PostPreview from "../components/post-preview";
 
 import type { Metadata } from 'next';
 import { Reveal } from "../components/effects/reveal";
+import { Container, EmptyContainer } from "../components/container";
+import { BiBookAlt } from "react-icons/bi";
 
 export const metadata: Metadata = {
   title: 'Kane Lariviere | Writing',
@@ -23,14 +23,23 @@ export default function Writing() {
     ));
 
     return (
-        <div className="max-w-sm mx-auto">
-            <PageTop 
+        <div className="max-w-sm mx-auto mt-28">
+            {/* <PageTop 
                 title="Writing"
                 desc="Thoughts on tech, tooling, and building things that work."
-            />
-            <div>
+            /> */}
+            <Container
+                title="Writing"
+                icon={<BiBookAlt size={20} />}
+                iconColor="text-orange-400"
+                >
+                <div className="text-neutral-700 dark:text-neutral-300">
+                    Thoughts on tech, tooling, and building things that work.
+                </div>
+            </Container>
+            <EmptyContainer>
                 {postPreviews}  
-            </div>
+            </EmptyContainer>
         </div>
     )
 }
