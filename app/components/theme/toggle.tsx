@@ -52,7 +52,7 @@ export function Toggle() {
             alt="light mode activated"
             width={1000}
             height={1000}
-            className="grayscale bg-white bg-blend-multiply"
+            className="grayscale bg-white rounded-lg bg-blend-multiply"
           />
         </div>
       )}

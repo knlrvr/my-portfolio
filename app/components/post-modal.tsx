@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation"
 import { useEffect, useRef } from "react"
+import { Grain } from "./effects/grain"
 
 interface PostModalProps {
   children: React.ReactNode
@@ -60,14 +61,14 @@ export function PostModal({ children, useBackNavigation = false }: PostModalProp
       ref={dialogRef}
       onClose={handleDialogClose}
       onClick={handleBackdropClick}
-      className="backdrop:bg-black/50 backdrop:backdrop-blur-sm bg-transparent p-0 m-0 max-w-none w-full h-full open:flex items-center justify-center"
+      className="backdrop:bg-black/20 backdrop:backdrop-blur-sm bg-transparent p-0 m-0 max-w-none w-full h-full open:flex items-center justify-center"
     >
-      <article className="hide-scroll bg-neutral-50 dark:bg-[#111] border border-neutral-500/10 rounded-lg w-full max-w-sm max-h-[90vh] overflow-y-auto px-4 pb-12 -pt-8 mx-4 relative shadow-sm">
+      <article className="hide-scroll bg-neutral-50 dark:bg-[#111] border border-neutral-500/10 rounded-lg w-full max-w-sm max-h-[90vh] overflow-y-auto px-8 pt-2 pb-12 mx-4 relative shadow-sm">
         <div className="sticky top-0 z-99 flex justify-end h-fit">
           <button
             onClick={handleClose}
             aria-label="Close"
-            className="cursor-pointer mt-4 shadow-sm border-2 border-mist-500/30 rounded-full p-1 text-mist-500/80 bg-neutral-50 dark:bg-[#111]"
+            className="cursor-pointer mt-2 -mr-4 shadow-sm border-2 border-mist-500/30 rounded-full p-1 text-mist-500/80 bg-neutral-50 dark:bg-[#111]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -85,6 +86,7 @@ export function PostModal({ children, useBackNavigation = false }: PostModalProp
             </svg>
           </button>
         </div>
+        <Grain />
         {children}
       </article>
     </dialog>
