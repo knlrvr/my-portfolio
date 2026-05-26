@@ -1,9 +1,12 @@
+// lib/posts.ts
 import fs from "fs"
+import path from "path"
 import matter from "gray-matter"
 import readingTime from "reading-time"
 
 export const getPostContent = (slug: string) => {
-  const file = `posts/${slug}.mdx`
+  // Absolute path against cwd — relative "posts/..." can resolve differently in prod.
+  const file = path.join(process.cwd(), "posts", `${slug}.mdx`)
   if (!fs.existsSync(file)) return null
 
   const content = fs.readFileSync(file, "utf8")

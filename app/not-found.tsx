@@ -3,7 +3,7 @@ import PageTop from "./components/page-top";
 
 export default function NotFound() { 
     return ( 
-        <div className="max-w-2xl mx-auto"> 
+        <div className="max-w-sm mx-auto"> 
             <PageTop 
                 title="Not Found!" 
                 desc="Oh no. What did you do?" 
