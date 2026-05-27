@@ -8,11 +8,11 @@ import { Container } from "./container";
 function AllPostsButton() {
     return (
         <Reveal delay={0.24}>
-            <Link href="/writing" className="group flex items-center gap-1 text-xs w-fit mt-8 rounded-md px-4 py-2 bg-orange-400 transition-colors duration-150">
-                <span className="text-[#111]">
+            <Link href="/writing" className="group flex shadow items-center gap-1 text-xs w-fit mt-8 rounded-md px-4 py-2 border border-emerald-400 hover:bg-emerald-400 hover:border-emerald-400/20 transition-colors duration-150">
+                <span className="">
                     All Posts
                 </span>
-                <LuArrowUpRight className="mt-0.5 text-[#111] group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150" />
+                <LuArrowUpRight className="mt-0.5 group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150" />
             </Link>  
         </Reveal>
 
@@ -35,7 +35,7 @@ export default function Blog() {
             <Container
                 title="Writing"
                 icon={<LuPencilLine size={20} />}
-                iconColor="text-orange-400"
+                iconColor="text-emerald-400"
             >
                 {postPreviews}
                 <AllPostsButton />

@@ -68,7 +68,7 @@ export function PostModal({ children, useBackNavigation = false }: PostModalProp
           <button
             onClick={handleClose}
             aria-label="Close"
-            className="cursor-pointer mt-2 -mr-4 shadow-sm border-2 border-mist-500/30 rounded-full p-1 text-mist-500/80 bg-neutral-50 dark:bg-[#111]"
+            className="cursor-pointer mt-2 -mr-4 shadow-sm border-2 border-neutral-500/30 rounded-full p-1 text-neutral-500/80 bg-neutral-50 dark:bg-[#111]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

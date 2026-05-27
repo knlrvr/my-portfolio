@@ -14,11 +14,11 @@ export function Container({
     return (
         <Reveal delay={0.16}>
             <div className="
-                max-w-sm mx-auto rounded-lg bg-neutral-200/5 dark:bg-neutral-700/5 border border-b- border-r-2 border-neutral-500/10
+                max-w-sm mx-auto rounded-lg bg-neutral-200/5 dark:bg-neutral-700/5 border border-b-2 border-r-2 border-neutral-500/10
                 p-8 my-8 shadow-sm
                 flex flex-col gap-4
             ">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-5">
                     <div className={`w-fit ${iconColor} `}>
                         {icon}
                     </div>
@@ -30,6 +30,39 @@ export function Container({
                 </div>
             </div>
         </Reveal>
+    )
+}
+
+export function LgIconContainer({
+    children,
+    title,
+    icon,
+    iconColor,
+}:{
+    children: React.ReactNode;
+    title: string;
+    icon: React.ReactNode;
+    iconColor: string;
+}) {
+    return (
+        <Reveal delay={0.16}>
+            <div className="
+                max-w-sm mx-auto rounded-lg bg-neutral-200/5 dark:bg-neutral-700/5 border border-b-2 border-r-2 border-neutral-500/10
+                p-8 my-8 shadow-sm
+                flex flex-col gap-4
+            ">
+                <div className="flex items-center gap-4">
+                    <div className={`w-fit ${iconColor} `}>
+                        {icon}
+                    </div>
+                    <p className="text-3xl tracking-tighter font-medium text-neutral-700 dark:text-neutral-300">{title}</p>
+                </div>
+
+                <div className="text-sm pt-4">
+                    {children}
+                </div>
+            </div>
+        </Reveal>     
     )
 }
 
@@ -68,7 +101,7 @@ export function EmptyContainer({
         <Reveal delay={0.16}>
             <div className="
                 max-w-sm mx-auto rounded-lg bg-neutral-200/5 dark:bg-neutral-700/5 border border-b-2 border-r-2 border-neutral-500/10
-                p-8 my-8 shadow-sm
+                p-8 mt-8 mb-2 shadow-sm
                 flex flex-col gap-4
             ">
                 <div className="text-sm pt-4">

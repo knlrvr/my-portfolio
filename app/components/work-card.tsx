@@ -33,7 +33,7 @@ export default function WorkCard({
           <div className="flex items-center gap-2">
             <span className="text-sm tracking-tighter font-medium">{company}</span>
             {featured && (
-              <span className="ml-2 text-[0.625rem] font-mono uppercase font-bold bg-violet-500/10 text-violet-400 rounded-md px-2 py-1">current</span>
+              <span className="ml-2 text-[0.625rem] font-mono uppercase font-bold bg-red-400/10 text-red-400 rounded-md px-2 py-1">current</span>
             )}
           </div>
           <div className="flex items-center justify-between text-neutral-700 dark:text-neutral-300">

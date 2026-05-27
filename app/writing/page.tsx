@@ -24,14 +24,10 @@ export default function Writing() {
 
     return (
         <div className="max-w-sm mx-auto mt-28">
-            {/* <PageTop 
-                title="Writing"
-                desc="Thoughts on tech, tooling, and building things that work."
-            /> */}
             <Container
                 title="Writing"
                 icon={<BiBookAlt size={20} />}
-                iconColor="text-orange-400"
+                iconColor="text-emerald-400"
                 >
                 <div className="text-neutral-700 dark:text-neutral-300">
                     Thoughts on tech, tooling, and building things that work.

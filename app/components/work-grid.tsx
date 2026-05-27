@@ -10,7 +10,7 @@ export default function WorkGrid() {
             <Container
                 title="Work"
                 icon={<LuBriefcase size={20} />}
-                iconColor="text-violet-500"
+                iconColor="text-red-400"
             >
                 <div className="divide-y divide-neutral-200 dark:divide-neutral-800">
                     <Reveal delay={0.24} className="pb-8">

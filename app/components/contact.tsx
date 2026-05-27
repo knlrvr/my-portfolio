@@ -10,7 +10,7 @@ export default function Contact() {
         <Container
             title="Get In Touch"
             icon={<LuMessageSquare size={20} />}
-            iconColor="text-emerald-500"
+            iconColor="text-orange-400"
         >
             <div className="divide-y divide-neutral-200 dark:divide-neutral-800 text-sm *:py-4">
                 <Reveal delay={0.16}>

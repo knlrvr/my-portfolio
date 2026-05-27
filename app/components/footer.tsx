@@ -30,7 +30,7 @@ export default function Footer() {
     <EmptyContainer>
       <footer className="max-w-sm mx-auto">
 
-        <div className="grid grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-3 gap-8">
           {columns.map((col, i) => (
             <div key={i} className="flex flex-col gap-2.5">
               {col.map((link, index) => (
@@ -51,6 +51,12 @@ export default function Footer() {
         </div>
 
         <Reveal delay={0.16}>
+
+          <div className="relative h-px my-8">
+            <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-800" />
+            <div className="absolute top-0 right-0 w-12 h-px bg-neutral-500" />
+          </div>
+          
           <div className="flex items-center gap-2">
             <p className="font-mono text-[0.625rem] text-neutral-500 tracking-wider">
               © 2026 Kane Lariviere
