@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { BsEnvelope } from "react-icons/bs"
 import { FaGithub, FaLinkedin, FaTwitch } from "react-icons/fa"
-import { LuArrowUpRight, LuMessageSquare } from "react-icons/lu"
+import { LuArrowUpRight, LuHandshake, LuMessageSquare } from "react-icons/lu"
 import { Reveal } from "./effects/reveal"
 import { Container } from "./container"
 
@@ -9,7 +9,7 @@ export default function Contact() {
     return (
         <Container
             title="Get In Touch"
-            icon={<LuMessageSquare size={20} />}
+            icon={<LuHandshake size={20} />}
             iconColor="text-orange-400"
         >
             <div className="divide-y divide-neutral-200 dark:divide-neutral-800 text-sm *:py-4">

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "./effects/reveal";
-import { Container, EmptyContainer } from "./container";
+import { EmptyContainer } from "./container";
 
 const columns = [
   [

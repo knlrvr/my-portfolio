@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Reveal } from "./effects/reveal";
 import WorkCard from "./work-card";
 import { Container } from "./container";

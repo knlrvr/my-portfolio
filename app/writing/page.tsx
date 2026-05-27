@@ -5,7 +5,7 @@ import PostPreview from "../components/post-preview";
 
 import type { Metadata } from 'next';
 import { Reveal } from "../components/effects/reveal";
-import { Container, EmptyContainer, LgIconContainer } from "../components/container";
+import { EmptyContainer, LgIconContainer } from "../components/container";
 import { BiBookAlt } from "react-icons/bi";
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Container, LgIconContainer, NoIconContainer } from "../components/container";
+import { LgIconContainer, NoIconContainer } from "../components/container";
 import { BiCoffeeTogo } from "react-icons/bi";
 
 export const metadata: Metadata = {

@@ -1,7 +1,5 @@
-// components/post-content.tsx
 import { MDXRemote } from "next-mdx-remote/rsc"
 import Link from "next/link"
-import { RxArrowTopRight } from "react-icons/rx"
 import { LuArrowLeft } from "react-icons/lu"
 
 import { Code } from "@/app/components/blog/code"

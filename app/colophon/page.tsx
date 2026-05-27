@@ -1,10 +1,7 @@
 import Link from "next/link";
-import PageTop from "../components/page-top";
 import { Metadata } from "next";
-import { SectionBreakSmall } from "../components/section-break";
 import { LuArrowUpRight } from "react-icons/lu";
-import { Reveal } from "../components/effects/reveal";
-import { Container, LgIconContainer, NoIconContainer } from "../components/container";
+import { LgIconContainer, NoIconContainer } from "../components/container";
 import { BiPen } from "react-icons/bi";
 
 export const metadata: Metadata = {

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import getPostMetadata from "../utils/PostMetadata";
 import PostPreview from "./post-preview";
-import { LuArrowUpRight, LuPen, LuPencilLine } from "react-icons/lu";
+import { LuArrowUpRight, LuPencilLine } from "react-icons/lu";
 import { Reveal } from "./effects/reveal";
 import { Container } from "./container";
 

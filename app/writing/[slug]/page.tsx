@@ -1,4 +1,3 @@
-// app/writing/[slug]/page.tsx
 import { notFound } from "next/navigation"
 import getPostMetadata from "@/app/utils/PostMetadata"
 
