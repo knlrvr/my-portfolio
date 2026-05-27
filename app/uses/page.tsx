@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Container, NoIconContainer } from "../components/container";
+import { Container, LgIconContainer, NoIconContainer } from "../components/container";
 import { BiCoffeeTogo } from "react-icons/bi";
 
 export const metadata: Metadata = {
@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 export default function Uses() {
     return (
         <div className="max-w-sm mx-auto mt-28">
-            <Container
+            <LgIconContainer
                 title="Uses"
-                icon={<BiCoffeeTogo size={20} />}
+                icon={<BiCoffeeTogo size={28} />}
                 iconColor="text-taupe-500"
                 >
                 <div className="text-neutral-700 dark:text-neutral-300">
                     The tools behind my day-to-day.
                 </div>
-            </Container>
+            </LgIconContainer>
 
             <div className="text-sm">
 

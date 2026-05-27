@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { SectionBreakSmall } from "../components/section-break";
 import { LuArrowUpRight } from "react-icons/lu";
 import { Reveal } from "../components/effects/reveal";
-import { Container, NoIconContainer } from "../components/container";
+import { Container, LgIconContainer, NoIconContainer } from "../components/container";
 import { BiPen } from "react-icons/bi";
 
 export const metadata: Metadata = {
@@ -15,15 +15,15 @@ export const metadata: Metadata = {
 export default function Colophon() {
     return (
         <div className="max-w-sm mx-auto mt-28">
-            <Container
+            <LgIconContainer
                 title="Colophon"
-                icon={<BiPen size={20} />}
+                icon={<BiPen size={28} />}
                 iconColor="text-mist-500"
             >
                 <div className="text-neutral-700 dark:text-neutral-300">
                     How this site was built & the decisions behind it.
                 </div>
-            </Container>
+            </LgIconContainer>
 
 
             <NoIconContainer

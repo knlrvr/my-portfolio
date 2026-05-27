@@ -29,7 +29,7 @@ export default function WorkGrid() {
                             role="Software Engineer + Product"
                             company="eraWorks Studio"
                             img="/era.png"
-                            period="2022 - 2025"
+                            period="2022 - 25"
                             featured={false}
                             desc="Partnered with a range of small to medium businesses on product direction & 0-to-1 development."
                         />

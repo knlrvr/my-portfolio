@@ -10,7 +10,7 @@ export default function PageTop({ title, desc, date }: PageTopProps) {
   return (
     <div className="pt-12 pb-16">
       <Reveal>
-        <h1 className="text-5xl leading-[1.05] tracking-[-0.02em] font-light">
+        <h1 className="text-3xl tracking-tighter font-medium text-neutral-700 dark:text-neutral-300">
           {title}
         </h1>
       </Reveal>

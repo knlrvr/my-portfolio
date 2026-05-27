@@ -5,7 +5,7 @@ import PostPreview from "../components/post-preview";
 
 import type { Metadata } from 'next';
 import { Reveal } from "../components/effects/reveal";
-import { Container, EmptyContainer } from "../components/container";
+import { Container, EmptyContainer, LgIconContainer } from "../components/container";
 import { BiBookAlt } from "react-icons/bi";
 
 export const metadata: Metadata = {
@@ -24,15 +24,15 @@ export default function Writing() {
 
     return (
         <div className="max-w-sm mx-auto mt-28">
-            <Container
+            <LgIconContainer
                 title="Writing"
-                icon={<BiBookAlt size={20} />}
+                icon={<BiBookAlt size={28} />}
                 iconColor="text-emerald-400"
                 >
                 <div className="text-neutral-700 dark:text-neutral-300">
                     Thoughts on tech, tooling, and building things that work.
                 </div>
-            </Container>
+            </LgIconContainer>
             <EmptyContainer>
                 {postPreviews}  
             </EmptyContainer>
