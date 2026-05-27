@@ -8,6 +8,7 @@ import WorkGrid from "./components/work-grid";
 export default function Home() {
   return (
     <div className="max-w-sm mx-auto">
+      
       <PageTop
         title={`Hi, I'm Kane`}
         desc={`Software Engineer • NC, USA`}

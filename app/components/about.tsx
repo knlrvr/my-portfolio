@@ -21,8 +21,8 @@ export default function About() {
             <div className="flex flex-col gap-4 pb-4">
 
                 <Reveal delay={0.16}>
-                    <p className="text-sm">
-                        <span className="inline-flex tracking-tighter font-medium mb-1">{greeting}</span> <br />
+                    <p className="text-sm text-mist-600 dark:text-mist-400">
+                        <span className="inline-flex tracking-tighter font-medium mb-1 text-[#111] dark:text-neutral-100">{greeting}</span> <br />
                         I&apos;m a software engineer,
                         artist, and d&d nerd living in North Carolina. Currently working as a QA Engineer, building tools that help teams trust what they ship.&nbsp;              
                     </p>
