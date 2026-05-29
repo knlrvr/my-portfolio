@@ -8,7 +8,7 @@ const PostPreview = (props: PostMetadata) => {
       <Link 
         key={props.slug} 
         href={`/writing/${props.slug}`}
-        className="group text-sm flex flex-col space-y-1 border border-neutral-200 dark:border-neutral-800 rounded-md p-4 my-4 hover:bg-mist-500/10 dark:hover:bg-mist-900/50 hover:border-mist-500/10 dark:hover:border-mist-900/50 transition-colors duration-150">
+        className="group text-sm flex flex-col space-y-1 border border-mist-200 dark:border-mist-800 rounded-md p-4 my-4 hover:bg-mist-500/5 dark:hover:bg-mist-500/5 hover:border-mist-500/5 dark:hover:border-mist-900/50 transition-colors duration-150">
           <div className="flex flex-col gap-1">
             <p className='text-[11px] text-mist-500'>{props.prevDate} &nbsp;&bull;&nbsp; {props.readTime}</p>
             <div className="flex justify-between items-center">
