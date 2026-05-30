@@ -19,7 +19,7 @@ export default function Uses() {
             <div className="text-sm">
 
                 <div>
-                    <SectionBreakSmall label="office" />
+                    <SectionBreakSmall num="01" label="office" />
                     <Reveal delay={0.16}>
                         <ul className="">
                             <li>M4 Macbook Air</li>
@@ -32,7 +32,7 @@ export default function Uses() {
                 </div>
 
                 <div>
-                    <SectionBreakSmall label="coding" />
+                    <SectionBreakSmall num="02" label="coding" />
                     <Reveal delay={0.16}>
                         <ul className="">
                             <li><strong>Editor</strong>: VSCode & Neovim</li>
@@ -42,7 +42,7 @@ export default function Uses() {
                 </div>
 
                 <div>
-                    <SectionBreakSmall label="productivity" />
+                    <SectionBreakSmall num="03" label="productivity" />
                     <Reveal delay={0.16}>
                         <ul className="">
                             <li>Raycast</li>
@@ -53,7 +53,7 @@ export default function Uses() {
                 </div>
 
                 <div>
-                    <SectionBreakSmall label="gaming" />
+                    <SectionBreakSmall num="04" label="gaming" />
                     <Reveal delay={0.16}>
                         <ul className="">
                             <li>Windows 10</li>
@@ -69,7 +69,7 @@ export default function Uses() {
                 </div>
 
                 <div>
-                    <SectionBreakSmall label="audio / video" />
+                    <SectionBreakSmall num="05" label="audio / video" />
                     <Reveal delay={0.16}>
                         <ul className="">
                             <li>PreSonus Eris 3.5 Monitors</li>
@@ -85,7 +85,7 @@ export default function Uses() {
                 </div>
 
                 <div>
-                    <SectionBreakSmall label="music" />
+                    <SectionBreakSmall num="06" label="music" />
                     <Reveal delay={0.16}>
                         <ul className="">
                             <li>Gibson Les Paul</li>
