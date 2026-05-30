@@ -14,16 +14,16 @@ export default function Home() {
         desc={`Software Engineer • NC, USA`}
       />
 
-      <SectionBreak label="about" />
+      <SectionBreak num="01" label="about" />
       <About />
 
-      <SectionBreak label="work" />
+      <SectionBreak num="02" label="work" />
       <WorkGrid />
 
-      <SectionBreak label="writing" />
+      <SectionBreak num="03" label="writing" />
       <Blog />
 
-      <SectionBreak label="get in touch" />
+      <SectionBreak num="04" label="get in touch" />
       <Contact />
     </div>
   );
