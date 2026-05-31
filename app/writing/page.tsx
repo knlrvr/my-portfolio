@@ -45,7 +45,7 @@ export default function WritingPage() {
                 flex flex-col py-8 px-2
                 hover:bg-[#F2F0E9] dark:hover:bg-[#F2F0E9]/5 transition-colors duration-150
                 group
-                ${i < posts.length - 1 ? 'border-b border-neutral-200 dark:border-neutral-800' : ''}
+                ${i < posts.length - 1 ? 'border-b border-[#F2F0E9] dark:border-[#F2F0E9]/5' : ''}
               `}
             >
               <div className="flex items-center justify-between">
@@ -53,7 +53,7 @@ export default function WritingPage() {
                   <p className="text-[11px] text-neutral-400 dark:text-neutral-600">
                     {post.prevDate}&nbsp;&bull;&nbsp;{post.readTime}
                   </p>
-                  <span className="text-sm font-medium tracking-tighter">
+                  <span className="text-sm font-medium tracking-tighter group-hover:text-orange transition-colors duration-150">
                     {post.title}
                   </span>
                   {post.description && (

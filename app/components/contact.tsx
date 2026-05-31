@@ -8,12 +8,12 @@ import SectionStrip from "./section-strip"
 export default function Contact() {
     return (
         <>
-        <SectionStrip label="Contact" number="004" />
-        <div id="contact" className="divide-y divide-neutral-200 dark:divide-neutral-800 text-sm *:py-4 pt-8">
+        <SectionStrip label="contact" number="04" />
+        <div id="contact" className="divide-y divide-[#F2F0E9] dark:divide-[#F2F0E9]/5 text-sm">
             <Reveal delay={0.16}>
                 <Link
                     href="mailto:hello@knlrvr.dev"
-                    className="group flex justify-between"
+                    className="group flex justify-between py-6 px-2 hover:bg-[#F2F0E9] dark:hover:bg-[#F2F0E9]/5 transition-colors duration-150"
                     target="_blank"
                 >
                     <div className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400">
@@ -30,7 +30,7 @@ export default function Contact() {
             <Reveal delay={0.24}>
                 <Link
                     href="https://www.linkedin.com/in/kane-lariviere"
-                    className="group flex justify-between"
+                    className="group flex justify-between py-6 px-2 hover:bg-[#F2F0E9] dark:hover:bg-[#F2F0E9]/5 transition-colors duration-150"
                     target="_blank"    
                 >
                     <div className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400">
@@ -47,7 +47,7 @@ export default function Contact() {
             <Reveal delay={0.32}>
                 <Link
                     href="https://www.github.com/knlrvr"
-                    className="group flex justify-between"
+                    className="group flex justify-between py-6 px-2 hover:bg-[#F2F0E9] dark:hover:bg-[#F2F0E9]/5 transition-colors duration-150"
                     target="_blank"    
                 >
                     <div className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400">
@@ -64,7 +64,7 @@ export default function Contact() {
             <Reveal delay={0.40}>
                 <Link
                     href="https://www.twitch.tv/knlrvr"
-                    className="group flex justify-between"
+                    className="group flex justify-between py-6 px-2 hover:bg-[#F2F0E9] dark:hover:bg-[#F2F0E9]/5 transition-colors duration-150"
                     target="_blank"    
                 >
                     <div className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400">

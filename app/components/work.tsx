@@ -36,7 +36,7 @@ const entries: WorkEntry[] = [
 export default function Work() {
   return (
     <section id="work">
-      <SectionStrip label="Experience" number="002" />
+      <SectionStrip label="experience" number="02" />
 
       {entries.map((entry, i) => (
         <Reveal key={entry.index} delay={0.16 * (i + 1)}>
@@ -44,7 +44,7 @@ export default function Work() {
             className={`
               flex flex-col gap-2
               py-8
-              ${i < entries.length - 1 ? 'border-b border-neutral-200 dark:border-neutral-800' : ''}
+              ${i < entries.length - 1 ? 'border-b border-[#F2F0E9] dark:border-[#F2F0E9]/5' : ''}
             `}
           >
             <div className="flex flex-col gap-2">

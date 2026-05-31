@@ -44,7 +44,7 @@ export default function Hero() {
           <Reveal delay={0.24}>
             <Link 
                   href="https://github.com/knlrvr"
-                  className="group flex items-center w-fit mt-8 text-xs"    
+                  className="group flex gap-px items-center w-fit mt-8 text-xs"    
               >
                   <span className="px-4 py-2 rounded-full border border-orange group-hover:bg-orange group-hover:text-bg transition-colors duration-150">
                       Always Shipping
