@@ -1,7 +1,6 @@
 import { Metadata } from "next";
-import PageTop from "../components/page-top";
-import { SectionBreakSmall } from "../components/section-break";
 import { Reveal } from "../components/effects/reveal";
+import { SectionStripSm } from "../components/section-strip";
 
 export const metadata: Metadata = {
     title: 'Kane Lariviere | Uses',
@@ -11,17 +10,35 @@ export const metadata: Metadata = {
 export default function Uses() {
     return (
         <div className="max-w-sm mx-auto">
-            <PageTop
-                title="Uses"
-                desc="The tools behind my day-to-day."
-            />
+            <section
+                id="hero"
+                className="pt-32"
+            >
+                <div className="flex flex-col gap-10">
+                    <Reveal delay={0.08}>
+                        <h1 className="text-[clamp(52px,8vw,80px)] font-light leading-[0.98] tracking-[-0.03em]">
+                            <span className="bg-orange text-white not-italic px-2 ml-1">
+                                Uses.
+                            </span>
+                        </h1>
+                    </Reveal>
+
+                    <div className="pb-1.5">
+                        <Reveal delay={0.16}>
+                            <p className="text-[14px] leading-[1.75] text-neutral-600 dark:text-neutral-400 mb-8">
+                                The tools behind my day-to-day.
+                            </p>
+                        </Reveal>
+                    </div>
+                </div>
+            </section>
 
             <div className="text-sm">
 
                 <div>
-                    <SectionBreakSmall num="01" label="office" />
                     <Reveal delay={0.16}>
-                        <ul className="">
+                        <SectionStripSm label="office" number="001" />
+                        <ul className="text-neutral-600 dark:text-neutral-400">
                             <li>M4 Macbook Air</li>
                             <li>27&quot; Samsung Curved Monitor</li>
                             <li>24&quot; Dell Monitor</li>
@@ -32,9 +49,9 @@ export default function Uses() {
                 </div>
 
                 <div>
-                    <SectionBreakSmall num="02" label="coding" />
                     <Reveal delay={0.16}>
-                        <ul className="">
+                        <SectionStripSm label="coding" number="002" />
+                        <ul className="text-neutral-600 dark:text-neutral-400">
                             <li><strong>Editor</strong>: VSCode & Neovim</li>
                             <li><strong>Terminal</strong>: Ghostty with tmux</li>
                         </ul>
@@ -42,9 +59,9 @@ export default function Uses() {
                 </div>
 
                 <div>
-                    <SectionBreakSmall num="03" label="productivity" />
                     <Reveal delay={0.16}>
-                        <ul className="">
+                        <SectionStripSm label="productivity" number="003" />
+                        <ul className="text-neutral-600 dark:text-neutral-400">
                             <li>Raycast</li>
                             <li>Obsidian</li>
                             <li>Notion <em>(sometimes)</em></li>
@@ -53,9 +70,9 @@ export default function Uses() {
                 </div>
 
                 <div>
-                    <SectionBreakSmall num="04" label="gaming" />
                     <Reveal delay={0.16}>
-                        <ul className="">
+                        <SectionStripSm label="gaming" number="004" />
+                        <ul className="text-neutral-600 dark:text-neutral-400">
                             <li>Windows 10</li>
                             <li>Intel Core i5 9400F</li>
                             <li>MSI MAG B365M MORTAR</li>
@@ -69,9 +86,9 @@ export default function Uses() {
                 </div>
 
                 <div>
-                    <SectionBreakSmall num="05" label="audio / video" />
                     <Reveal delay={0.16}>
-                        <ul className="">
+                        <SectionStripSm label="audio / video" number="005" />
+                        <ul className="text-neutral-600 dark:text-neutral-400">
                             <li>PreSonus Eris 3.5 Monitors</li>
                             <li>Scarlett 4i4 Interface</li>
                             <li>Mackie HM-4 Headphone Amplifier</li>
@@ -85,9 +102,9 @@ export default function Uses() {
                 </div>
 
                 <div>
-                    <SectionBreakSmall num="06" label="music" />
                     <Reveal delay={0.16}>
-                        <ul className="">
+                        <SectionStripSm label="music" number="006" />
+                        <ul className="text-neutral-600 dark:text-neutral-400">
                             <li>Gibson Les Paul</li>
                             <li>Orange Crush Pro 120 Amp Head + Orange FS2</li>
                             <li>Peavey 5150 4 x 12 Cabinet</li>

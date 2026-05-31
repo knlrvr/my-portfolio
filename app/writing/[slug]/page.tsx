@@ -1,4 +1,3 @@
-// app/writing/[slug]/page.tsx
 import { notFound } from "next/navigation"
 import getPostMetadata from "@/app/utils/PostMetadata"
 
@@ -41,7 +40,7 @@ export default async function PostPage({ params }: { params: Params }) {
 
   return (
     <section className="pb-6 max-w-sm mx-auto">
-      <PostContent post={post} variant="full" />
+      <PostContent post={post} />
     </section>
   )
 }

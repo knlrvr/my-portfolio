@@ -28,7 +28,7 @@ export default function Footer() {
 
   return (
     <footer className="pt-16 pb-12 max-w-sm mx-auto">
-      <SectionStrip label="links" number="005" />
+      <SectionStrip label="links" number="∞" />
 
       <div className="grid grid-cols-3 gap-8 mb-12 pt-8">
         {columns.map((col, i) => (
