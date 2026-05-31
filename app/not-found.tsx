@@ -18,7 +18,7 @@ export default function NotFound() {
                     <div className="pb-1.5">
                     <Reveal delay={0.16}>
                         <p className="text-[14px] leading-[1.75] text-neutral-600 dark:text-neutral-400 mb-8">
-                            Oh no! It looks like this page doesn't exist!
+                            Oh no! It looks like this page doesn&apos;t exist!
                         </p>
                     </Reveal>
                     </div>
