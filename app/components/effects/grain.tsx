@@ -50,7 +50,7 @@ export const Grain = () => {
     <div className="pointer-events-none fixed inset-0 h-full w-full overflow-hidden z-[9999]">
       <div
         ref={grainRef}
-        className="absolute inset-[-200%] h-[400%] w-[400%] bg-[url('/framernoise.png')] bg-[length:256px] bg-left-top opacity-[3%] dark:opacity-[2%]"
+        className="absolute inset-[-200%] h-[400%] w-[400%] bg-[url('/framernoise.png')] bg-size-[256px] bg-top-left opacity-3 dark:opacity-3"
       />
     </div>
   );
