@@ -57,7 +57,7 @@ export default function PathHeader() {
                     <ol className="flex items-center gap-4">
                         {items.map((item) => (
                             <li key={item.href} className="">
-                                <Link href={item.href} className="hover:underline underline-offset-2">
+                                <Link href={item.href} className="hover:text-orange transition-colors duraiton-150">
                                     {item.label}
                                 </Link>
                             </li>
@@ -78,10 +78,10 @@ export default function PathHeader() {
                 <ol className="flex flex-wrap items-center" aria-label="Breadcrumb">
                     {/* Home icon */}
                     <li className="flex items-center">
-                        <Link href="/" className="text-mist-500">
+                        <Link href="/" className="text-neutral-500">
                             <BiHome />
                         </Link>
-                        <span className="mx-1"><BiChevronRight className="text-mist-500"/></span>
+                        <span className="mx-1"><BiChevronRight className="text-neutral-500"/></span>
                     </li>
                     
                     {pathSegments.map((segment, index) => {
@@ -97,7 +97,7 @@ export default function PathHeader() {
                             <li key={index} className="flex items-center">
                                 <Link
                                     href={href}
-                                    className={`flex items-center gap-1 ${!isLastSegment ? 'text-mist-500' : ''}`}
+                                    className={`flex items-center gap-1 ${!isLastSegment ? 'text-neutral-500' : ''}`}
                                 >
                                     {displayIcon}
                                     {isLastSegment && segment}
@@ -111,7 +111,7 @@ export default function PathHeader() {
                 <ol className="flex items-center gap-4">
                     {items.map((item) => (
                         <li key={item.href} className="">
-                            <Link href={item.href} className="hover:underline underline-offset-2">
+                            <Link href={item.href} className="hover:text-orange">
                                 {item.label}
                             </Link>
                         </li>

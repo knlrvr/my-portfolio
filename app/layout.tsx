@@ -4,7 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-import Header from "./components/header";
+import PathHeader from "./components/header";
 import Footer from "./components/footer";
 
 import { Grain } from "./components/effects/grain";
@@ -30,10 +30,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  modal,
 }: Readonly<{
   children: React.ReactNode;
-  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -50,9 +48,8 @@ export default function RootLayout({
             <Edges />
             <ConsoleAsciiArt />
 
-            <Header />
+            <PathHeader />
               {children}
-              {modal}
             <Footer />
 
             <Analytics />

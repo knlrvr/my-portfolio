@@ -13,6 +13,11 @@
   }
 }
 
+@theme {
+  /* --color-hover: #F2F0E9; */
+  --color-orange: #E8521A;
+}
+
 :root {
   --edge: oklch(97% 0 0);
   --sh-class: #427b58;
@@ -24,9 +29,6 @@
   --sh-string: #79740e;
   --sh-keyword: #9d0006;
   --sh-comment: #928374;
-  ::selection {
-    background-color: oklch(87.2% 0.007 219.6);
-  }
 }
 
 .dark {
@@ -41,11 +43,7 @@
   --sh-string: #b8bb26;
   --sh-keyword: #fb4934;
   --sh-comment: #928374;
-  ::selection {
-    background-color: oklch(78.92% 0.01507 213.403);
-  }
 }
-
 
 html {
   scroll-behavior: smooth !important;
@@ -61,4 +59,9 @@ html {
 }
 .hide-scroll::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
+}
+
+::selection {
+  background-color: var(--color-orange);
+  color: #fff;
 }
