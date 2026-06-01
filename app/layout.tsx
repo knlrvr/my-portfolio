@@ -4,13 +4,14 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-import Header from "./components/header";
+import { Header } from "./components/header";
 import Footer from "./components/footer";
 
 import { Grain } from "./components/effects/grain";
 import { ConsoleAsciiArt } from "./components/console-ascii";
 import { ThemeProvider } from "./components/theme/theme-provider";
 import Edges from "./components/effects/edges";
+import Links from "./components/links";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased p-6`} 
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`} 
       >
           <ThemeProvider
             attribute="class"
@@ -53,7 +54,7 @@ export default function RootLayout({
             <Header />
               {children}
               {modal}
-            <Footer />
+            <Links />
 
             <Analytics />
             <SpeedInsights />

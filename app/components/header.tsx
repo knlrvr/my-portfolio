@@ -16,6 +16,7 @@ import {
     BiMessage, 
     BiPen, 
 } from "react-icons/bi"
+import { GridLayout, GridRow, GridSpacer } from "./gridlayout"
 
 const items = [
     {label: 'writing', href: '/writing'},
@@ -32,7 +33,7 @@ const navItems = [
     { icon: <BiMessage />, href: "/visitors"}
 ]
 
-export default function PathHeader() {
+export function PathHeader() {
     const pathname = usePathname()
     const pathSegments = pathname.split("/").filter((segment) => segment !== "")
 
@@ -122,5 +123,18 @@ export default function PathHeader() {
                 </ol>
             </nav>
         </header>
+    )
+}
+
+export function Header() {
+    return (
+        <GridLayout>
+            <GridSpacer height="h-8" />
+            <GridRow className="py-4">
+                <div className="mx-2">
+                    <PathHeader />
+                </div>
+            </GridRow>
+        </GridLayout>
     )
 }

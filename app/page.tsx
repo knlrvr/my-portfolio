@@ -1,29 +1,14 @@
 import About from "./components/about";
-import Blog from "./components/blog";
 import Contact from "./components/contact";
-import PageTop from "./components/page-top";
-import SectionBreak from "./components/section-break";
 import WorkGrid from "./components/work-grid";
+import Writing from "./components/writing";
 
 export default function Home() {
   return (
-    <div className="max-w-sm mx-auto">
-      
-      <PageTop
-        title={`Hi, I'm Kane`}
-        desc={`Software Engineer • NC, USA`}
-      />
-
-      <SectionBreak num="01" label="about" />
+    <div className="">
       <About />
-
-      <SectionBreak num="02" label="work" />
       <WorkGrid />
-
-      <SectionBreak num="03" label="writing" />
-      <Blog />
-
-      <SectionBreak num="04" label="get in touch" />
+      <Writing />
       <Contact />
     </div>
   );

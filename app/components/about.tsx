@@ -1,47 +1,49 @@
-"use client"
-
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { GridLayout, GridRow, GridSpacer } from "./gridlayout";
 import { LuArrowUpRight } from "react-icons/lu";
-import { Reveal } from "./effects/reveal";
 
-export default function About() {
+export default function HeroSection() {
+  return (
+    <section className="">
+      <GridLayout>
 
-  const [greeting, setGreeting] = useState("");
+        <GridSpacer height="h-24" />
 
-  useEffect(() => {
-    const currentHour = new Date().getHours();
-    if (currentHour < 12) setGreeting("Good morning!");
-    else if (currentHour < 18) setGreeting("Good afternoon!");
-    else setGreeting("Good evening!");
-  }, []);
+        <GridRow className=" relative">
+          <p className="text-[11px] text-neutral-500 mx-2">
+            about.
+          </p>
+        </GridRow>
 
-    return (
-        <div className="text-sm">
-            <div className="flex flex-col gap-4 pb-4">
+        <GridRow className="py-12">
+          <h1 className="mx-2 text-[clamp(36px,7vw,64px)] font-normal leading-[1.1] tracking-[-0.02em]">
+            Hi, I&apos;m Kane
+          </h1>
+        </GridRow>
 
-                <Reveal delay={0.16}>
-                    <p className="text-sm text-mist-600 dark:text-mist-400">
-                        <span className="inline-flex tracking-tighter font-medium mb-1 text-[#111] dark:text-neutral-100">{greeting}</span> <br />
-                        I&apos;m a software engineer,
-                        artist, and d&d nerd living in North Carolina. Currently working as a QA Engineer, building tools that help teams trust what they ship.&nbsp;              
-                    </p>
-                </Reveal>
+        <GridRow className="py-4">
+          <p className="mx-2 text-sm text-neutral-600 dark:text-neutral-400">
+            I&apos;m a software engineer, artist, and d&d nerd living in North Carolina. Currently working as a QA Engineer, building tools that help teams trust what they ship. 
+          </p>
+        </GridRow>
 
-                <Reveal delay={0.24}>
-                    <Link 
-                        href="/"
-                        className="group flex items-center w-fit mt-8 text-xs"    
-                    >
-                        <span className="px-4 py-2 rounded-full border border-mist-200 dark:border-mist-800 text-mist-700 dark:text-mist-300 group-hover:bg-mist-300 dark:group-hover:bg-mist-700 group-hover:border-mist-200/20 dark:group-hover:border-mist-700/20 transition-colors duration-150">
-                            Always Shipping
-                        </span>
-                        <div className="bg-mist-300 dark:bg-mist-700 text-mist-700 dark:text-mist-300 p-2.5 rounded-full">
-                            <LuArrowUpRight className="group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150"/>
-                        </div>
-                    </Link>
-                </Reveal>
-            </div>
-        </div>
-    )
+        <GridRow className="py-4">
+            <Link 
+                href="https://www.github.com/knlrvr"
+                className="group flex items-center w-fit text-xs mx-2"    
+            >
+                <span className="px-4 py-2 rounded-full border border-[#F2F0E9] dark:border-[#F2F0E9]/5 text-neutral-700 dark:text-neutral-300 group-hover:bg-[#F2F0E9] dark:group-hover:bg-[#F2F0E9]/5 group-hover:border-[#F2F0E9] dark:group-hover:border-[#F2F0E9]/0 transition-colors duration-150">
+                    Always Shipping
+                </span>
+                <div className="bg-[#F2F0E9] dark:bg-[#F2F0E9]/5 text-neutral-700 dark:text-neutral-300 p-2.5 rounded-full">
+                    <LuArrowUpRight className="group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150"/>
+                </div>
+            </Link>
+        </GridRow>
+
+      </GridLayout>
+    </section>
+  );
 }
+
+// hover:bg-[#F2F0E9] dark:hover:bg-[#F2F0E9]/5
