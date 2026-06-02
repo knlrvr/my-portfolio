@@ -4,16 +4,16 @@ import SectionStrip from "./section-strip";
 
 const columns = [
   [
+    { label: "home", href: "/" },
     { label: "writing", href: "/writing" },
+  ],
+  [
     { label: "uses", href: "/uses" },
-  ],
-  [
     { label: "colophon", href: "/colophon" },
-    { label: "github", href: "https://github.com/knlrvr"},
   ],
   [
+    { label: "github", href: "https://github.com/knlrvr"},
     { label: "linkedin", href: "https://www.linkedin.com/in/kane-lariviere"},
-    { label: "twitch", href: "https://twitch.tv/knlrvr"}
   ],
 ];
 

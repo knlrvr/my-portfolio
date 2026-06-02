@@ -26,7 +26,7 @@ export default function Hero() {
           <h1 className="text-[clamp(52px,8vw,80px)] font-light leading-[0.98] tracking-[-0.03em]">
             <span className="block">Hi, I&apos;m</span>
             <span className="block">
-              <span className="bg-orange text-white not-italic px-2 ml-1">
+              <span className="bg-orange text-white not-italic px-2 ml-px">
                 Kane.
               </span>
             </span>
