@@ -40,7 +40,7 @@ export default function Footer() {
               >
                 <Link
                   href={link.href}
-                  className="text-xs text-neutral-600 dark:text-neutral-400 hover:text-orange font-base no-underline tracking-wide transition-colors duration-150 w-fit"
+                  className="text-xs text-neutral-600 dark:text-neutral-400 hover:text-olive dark:hover:text-orange font-base no-underline tracking-wide transition-colors duration-150 w-fit"
                 >
                   {link.label}
                 </Link>
@@ -63,7 +63,7 @@ export default function Footer() {
                 href={commitUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-[0.625rem] text-neutral-500 hover:text-orange tracking-wider transition-colors duration-150"
+                className="font-mono text-[0.625rem] text-neutral-500 hover:text-olive dark:hover:text-orange tracking-wider transition-colors duration-150"
               >
                 {shortSha}
               </Link>

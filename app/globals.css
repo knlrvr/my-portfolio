@@ -14,8 +14,8 @@
 }
 
 @theme {
-  /* --color-hover: #F2F0E9; */
   --color-orange: #E8521A;
+  --color-olive: oklch(73.7% 0.021 106.9); 
 }
 
 :root {
@@ -29,6 +29,10 @@
   --sh-string: #79740e;
   --sh-keyword: #9d0006;
   --sh-comment: #928374;
+  ::selection {
+    background-color: var(--color-olive);
+    color: #fff;
+  }
 }
 
 .dark {
@@ -43,6 +47,10 @@
   --sh-string: #b8bb26;
   --sh-keyword: #fb4934;
   --sh-comment: #928374;
+  ::selection {
+    background-color: var(--color-orange);
+    color: #fff;
+  }
 }
 
 html {
@@ -59,9 +67,4 @@ html {
 }
 .hide-scroll::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
-}
-
-::selection {
-  background-color: var(--color-orange);
-  color: #fff;
 }

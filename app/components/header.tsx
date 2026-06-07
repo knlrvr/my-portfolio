@@ -57,7 +57,7 @@ export default function PathHeader() {
                     <ol className="flex items-center gap-4">
                         {items.map((item) => (
                             <li key={item.href} className="">
-                                <Link href={item.href} className="hover:text-orange transition-colors duraiton-150">
+                                <Link href={item.href} className="hover:text-olive dark:hover:text-orange transition-colors duraiton-150">
                                     {item.label}
                                 </Link>
                             </li>
@@ -111,7 +111,7 @@ export default function PathHeader() {
                 <ol className="flex items-center gap-4">
                     {items.map((item) => (
                         <li key={item.href} className="">
-                            <Link href={item.href} className="hover:text-orange">
+                            <Link href={item.href} className="hover:text-olive dark:hover:text-orange">
                                 {item.label}
                             </Link>
                         </li>

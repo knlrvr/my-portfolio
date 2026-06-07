@@ -20,7 +20,7 @@ export default function WritingPage() {
         <div className="flex flex-col gap-10">
           <Reveal delay={0.08}>
             <h1 className="text-[clamp(52px,8vw,80px)] font-light leading-[0.98] tracking-[-0.03em]">
-              <span className="bg-orange text-white not-italic px-2 ml-1">
+              <span className="bg-olive dark:bg-orange text-white not-italic px-2 ml-1">
                 Writing.
               </span>
             </h1>
@@ -53,14 +53,14 @@ export default function WritingPage() {
                   <p className="text-[11px] text-neutral-400 dark:text-neutral-600">
                     {post.prevDate}&nbsp;&bull;&nbsp;{post.readTime}
                   </p>
-                  <span className="text-sm font-medium tracking-tighter group-hover:text-orange transition-colors duration-150">
+                  <span className="text-sm font-medium tracking-tighter group-hover:text-olive dark:group-hover:text-orange transition-colors duration-150">
                     {post.title}
                   </span>
                   {post.description && (
                     <p className="text-neutral-600 dark:text-neutral-400 text-xs">{post.description}</p>
                   )}
                 </div>
-                <span className="pt-1 shrink-0 ml-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[var(--color-orange)] transition-all duration-200">
+                <span className="pt-1 shrink-0 ml-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-olive dark:group-hover:text-orange transition-all duration-200">
                   <LuArrowUpRight />
                 </span>
               </div>

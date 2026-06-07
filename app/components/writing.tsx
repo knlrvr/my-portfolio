@@ -30,14 +30,14 @@ export default function Writing() {
                 <p className="text-[11px] text-neutral-400 dark:text-neutral-600">
                   {post.prevDate}&nbsp;&bull;&nbsp;{post.readTime}
                 </p>
-                <span className="text-sm font-medium tracking-tighter group-hover:text-orange transition-colors duration-150">
+                <span className="text-sm font-medium tracking-tighter group-hover:text-olive dark:group-hover:text-orange transition-colors duration-150">
                   {post.title}
                 </span>
                 {post.description && (
                   <p className="text-neutral-600 dark:text-neutral-400 text-xs">{post.description}</p>
                 )}
               </div>
-              <span className="pt-1 shrink-0 ml-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-orange transition-all duration-200">
+              <span className="pt-1 shrink-0 ml-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-olive dark:group-hover:text-orange transition-all duration-200">
                 <LuArrowUpRight />
               </span>
             </div>
@@ -51,10 +51,10 @@ export default function Writing() {
             href="/writing"
             className="group flex items-center w-fit text-xs"
           >
-            <span className="px-4 py-2 rounded-full border border-orange group-hover:bg-orange transition-colors duration-150">
+            <span className="px-4 py-2 rounded-full border border-olive dark:border-orange group-hover:bg-olive dark:group-hover:bg-orange transition-colors duration-150">
               All Posts
             </span>
-            <div className="bg-orange p-2.5 rounded-full">
+            <div className="bg-olive dark:bg-orange p-2.5 rounded-full">
               <LuArrowRight className="group-hover:translate-x-px transition-transform duration-150" />
             </div>
           </Link>

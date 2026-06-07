@@ -20,9 +20,9 @@ export default function Contact() {
                         <BsEnvelope />
                         <p className="">Email <span className="italic">(preferred)</span></p>
                     </div>
-                    <div className="flex items-center gap-2 group-hover:text-orange transition-colors duration-150">
+                    <div className="flex items-center gap-2 group-hover:text-olive dark:group-hover:text-orange transition-colors duration-150">
                         <p className="font-medium tracking-tighter">hello@knlrvr.dev</p>
-                        <LuArrowUpRight className="group-hover:text-orange group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150"/>
+                        <LuArrowUpRight className="group-hover:text-olive dark:group-hover:text-orange group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150"/>
                     </div>
                 </Link>
             </Reveal>
@@ -37,9 +37,9 @@ export default function Contact() {
                         <FaLinkedin />
                         <span className="">LinkedIn</span>
                     </div>                
-                    <div className="flex items-center gap-2 group-hover:text-orange transition-colors duration-150">
+                    <div className="flex items-center gap-2 group-hover:text-olive dark:group-hover:text-orange transition-colors duration-150">
                         <p className="font-medium tracking-tighter">kane-lariviere</p>
-                        <LuArrowUpRight className="group-hover:text-orange group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150"/>
+                        <LuArrowUpRight className="group-hover:text-olive dark:group-hover:text-orange group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150"/>
                     </div>
                 </Link>
             </Reveal>
@@ -54,9 +54,9 @@ export default function Contact() {
                         <FaGithub />
                         <span className="">GitHub</span>
                     </div> 
-                    <div className="flex items-center gap-2 group-hover:text-orange transition-colors duration-150">
+                    <div className="flex items-center gap-2 group-hover:text-olive dark:group-hover:text-orange transition-colors duration-150">
                         <p className="font-medium tracking-tighter">@knlrvr</p>
-                        <LuArrowUpRight className="group-hover:text-orange group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150"/>
+                        <LuArrowUpRight className="group-hover:text-olive dark:group-hover:text-orange group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150"/>
                     </div>
                 </Link>
             </Reveal>
@@ -71,9 +71,9 @@ export default function Contact() {
                         <FaTwitch />
                         <span className="">Twitch</span>
                     </div> 
-                    <div className="flex items-center gap-2 group-hover:text-orange transition-colors duration-150">
+                    <div className="flex items-center gap-2 group-hover:text-olive dark:group-hover:text-orange transition-colors duration-150">
                         <p className="font-medium tracking-tighter">@knlrvr</p>
-                        <LuArrowUpRight className="group-hover:text-orange group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150"/>
+                        <LuArrowUpRight className="group-hover:text-olive dark:group-hover:text-orange group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150"/>
                     </div>
                 </Link>
             </Reveal>

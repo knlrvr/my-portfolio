@@ -60,7 +60,7 @@ export default function Work() {
                   {entry.company}
                 </p>
                 {entry.featured && (
-                  <span className="rounded-full ml-2 text-[0.625rem] font-mono uppercase font-bold bg-orange/20 text-orange px-3 py-1">
+                  <span className="rounded-full ml-2 text-[0.625rem] font-mono uppercase font-bold bg-olive/20 dark:bg-orange/20 text-olive dark:text-orange px-3 py-1">
                     current
                   </span>
                 )}

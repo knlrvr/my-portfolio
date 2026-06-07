@@ -19,7 +19,7 @@ export default function Colophon() {
                 <div className="flex flex-col gap-10">
                     <Reveal delay={0.08}>
                         <h1 className="text-[clamp(52px,8vw,80px)] font-light leading-[0.98] tracking-[-0.03em]">
-                            <span className="bg-orange text-white not-italic px-2 ml-1">
+                            <span className="bg-olive dark:bg-orange text-white not-italic px-2 ml-1">
                             Colophon.
                             </span>
                         </h1>
@@ -69,10 +69,10 @@ export default function Colophon() {
                             href="https://github.com/knlrvr/my-portfolio"
                             className="group flex items-center w-fit mt-8 text-xs"    
                         >
-                            <span className="px-4 py-2 rounded-full border border-orange group-hover:bg-orange group-hover:text-bg transition-colors duration-150">
+                            <span className="px-4 py-2 rounded-full border border-olive dark:border-orange group-hover:bg-olive dark:group-hover:bg-orange group-hover:text-bg transition-colors duration-150">
                                 GitHub Repo
                             </span>
-                            <div className="bg-orange text-bg p-3 rounded-full">
+                            <div className="bg-olive dark:bg-orange text-bg p-3 rounded-full">
                                 <LuArrowUpRight className="group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150"/>
                             </div>
                         </Link>

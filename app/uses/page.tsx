@@ -17,7 +17,7 @@ export default function Uses() {
                 <div className="flex flex-col gap-10">
                     <Reveal delay={0.08}>
                         <h1 className="text-[clamp(52px,8vw,80px)] font-light leading-[0.98] tracking-[-0.03em]">
-                            <span className="bg-orange text-white not-italic px-2 ml-1">
+                            <span className="bg-olive dark:bg-orange text-white not-italic px-2 ml-1">
                                 Uses.
                             </span>
                         </h1>

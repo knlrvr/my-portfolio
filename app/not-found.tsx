@@ -9,7 +9,7 @@ export default function NotFound() {
                 <div className="flex flex-col gap-10">
                     <Reveal delay={0.08}>
                     <h1 className="text-[clamp(52px,8vw,80px)] font-light leading-[0.98] tracking-[-0.03em]">
-                        <span className="bg-orange text-white not-italic px-2 ml-1">
+                        <span className="bg-olive dark:bg-orange text-white not-italic px-2 ml-1">
                         Not Found.
                         </span>
                     </h1>
@@ -28,7 +28,7 @@ export default function NotFound() {
         <div className="my-8">
             <p className="text-sm ">
                 You can check the URL and try again, click one of the links below,
-                or return to the <Link href="/" className="underline underline-offset-2 decoration-neutral-300 hover:decoration-orange transition-colors duration-150">home page</Link>.
+                or return to the <Link href="/" className="underline underline-offset-2 decoration-neutral-300 hover:decoration-olive dark:hover:decoration-orange transition-colors duration-150">home page</Link>.
             </p>
         </div>
     </div>

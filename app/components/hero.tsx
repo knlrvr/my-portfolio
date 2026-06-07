@@ -26,7 +26,7 @@ export default function Hero() {
           <h1 className="text-[clamp(52px,8vw,80px)] font-light leading-[0.98] tracking-[-0.03em]">
             <span className="block">Hi, I&apos;m</span>
             <span className="block">
-              <span className="bg-orange text-white not-italic px-2 ml-px">
+              <span className="bg-olive dark:bg-orange text-white not-italic px-2 ml-px">
                 Kane.
               </span>
             </span>
@@ -46,10 +46,10 @@ export default function Hero() {
                   href="https://github.com/knlrvr"
                   className="group flex gap-px items-center w-fit mt-8 text-xs"    
               >
-                  <span className="px-4 py-2 rounded-full border border-orange group-hover:bg-orange group-hover:text-bg transition-colors duration-150">
+                  <span className="px-4 py-2 rounded-full border border-olive dark:border-orange group-hover:bg-olive dark:group-hover:bg-orange group-hover:text-bg transition-colors duration-150">
                       Always Shipping
                   </span>
-                  <div className="bg-orange text-bg p-3 rounded-full">
+                  <div className="bg-olive dark:bg-orange text-bg p-3 rounded-full">
                       <LuArrowUpRight className="group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150"/>
                   </div>
               </Link>
