@@ -12,7 +12,7 @@ export default function Uses() {
     return (
         <div className="max-w-sm mx-auto">
             <PageTop
-                title="Writing"
+                title="Uses"
                 description="The tools behind my day-to-day."
                 back={false}
             />
