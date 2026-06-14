@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Reveal } from "../components/effects/reveal";
 import { SectionStripSm } from "../components/section-strip";
+import PageTop from "../components/page-top";
 
 export const metadata: Metadata = {
     title: 'Kane Lariviere | Uses',
@@ -10,29 +11,11 @@ export const metadata: Metadata = {
 export default function Uses() {
     return (
         <div className="max-w-sm mx-auto">
-            <section
-                id="hero"
-                className="pt-32"
-            >
-                <div className="flex flex-col gap-10">
-                    <Reveal delay={0.08}>
-                        <h1 className="text-[clamp(52px,8vw,80px)] font-light leading-[0.98] tracking-[-0.03em]">
-                            <span className="bg-olive dark:bg-orange text-white not-italic px-2 ml-1">
-                                Uses.
-                            </span>
-                        </h1>
-                    </Reveal>
-
-                    <div className="pb-1.5">
-                        <Reveal delay={0.16}>
-                            <p className="text-[14px] leading-[1.75] text-neutral-600 dark:text-neutral-400 mb-8">
-                                The tools behind my day-to-day.
-                            </p>
-                        </Reveal>
-                    </div>
-                </div>
-            </section>
-
+            <PageTop
+                title="Writing"
+                description="The tools behind my day-to-day."
+                back={false}
+            />
             <div className="text-sm">
 
                 <div>

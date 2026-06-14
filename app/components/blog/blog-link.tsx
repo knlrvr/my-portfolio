@@ -19,9 +19,9 @@ export function BlogLink({ href, children }: BlogLinkProps) {
 
     return (
         <Link href={href} target='_blank' rel="noopener noreferrer" 
-            className="underline underline-offset-2 decoration-neutral-500 hover:decoration-olive dark:hover:decoration-orange transition-colors duration-150">
+            className="underline underline-offset-2 decoration-neutral-500 hover:decoration-neutral-400 dark:hover:decoration-neutral-600 transition-colors duration-150">
             {children} 
-            <RxArrowTopRight className="inline-block text-olive dark:text-orange" />
+            <RxArrowTopRight className="inline-block text-neutral-600 dark:text-neutral-400" />
         </Link>
     );
 }

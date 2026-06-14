@@ -27,10 +27,10 @@ export default function Footer() {
       : null;
 
   return (
-    <footer className="pt-16 pb-12 max-w-sm mx-auto">
+    <footer className="max-w-sm mx-auto">
       <SectionStrip label="links" number="∞" />
 
-      <div className="grid grid-cols-3 gap-8 mb-12 pt-8">
+      <div className="grid grid-cols-3 gap-8 mb-12 mt-4">
         {columns.map((col, i) => (
           <div key={i} className="flex flex-col gap-2.5">
             {col.map((link, index) => (
@@ -40,7 +40,7 @@ export default function Footer() {
               >
                 <Link
                   href={link.href}
-                  className="text-xs text-neutral-600 dark:text-neutral-400 hover:text-olive dark:hover:text-orange font-base no-underline tracking-wide transition-colors duration-150 w-fit"
+                  className="text-xs hover:text-neutral-400 dark:hover:text-neutral-600 font-base no-underline tracking-wide transition-colors duration-150 w-fit"
                 >
                   {link.label}
                 </Link>

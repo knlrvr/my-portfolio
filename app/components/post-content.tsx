@@ -8,12 +8,13 @@ import Edit from "@/app/components/blog/edit"
 import Sticker from "@/app/components/blog/sticker"
 import { Reveal } from "@/app/components/effects/reveal"
 import type { Post } from "../lib/posts"
+import PageTop from "./page-top"
 
 
 const components = { code: Code, Callout, Edit, BlogLink, InlineCode }
 
 const proseClassName = `
-  mt-10 text-neutral-700 dark:text-neutral-300
+  mt-16 text-neutral-800 dark:text-neutral-200
   blog prose prose-headings:text-neutral-800 dark:prose-headings:text-neutral-200
   prose-strong:text-[#111] dark:prose-strong:text-neutral-200 max-w-full
   prose-sm prose-code:text-xs prose-pre:text-neutral-700 prose-pre:bg-neutral-100 dark:prose-pre:bg-[#151515] dark:prose-pre:text-neutral-300 prose-pre:mb-1
@@ -59,28 +60,13 @@ export function PostContent({ post }: PostContentProps) {
       />
       <div className="relative">
         <div className="relative">
-          <section id="hero" className="pt-32 border-b border-neutral-200 dark:border-neutral-800">
-            <div className="flex flex-col gap-4">
-              <Reveal delay={0.08}>
-                <span className="text-xs bg-olive/20 dark:bg-orange/20 px-2 py-1 text-olive dark:text-orange">
-                  {post.data.date} &bull; {post.readTime}
-                </span>
-              </Reveal>
-              <Reveal delay={0.16}>
-                <h1 className="text-[clamp(52px,8vw,80px)] font-light leading-[0.98] tracking-[-0.03em]">
-                  {post.data.title}
-                </h1>
-              </Reveal>
-
-              <div className="pb-2">
-                <Reveal delay={0.16}>
-                  <p className="text-[14px] leading-[1.75] text-neutral-500 mb-8">
-                    {post.data.description}
-                  </p>
-                </Reveal>
-              </div>
-            </div>
-          </section>
+          <PageTop
+            title={post.data.title}
+            description={post.data.description}
+            date={`${post.data.date} • ${post.readTime}`}
+            back={true}
+            backHref="/writing"
+          />
           <Sticker src={`${post.data.sticker}`} />
         </div>
         {body}

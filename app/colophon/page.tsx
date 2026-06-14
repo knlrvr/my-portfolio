@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { LuArrowUpRight } from "react-icons/lu";
 import { Reveal } from "../components/effects/reveal";
 import { SectionStripSm } from "../components/section-strip";
+import PageTop from "../components/page-top";
 
 export const metadata: Metadata = {
     title: 'Kane Lariviere | Colophon',
@@ -12,28 +13,12 @@ export const metadata: Metadata = {
 export default function Colophon() {
     return (
         <div className="max-w-sm mx-auto mb-12">
-            <section
-                id="hero"
-                className="pt-32"
-            >
-                <div className="flex flex-col gap-10">
-                    <Reveal delay={0.08}>
-                        <h1 className="text-[clamp(52px,8vw,80px)] font-light leading-[0.98] tracking-[-0.03em]">
-                            <span className="bg-olive dark:bg-orange text-white not-italic px-2 ml-1">
-                            Colophon.
-                            </span>
-                        </h1>
-                    </Reveal>
 
-                    <div className="pb-1.5">
-                        <Reveal delay={0.16}>
-                            <p className="text-[14px] leading-[1.75] text-neutral-600 dark:text-neutral-400 mb-8">
-                                How this site was built & the decisions behind it.                    
-                            </p>
-                        </Reveal>
-                    </div>
-                </div>
-            </section>
+            <PageTop
+                title="Colophon"
+                description="How this site was built & the decisions behind it.   "
+                back={false}
+            />
 
             <div className="flex flex-col">
 
@@ -64,15 +49,13 @@ export default function Colophon() {
                         </p>
                     </Reveal>
 
-                    <Reveal delay={0.32}>
+                    <Reveal delay={0.24}>
                         <Link 
                             href="https://github.com/knlrvr/my-portfolio"
-                            className="group flex items-center w-fit mt-8 text-xs"    
+                            className="group flex gap-2 items-center w-fit mt-8 text-xs pl-4 pr-2 py-2 border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-full"    
                         >
-                            <span className="px-4 py-2 rounded-full border border-olive dark:border-orange group-hover:bg-olive dark:group-hover:bg-orange group-hover:text-bg transition-colors duration-150">
-                                GitHub Repo
-                            </span>
-                            <div className="bg-olive dark:bg-orange text-bg p-3 rounded-full">
+                            <span className="font-medium tracking-tighter">GitHub Repo</span>
+                            <div className="bg-neutral-800 dark:bg-neutral-200 text-neutral-100 dark:text-neutral-800 rounded-full p-2">
                                 <LuArrowUpRight className="group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150"/>
                             </div>
                         </Link>

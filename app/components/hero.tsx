@@ -4,6 +4,7 @@ import Link from "next/link";
 import { LuArrowUpRight } from "react-icons/lu";
 import { Reveal } from "./effects/reveal";
 import { useEffect, useState } from "react";
+import PageTop from "./page-top";
 
 export default function Hero() {
 
@@ -17,22 +18,18 @@ export default function Hero() {
   }, []);
 
   return (
+    <>
+
+    <PageTop
+      title="Hi, I'm Kane"
+      description="Software Engineer • NC, US"
+      back={false}
+    />
+
     <section
       id="hero"
-      className="pt-32 pb-24"
+      className=""
     >
-      <div className="flex flex-col gap-10">
-        <Reveal delay={0.08}>
-          <h1 className="text-[clamp(52px,8vw,80px)] font-light leading-[0.98] tracking-[-0.03em]">
-            <span className="block">Hi, I&apos;m</span>
-            <span className="block">
-              <span className="bg-olive dark:bg-orange text-white not-italic px-2 ml-px">
-                Kane.
-              </span>
-            </span>
-          </h1>
-        </Reveal>
-
         <div className="pb-1.5">
           <Reveal delay={0.16}>
             <p className="text-[14px] leading-[1.75] text-neutral-600 dark:text-neutral-400 mb-8">
@@ -41,21 +38,20 @@ export default function Hero() {
               trust what they ship.
             </p>
           </Reveal>
+
           <Reveal delay={0.24}>
             <Link 
-                  href="https://github.com/knlrvr"
-                  className="group flex gap-px items-center w-fit mt-8 text-xs"    
-              >
-                  <span className="px-4 py-2 rounded-full border border-olive dark:border-orange group-hover:bg-olive dark:group-hover:bg-orange group-hover:text-bg transition-colors duration-150">
-                      Always Shipping
-                  </span>
-                  <div className="bg-olive dark:bg-orange text-bg p-3 rounded-full">
-                      <LuArrowUpRight className="group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150"/>
-                  </div>
-              </Link>
-            </Reveal>
+              href="https://github.com/knlrvr"
+              className="group flex gap-2 items-center w-fit mt-12 text-xs pl-4 pr-2 py-2 border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-full"    
+            >
+              <span className="font-medium tracking-tighter">Always Shipping</span>
+              <div className="bg-neutral-800 dark:bg-neutral-200 text-neutral-100 dark:text-neutral-800 rounded-full p-2">
+                <LuArrowUpRight className="group-hover:-translate-y-px group-hover:translate-x-px transition-transform duration-150"/>
+              </div>
+            </Link>
+          </Reveal>
         </div>
-      </div>
     </section>
+    </>
   )
 }

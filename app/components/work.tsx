@@ -19,7 +19,7 @@ const entries: WorkEntry[] = [
     company: 'Rather Outdoors',
     featured: true,
     img: '/ro-logo.png',
-    role: 'QA Automation Engineer',
+    role: 'Software Engineer, QA & Automation',
     description: 'Building infrastructure & tools that help teams trust what they ship.',
   },
   {
@@ -44,23 +44,16 @@ export default function Work() {
             className={`
               flex flex-col gap-2
               py-8
-              ${i < entries.length - 1 ? 'border-b border-[#F2F0E9] dark:border-[#F2F0E9]/5' : ''}
+              ${i < entries.length - 1 ? 'border-b border-neutral-200 dark:border-neutral-800' : ''}
             `}
           >
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
-                <Image
-                  src={entry.img}
-                  alt={`${entry.company} logo`}
-                  width={250}
-                  height={250}
-                  className="w-6 h-fit dark:invert"
-                />
-                <p className="text-sm font-medium tracking-tighter leading-none text-ink">
+                <p className="text-sm font-medium tracking-tighter leading-none">
                   {entry.company}
                 </p>
                 {entry.featured && (
-                  <span className="rounded-full ml-2 text-[0.625rem] font-mono uppercase font-bold bg-olive/20 dark:bg-orange/20 text-olive dark:text-orange px-3 py-1">
+                  <span className="rounded-full ml-2 text-[0.625rem] font-mono uppercase font-bold bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 px-2 py-0.5">
                     current
                   </span>
                 )}
@@ -69,11 +62,11 @@ export default function Work() {
                   <p className="text-sm font-medium tracking-tighter text-neutral-600 dark:text-neutral-400">
                     {entry.role}
                   </p>
-                <span className="block text-[11px] tracking-tight text-neutral-400 dark:text-neutral-600">
+                <span className="block text-[11px] tracking-tight text-neutral-500">
                   {entry.years}
                 </span>
               </div>
-              <p className="text-sm text-neutral-500 blog">
+              <p className="text-sm text-neutral-600 dark:text-neutral-400 blog">
                 {entry.description}
               </p>
             </div>
