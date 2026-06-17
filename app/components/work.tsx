@@ -66,7 +66,7 @@ export default function Work() {
                   {entry.years}
                 </span>
               </div>
-              <p className="text-sm text-neutral-600 dark:text-neutral-400 blog">
+              <p className="text-sm text-neutral-700 dark:text-neutral-300 blog">
                 {entry.description}
               </p>
             </div>

@@ -31,7 +31,7 @@ export default function Writing() {
                   {post.title}
                 </span>
                 {post.description && (
-                  <p className="text-neutral-600 dark:text-neutral-400 text-xs">{post.description}</p>
+                  <p className="text-neutral-600 dark:text-neutral-400 text-sm">{post.description}</p>
                 )}
               </div>
               <span className="pt-1 shrink-0 ml-4 group-hover:translate-x-px group-hover:text-neutral-400 dark:group-hover:text-neutral-500 transition-all duration-200">
