@@ -11,7 +11,7 @@ export function BlogLink({ href, children }: BlogLinkProps) {
     if (href.startsWith('/')) {
         return (
             <Link href={href}
-                className='inline-flex items-center underline underline-offset-2 decoration-neutral-300 hover:decoration-olive dark:hover:decoration-orange transition-colors duration-150'>
+                className='inline-flex items-center underline underline-offset-2 decoration-neutral-500 hover:decoration-neutral-400 dark:hover:decoration-neutral-600 transition-colors duration-150'>
                 {children}
             </Link>
         )
