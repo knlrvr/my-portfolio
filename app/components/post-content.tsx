@@ -63,7 +63,7 @@ export function PostContent({ post }: PostContentProps) {
           <PageTop
             title={post.data.title}
             description={post.data.description}
-            date={`${post.data.date} • ${post.readTime}`}
+            date={`${post.data.date} // ${post.readTime}`}
             back={true}
             backHref="/writing"
           />

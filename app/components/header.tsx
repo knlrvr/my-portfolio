@@ -44,7 +44,7 @@ export default function PathHeader() {
     // On home page, just show "knlrvr.dev"
     if (pathSegments.length === 0) {
         return (
-            <header className="text-xs max-w-sm mx-auto">
+            <header className="text-xs max-w-md mx-auto">
                 <nav className="flex justify-between items-center">
                     <ol className="flex flex-wrap items-center" aria-label="Breadcrumb">
                         <li className="flex items-center">
@@ -57,7 +57,7 @@ export default function PathHeader() {
                     <ol className="flex items-center gap-4">
                         {items.map((item) => (
                             <li key={item.href} className="">
-                                <Link href={item.href} className="hover:text-olive dark:hover:text-orange transition-colors duraiton-150">
+                                <Link href={item.href} className="hover:text-neutral-400 dark:hover:text-neutral-600 transition-colors duraiton-150">
                                     {item.label}
                                 </Link>
                             </li>
@@ -73,7 +73,7 @@ export default function PathHeader() {
 
     // For non-home pages, show breadcrumb with icons
     return (
-        <header className="text-xs max-w-sm mx-auto">
+        <header className="text-xs max-w-md mx-auto">
             <nav className="flex justify-between items-center">
                 <ol className="flex flex-wrap items-center" aria-label="Breadcrumb">
                     {/* Home icon */}
@@ -111,7 +111,7 @@ export default function PathHeader() {
                 <ol className="flex items-center gap-4">
                     {items.map((item) => (
                         <li key={item.href} className="">
-                            <Link href={item.href} className="hover:text-olive dark:hover:text-orange">
+                            <Link href={item.href} className="hover:text-neutral-400 dark:hover:text-neutral-600">
                                 {item.label}
                             </Link>
                         </li>

@@ -62,7 +62,7 @@ export default function Work() {
                   <p className="text-sm font-medium tracking-tighter text-neutral-600 dark:text-neutral-400">
                     {entry.role}
                   </p>
-                <span className="block text-[11px] tracking-tight text-neutral-500">
+                <span className="block text-[10px] font-mono tracking-tight text-neutral-500">
                   {entry.years}
                 </span>
               </div>

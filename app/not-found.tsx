@@ -3,7 +3,7 @@ import { Reveal } from "./components/effects/reveal";
 
 export default function NotFound() { 
     return ( 
-        <div className="max-w-sm mx-auto"> 
+        <div className="max-w-md mx-auto"> 
         
             <section id="hero" className="pt-32">
                 <div className="flex flex-col gap-10">

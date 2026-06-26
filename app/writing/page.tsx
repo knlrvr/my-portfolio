@@ -16,7 +16,7 @@ export default function WritingPage() {
     .filter((p) => p.slug)
 
   return (
-    <div className="max-w-sm mx-auto">
+    <div className="max-w-md mx-auto">
 
       <PageTop
         title="Writing"
@@ -47,7 +47,7 @@ export default function WritingPage() {
                     </span>
                   </div>
                   <p className="text-neutral-600 dark:text-neutral-400 text-xs">{post.description}</p>
-                  <p className="text-[11px] text-neutral-400 dark:text-neutral-600">
+                  <p className="text-[10px] font-mono text-neutral-400 dark:text-neutral-600">
                     {post.prevDate}&nbsp;&bull;&nbsp;{post.readTime}
                   </p>
                 </div>

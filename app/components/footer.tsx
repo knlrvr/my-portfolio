@@ -27,7 +27,7 @@ export default function Footer() {
       : null;
 
   return (
-    <footer className="max-w-sm mx-auto">
+    <footer className="max-w-md mx-auto">
       <SectionStrip label="links" number="∞" />
 
       <div className="grid grid-cols-3 gap-8 mb-12 mt-4">
@@ -63,7 +63,7 @@ export default function Footer() {
                 href={commitUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-[0.625rem] text-neutral-500 hover:text-olive dark:hover:text-orange tracking-wider transition-colors duration-150"
+                className="font-mono text-[0.625rem] text-neutral-500 hover:text-neutral-400 dark:hover:text-neutral-600 tracking-wider transition-colors duration-150"
               >
                 {shortSha}
               </Link>

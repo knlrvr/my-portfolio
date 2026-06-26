@@ -5,7 +5,7 @@ import Contact from "./components/contact";
 
 export default function Home() {
   return (
-    <div className="max-w-sm mx-auto">
+    <div className="max-w-md mx-auto">
       <main>
         <Hero />
         <Work />

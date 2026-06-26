@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Colophon() {
     return (
-        <div className="max-w-sm mx-auto mb-12">
+        <div className="max-w-md mx-auto mb-12">
 
             <PageTop
                 title="Colophon"
