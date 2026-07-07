@@ -32,7 +32,7 @@ export default function Hero() {
     >
         <div className="pb-1.5">
           <Reveal delay={0.16}>
-            <p className="text-[14px] leading-[1.75] text-neutral-600 dark:text-neutral-400 mb-8">
+            <p className="text-[14px] leading-[1.75] text-neutral-600 dark:text-neutral-400 mb-8 blog">
               <span className="font-medium tracking-tighter text-neutral-700 dark:text-neutral-300">{greeting}</span> I&apos;m a software engineer, artist, and d&amp;d nerd living in North Carolina.
               Currently working as a QA Engineer, building tools that help teams
               trust what they ship.

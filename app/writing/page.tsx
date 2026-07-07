@@ -46,10 +46,18 @@ export default function WritingPage() {
                       <LuArrowRight />
                     </span>
                   </div>
-                  <p className="text-neutral-600 dark:text-neutral-400 text-xs">{post.description}</p>
-                  <p className="text-[10px] font-mono text-neutral-400 dark:text-neutral-600">
+                  <p className="text-neutral-600 dark:text-neutral-400 text-sm blog">{post.description}</p>
+                  <p className="text-[11px] font-mono text-neutral-500">
                     {post.prevDate}&nbsp;&bull;&nbsp;{post.readTime}
                   </p>
+                  {post.tags.map((tag, index) => (
+                    <p 
+                      key={index}
+                      className='font-mono text-[10px] uppercase text-neutral-400 dark:text-neutral-600 mt-0.5'
+                    >
+                      // {tag}
+                    </p>
+                  ))}
                 </div>
               </div>
             </Link>
