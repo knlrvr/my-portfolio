@@ -45,7 +45,7 @@ export default function Writing() {
                     key={index}
                     className='font-mono text-[10px] uppercase text-neutral-400 dark:text-neutral-600 mt-0.5'
                   >
-                    // {tag}
+                    &#47;&#47; {tag}
                   </p>
                 ))}
               </div>
