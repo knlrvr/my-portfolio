@@ -40,14 +40,6 @@ export default function Writing() {
                 <p className="text-[11px] font-mono text-neutral-500">
                   {post.prevDate}&nbsp;&bull;&nbsp;{post.readTime}
                 </p>
-                {post.tags.map((tag, index) => (
-                  <p 
-                    key={index}
-                    className='font-mono text-[10px] uppercase text-neutral-400 dark:text-neutral-600 mt-0.5'
-                  >
-                    &#47;&#47; {tag}
-                  </p>
-                ))}
               </div>
             </div>
           </Link>
