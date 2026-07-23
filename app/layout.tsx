@@ -10,6 +10,7 @@ import Footer from "./components/footer";
 import { Grain } from "./components/effects/grain";
 import { ConsoleAsciiArt } from "./components/console-ascii";
 import { ThemeProvider } from "./components/theme/theme-provider";
+import MarqueeGallery from "./components/gallery";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +50,7 @@ export default function RootLayout({
             <PathHeader />
               {children}
             <Footer />
+            <MarqueeGallery />
 
             <Analytics />
             <SpeedInsights />
