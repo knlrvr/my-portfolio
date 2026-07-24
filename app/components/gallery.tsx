@@ -17,16 +17,19 @@ type GalleryImage = {
 };
 
 const TOP_ROW: GalleryImage[] = [
-  { id: "top-1", src: "/gallery/clear-autumn.jpeg", alt: "" },
+  { id: "top-1", src: "/gallery/clear-autumn.jpeg", alt: "..." },
   { id: "top-2", src: "/gallery/frozen-waterfall.jpeg", alt: "..." },
   { id: "top-3", src: "/gallery/foggy-shed.jpeg", alt: "..." },
-  { id: "top-4", src: "/gallery/moss-from-an-oak.jpeg", alt: "..." },
-  { id: "top-5", src: "/gallery/aurora-nc.jpeg", alt: "..."},
+  { id: "top-4", src: "/gallery/grain-belt-sign.jpeg", alt: "..."},
+  { id: "top-5", src: "/gallery/moss-from-an-oak.jpeg", alt: "..." },
   { id: "top-6", src: "/gallery/near-the-congaree.jpeg", alt: "..." },
+  { id: "top-7", src: "/gallery/sea-of-clouds.jpeg", alt: "..." },
+  { id: "top-8", src: "/gallery/sunset-over-water.jpeg", alt: "..." },
+  { id: "top-9", src: "/gallery/aurora-nc.jpeg", alt: "..."},
 ];
 
 // const BOTTOM_ROW: GalleryImage[] = [
-//   { id: "bottom-1", src: "/gallery/...", alt: "..." },
+// { id: "bottom-1", src: "/gallery/...", alt: "..." },
 // ];
 
 type MarqueeRowProps = {
