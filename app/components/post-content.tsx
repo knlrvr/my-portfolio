@@ -3,6 +3,7 @@ import { MDXRemote } from "next-mdx-remote/rsc"
 import { Code } from "@/app/components/blog/code"
 import { BlogLink } from "./blog/blog-link"
 import { InlineCode } from "./blog/inline-code"
+import { SecondaryText } from "./blog/secondary"
 import Callout from "@/app/components/blog/callout"
 import Edit from "@/app/components/blog/edit"
 import Sticker from "@/app/components/blog/sticker"
@@ -11,7 +12,7 @@ import type { Post } from "../lib/posts"
 import PageTop from "./page-top"
 
 
-const components = { code: Code, Callout, Edit, BlogLink, InlineCode }
+const components = { code: Code, Callout, Edit, BlogLink, InlineCode, SecondaryText }
 
 const proseClassName = `
   mt-16 text-neutral-800 dark:text-neutral-200
