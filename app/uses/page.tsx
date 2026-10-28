@@ -61,8 +61,8 @@ export default function Uses() {
                             <li>GIGABYTE B550 Eagle</li>
                             <li>16GB T-Force Delta DDR4</li>
                             <li>NVIDIA GeForce GTX 1660 SUPER</li>
-                            <li>G515 LIGHTSPEED TKL</li>
-                            <li>G502 LIGHTSPEED</li>
+                            <li>Logitech G515 LIGHTSPEED TKL</li>
+                            <li>Logitech G502 LIGHTSPEED</li>
                             <li>Corsair VOID RGB ELITE Headset</li>
                         </ul>
                     </Reveal>
