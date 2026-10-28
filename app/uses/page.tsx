@@ -57,12 +57,12 @@ export default function Uses() {
                         <SectionStripSm label="gaming" number="004" />
                         <ul className="text-neutral-600 dark:text-neutral-400">
                             <li>Windows 10</li>
-                            <li>Intel Core i5 9400F</li>
-                            <li>MSI MAG B365M MORTAR</li>
+                            <li>AMD Ryzen 9 5900XT</li>
+                            <li>GIGABYTE B550 Eagle</li>
                             <li>16GB T-Force Delta DDR4</li>
                             <li>NVIDIA GeForce GTX 1660 SUPER</li>
-                            <li>Corsair K55 RGB Pro Keyboard</li>
-                            <li>Corsair M65 RGB ULTRA Mouse</li>
+                            <li>G515 LIGHTSPEED TKL</li>
+                            <li>G502 LIGHTSPEED</li>
                             <li>Corsair VOID RGB ELITE Headset</li>
                         </ul>
                     </Reveal>
