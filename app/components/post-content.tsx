@@ -7,12 +7,13 @@ import { SecondaryText } from "./blog/secondary"
 import Callout from "@/app/components/blog/callout"
 import Edit from "@/app/components/blog/edit"
 import Sticker from "@/app/components/blog/sticker"
+import Demo from "@/app/components/blog/demo"
 import { Reveal } from "@/app/components/effects/reveal"
 import type { Post } from "../lib/posts"
 import PageTop from "./page-top"
 
 
-const components = { code: Code, Callout, Edit, BlogLink, InlineCode, SecondaryText }
+const components = { code: Code, Callout, Demo, Edit, BlogLink, InlineCode, SecondaryText }
 
 const proseClassName = `
   mt-16 text-neutral-800 dark:text-neutral-200
@@ -39,7 +40,7 @@ export function PostContent({ post }: PostContentProps) {
   const body = (
     <Reveal delay={0.24}>
       <article className={proseClassName}>
-        <MDXRemote source={post.content} components={{ ...components }} />
+        <MDXRemote source={post.content} components={{ ...components }} options={{ blockJS: false }} />
       </article>
     </Reveal>
   )

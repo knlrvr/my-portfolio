@@ -1,0 +1,929 @@
+---
+title: Everything Is Screen™
+description: We need more tactile interactions. 
+date: Friday, October 30 2026
+prevDate: 20 Oct 2026
+tags: ['web dev']
+sticker: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand preview-icon"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+---
+
+I wish the world hadn't moved away from buttons, and knobs, and dials, and switches. I don't think "modernization" needs to be sticking everything behind a screen and simulating real-world touch sensations.
+
+A physical control talks back. A knob has detents you can count. A switch has a position you can feel in the dark. A button gives a little, then gives way. You know it worked before you look, *if* you look. 
+
+I build stuff that lives behind screens for a living, so I'm part of the problem. UI has come a long way, and I'm not sure we can practically incorporate tactility into software outside of haptics, but I do hope we stop trying to erase it elsewhere. The people yearn for physical feedback. 
+
+In the meantime, I spent an afternoon building a little control panel with HTML & CSS. There's two knobs, a row of latching buttons, some momentary keys, and two sliders with lamps that glow brighter or fainter as they're moved.
+
+It's not the real thing, but it's a reminder of what I miss. 
+
+---
+
+<Demo 
+    html={`
+        <div class="controls">
+            <div class="knob-row">
+                <div class="knob-unit mode">
+                    <div class="knob-well">
+                        <div class="knob-scale">
+                        <span class="mark" style="--k: 0"><span class="tick"></span><span class="num">0</span></span>
+                        <span class="mark" style="--k: 1"><span class="tick"></span><span class="num">1</span></span>
+                        <span class="mark" style="--k: 2"><span class="tick"></span><span class="num">2</span></span>
+                        <span class="mark" style="--k: 3"><span class="tick"></span><span class="num">3</span></span>
+                        <span class="mark" style="--k: 4"><span class="tick"></span><span class="num">4</span></span>
+                        <span class="mark" style="--k: 5"><span class="tick"></span><span class="num">5</span></span>
+                        <span class="mark" style="--k: 6"><span class="tick"></span><span class="num">6</span></span>
+                        <span class="mark" style="--k: 7"><span class="tick"></span><span class="num">7</span></span>
+                        <span class="mark" style="--k: 8"><span class="tick"></span><span class="num">8</span></span>
+                        <span class="mark" style="--k: 9"><span class="tick"></span><span class="num">9</span></span>
+                        <span class="mark" style="--k: 10"><span class="tick"></span><span class="num">10</span></span>
+                        </div>
+                        <div class="knob dark">
+                            <span class="knob-cap"></span>
+                            <span class="knob-rotor"><span class="knob-notch"></span><span class="knob-indicator"></span></span>
+                        </div>
+                        <input class="knob-input" type="range" min="0" max="10" step="1" value="3" aria-label="Mode">
+                    </div>
+                </div>
+                <div class="knob-unit gain">
+                    <div class="knob-well">
+                        <div class="knob-scale">
+                        <span class="led" style="--k: 0"></span>
+                        <span class="led" style="--k: 1"></span>
+                        <span class="led" style="--k: 2"></span>
+                        <span class="led" style="--k: 3"></span>
+                        <span class="led" style="--k: 4"></span>
+                        <span class="led" style="--k: 5"></span>
+                        <span class="led" style="--k: 6"></span>
+                        <span class="led" style="--k: 7"></span>
+                        <span class="led" style="--k: 8"></span>
+                        <span class="led" style="--k: 9"></span>
+                        <span class="led" style="--k: 10"></span>
+                        <span class="led" style="--k: 11"></span>
+                        <span class="led" style="--k: 12"></span>
+                        <span class="led" style="--k: 13"></span>
+                        <span class="led" style="--k: 14"></span>
+                        <span class="led" style="--k: 15"></span>
+                        <span class="led" style="--k: 16"></span>
+                        <span class="led" style="--k: 17"></span>
+                        <span class="led" style="--k: 18"></span>
+                        <span class="led" style="--k: 19"></span>
+                        <span class="led" style="--k: 20"></span>
+                        </div>
+                        <div class="knob orange">
+                            <span class="knob-cap"></span>
+                            <span class="knob-rotor"><span class="knob-notch"></span><span class="knob-indicator"></span></span>
+                        </div>
+                        <input class="knob-input" type="range" min="0" max="100" step="1" value="60" aria-label="Gain">
+                    </div>
+                </div>
+            </div>
+
+            <div class="wave-unit">
+                <div class="selector" role="radiogroup" aria-label="Wave">
+                    <label class="sel-item">
+                        <span class="led"></span>
+                        <span class="button"><input class="sr-radio" type="radio" name="wave" value="1"><span class="button-inside">1</span></span>
+                    </label>
+                    <label class="sel-item">
+                        <span class="led"></span>
+                        <span class="button"><input class="sr-radio" type="radio" name="wave" value="2"><span class="button-inside light">2</span></span>
+                    </label>
+                    <label class="sel-item">
+                        <span class="led"></span>
+                        <span class="button"><input class="sr-radio" type="radio" name="wave" value="3" checked><span class="button-inside mid">3</span></span>
+                    </label>
+                    <label class="sel-item">
+                        <span class="led"></span>
+                        <span class="button"><input class="sr-radio" type="radio" name="wave" value="4"><span class="button-inside dark">4</span></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="button-grid">
+                <div class="buttons-container">
+                    <button class="button" type="button">
+                        <span class="button-inside dark">1</span>
+                    </button>
+                </div>
+                <div class="buttons-container">
+                    <button class="button" type="button">
+                        <span class="button-inside mid">2</span>
+                    </button>
+                </div>
+                <div class="buttons-container">
+                    <button class="button" type="button">
+                        <span class="button-inside light">3</span>
+                    </button>
+                </div>
+                <div class="buttons-container">
+                    <button class="button" type="button">
+                        <span class="button-inside">4</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="fader-row">
+                <div class="fader-unit">
+                    <div class="fader">
+                        <div class="fader-scale">
+                            <span class="mark major" style="--k: 0"><span class="num">0</span></span>
+                        <span class="mark" style="--k: 1"></span>
+                        <span class="mark major" style="--k: 2"><span class="num">1</span></span>
+                        <span class="mark" style="--k: 3"></span>
+                        <span class="mark major" style="--k: 4"><span class="num">2</span></span>
+                        <span class="mark" style="--k: 5"></span>
+                        <span class="mark major" style="--k: 6"><span class="num">3</span></span>
+                        <span class="mark" style="--k: 7"></span>
+                        <span class="mark major" style="--k: 8"><span class="num">4</span></span>
+                        <span class="mark" style="--k: 9"></span>
+                        <span class="mark major" style="--k: 10"><span class="num">5</span></span>
+                        <span class="mark" style="--k: 11"></span>
+                        <span class="mark major" style="--k: 12"><span class="num">6</span></span>
+                        <span class="mark" style="--k: 13"></span>
+                        <span class="mark major" style="--k: 14"><span class="num">7</span></span>
+                        <span class="mark" style="--k: 15"></span>
+                        <span class="mark major" style="--k: 16"><span class="num">8</span></span>
+                        <span class="mark" style="--k: 17"></span>
+                        <span class="mark major" style="--k: 18"><span class="num">9</span></span>
+                        <span class="mark" style="--k: 19"></span>
+                        <span class="mark major" style="--k: 20"><span class="num">10</span></span>
+                        </div>
+                        <div class="fader-slot"></div>
+                        <input class="fader-input" type="range" min="0" max="100" step="1" value="70" aria-label="Level">
+                    </div>
+                    <span class="lamp"><span class="lamp-glass"></span></span>
+                </div>
+                <div class="fader-unit white">
+                    <div class="fader">
+                        <div class="fader-scale">
+                            <span class="mark major" style="--k: 0"><span class="num">0</span></span>
+                        <span class="mark" style="--k: 1"></span>
+                        <span class="mark major" style="--k: 2"><span class="num">1</span></span>
+                        <span class="mark" style="--k: 3"></span>
+                        <span class="mark major" style="--k: 4"><span class="num">2</span></span>
+                        <span class="mark" style="--k: 5"></span>
+                        <span class="mark major" style="--k: 6"><span class="num">3</span></span>
+                        <span class="mark" style="--k: 7"></span>
+                        <span class="mark major" style="--k: 8"><span class="num">4</span></span>
+                        <span class="mark" style="--k: 9"></span>
+                        <span class="mark major" style="--k: 10"><span class="num">5</span></span>
+                        <span class="mark" style="--k: 11"></span>
+                        <span class="mark major" style="--k: 12"><span class="num">6</span></span>
+                        <span class="mark" style="--k: 13"></span>
+                        <span class="mark major" style="--k: 14"><span class="num">7</span></span>
+                        <span class="mark" style="--k: 15"></span>
+                        <span class="mark major" style="--k: 16"><span class="num">8</span></span>
+                        <span class="mark" style="--k: 17"></span>
+                        <span class="mark major" style="--k: 18"><span class="num">9</span></span>
+                        <span class="mark" style="--k: 19"></span>
+                        <span class="mark major" style="--k: 20"><span class="num">10</span></span>
+                        </div>
+                        <div class="fader-slot"></div>
+                        <input class="fader-input" type="range" min="0" max="100" step="1" value="40" aria-label="Light">
+                    </div>
+                    <span class="lamp"><span class="lamp-glass"></span></span>
+                </div>
+            </div>
+        </div>
+        `}
+    css={`
+        :host { max-width: fit; }
+
+        /*
+        No JavaScript. The knobs and fader are <input type="range"> elements
+        (hidden behind each knob; the fader's thumb is the cap). Each slider's
+        thumb is a scroll-driven view timeline, and that timeline animates the
+        knob indicators, LEDs, scale numbers and lamp directly.
+        The Wave buttons are radio inputs.
+        (No @property here on purpose: it's ignored inside shadow DOM.)
+        Needs scroll-driven animation support (Chrome/Edge).
+        */
+
+        .controls {
+            --orange: #E8521A;
+            --orange-light: #f2926f;
+            --orange-dark: #7c2a0c;
+            --ink: #2a2826;
+            --ink-soft: rgb(42 40 38 / .5);
+            --key-size: 3.25rem;
+            --key-gap: clamp(.5rem, 2vw, 1rem);
+            --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+
+            timeline-scope: --mode-thumb, --gain-thumb;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-areas: "knobs" "wave" "buttons" "fader";
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            gap: 1.75rem;
+            background-color: white;
+            padding: 2rem;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: var(--ink);
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .knob-row    { grid-area: knobs; }
+        .button-grid { grid-area: buttons; }
+        .wave-unit   { grid-area: wave; }
+        .fader-row   { grid-area: fader; display: flex; justify-content: center; gap: clamp(1rem, 4vw, 2rem); }
+
+        /* Each fader scopes its own timeline, so each lamp follows only its own slider */
+        .fader-unit  { timeline-scope: --level-thumb; }
+
+        .knob-unit,
+        .fader-unit,
+        .wave-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .fader-unit,
+        .wave-unit { gap: .9rem; }
+
+        .knob-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: clamp(1rem, 4vw, 2.5rem);
+        }
+
+
+        /* ───────── Knobs ───────── */
+
+        .knob-well {
+            --size: clamp(4rem, 16vw, 5.5rem);
+            position: relative;
+            display: grid;
+            place-items: center;
+            width: calc(var(--size) + 3.6rem);
+            aspect-ratio: 1;
+        }
+
+        /* Two tiers in one color: the skirt sits a shade below the cap,
+        both with the same 1px light/dark bevel as the buttons */
+        .knob {
+            position: relative;
+            width: var(--size);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: var(--skirt);
+            box-shadow:
+                inset 1px 1px 1px var(--skirt-light),
+                inset -1px -1px 1px var(--skirt-dark),
+                1px 2px 4px rgb(0 0 0 / .35);
+
+            &.dark {
+                --skirt: #2a2929;
+                --skirt-light: #626262;
+                --skirt-dark: #131313;
+                --cap: #353434;
+                --cap-light: #7a7a7a;
+                --cap-dark: #1c1c1c;
+                --cap-shadow: rgb(0 0 0 / .5);
+                --indicator: var(--orange);
+            }
+
+            &.orange {
+                --skirt: #cf4815;
+                --skirt-light: var(--orange-light);
+                --skirt-dark: #8a2d0b;
+                --cap: var(--orange);
+                --cap-light: #f7a684;
+                --cap-dark: var(--orange-dark);
+                --cap-shadow: rgb(70 20 4 / .45);
+                --indicator: #fff;
+            }
+        }
+
+        .knob-cap {
+            position: absolute;
+            inset: 16%;
+            border-radius: 50%;
+            background: var(--cap);
+            box-shadow:
+                inset 1px 1px 1px var(--cap-light),
+                inset -1px -1px 1px var(--cap-dark),
+                0 0 0 1px var(--skirt-dark),
+                1px 2px 3px var(--cap-shadow);
+            transition-property: transform, box-shadow;
+            transition-duration: .2s;
+            transition-timing-function: cubic-bezier(.25, .5, .5, 1);
+        }
+
+        /* Only the markings rotate, so the light and shadows stay fixed */
+        .knob-rotor {
+            position: absolute;
+            inset: 0;
+            rotate: -135deg;
+            animation-name: knob-turn;
+            animation-timing-function: linear;
+            animation-fill-mode: both;
+            animation-range: entry 100% exit 0%;
+        }
+
+        .mode .knob-rotor { animation-timeline: --mode-thumb; }
+        .gain .knob-rotor { animation-timeline: --gain-thumb; }
+
+        @keyframes knob-turn {
+            from { rotate: -135deg; }
+            to   { rotate: 135deg; }
+        }
+
+        .knob-indicator {
+            position: absolute;
+            left: 50%;
+            top: 21%;
+            width: 3px;
+            height: 24%;
+            translate: -50% 0;
+            border-radius: 2px;
+            background: var(--indicator);
+            box-shadow: inset 1px 1px 0 rgb(0 0 0 / .3);
+        }
+
+        .knob-notch {
+            position: absolute;
+            left: 50%;
+            top: 5.5%;
+            width: 4px;
+            height: 4px;
+            translate: -50% 0;
+            border-radius: 50%;
+            background: var(--indicator);
+            opacity: .85;
+        }
+
+        /* Hidden vertical slider over the knob, clipped to its circle. Start a
+        drag on the knob; the pointer's height then sets the angle (level with
+        the center is halfway, --travel / 2 above or below is the end stop). */
+        .knob-input {
+            --travel: calc(var(--size) * 1.5);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 3;
+            width: var(--size);
+            height: calc(var(--size) + 2 * var(--travel));
+            translate: -50% -50%;
+            margin: 0;
+            padding: 0;
+            writing-mode: vertical-lr;
+            direction: rtl;               /* bottom = min, top = max */
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            overflow: hidden;             /* makes the slider the thumb's scroll container */
+            opacity: 0;
+            clip-path: circle(calc(var(--size) / 2) at 50% 50%);
+            cursor: ns-resize;
+
+            &::-webkit-slider-runnable-track { background: transparent; }
+            &::-moz-range-track { background: transparent; }
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: var(--size);
+                height: calc(var(--size) + var(--travel));
+            }
+
+            &::-moz-range-thumb {
+                width: var(--size);
+                height: calc(var(--size) + var(--travel));
+                border: 0;
+            }
+        }
+
+        .mode .knob-input::-webkit-slider-thumb { view-timeline: --mode-thumb inline; }
+        .gain .knob-input::-webkit-slider-thumb { view-timeline: --gain-thumb inline; }
+
+        /* Pressed while you're turning it: the cap sinks and its shadow tightens */
+        .knob-well:has(.knob-input:active) .knob-cap {
+            transform: scale(.97);
+            box-shadow:
+                inset 1px 1px 1px var(--cap-light),
+                inset -1px -1px 1px var(--cap-dark),
+                0 0 0 1px var(--skirt-dark),
+                .5px 1px 1.5px var(--cap-shadow);
+        }
+
+        .knob-well:has(.knob-input:focus-visible) .knob {
+            outline: 2px solid var(--orange);
+            outline-offset: 3px;
+        }
+
+        /* Printed scale and LED ring */
+        .knob-scale {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .mode .mark {
+            --a: calc(-135deg + var(--k) * 27deg);
+            position: absolute;
+            inset: 0;
+            transform: rotate(var(--a));
+            color: var(--ink-soft);
+            animation-timing-function: linear;
+            animation-fill-mode: both;
+            animation-timeline: --mode-thumb;
+            animation-range: entry 100% exit 0%;
+        }
+
+        .knob-scale :is(.tick, .num) {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+
+        .knob-scale .tick {
+            width: 2px;
+            height: 6px;
+            background: currentColor;
+            transform: translate(-50%, -50%) translateY(calc(var(--size) / -2 - .7rem));
+        }
+
+        .num {
+            font: 600 .6rem/1 var(--font-mono);
+        }
+
+        .knob-scale .num {
+            transform: translate(-50%, -50%) translateY(calc(var(--size) / -2 - 1.45rem)) rotate(calc(var(--a) * -1));
+        }
+
+        .led {
+            position: relative;
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #4a1f10;
+            box-shadow:
+                inset 0 1px 1px rgb(0 0 0 / .6),
+                0 1px 0 rgb(255 255 255 / .5);
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                background: radial-gradient(circle at 40% 35%, #ffbe9d, #f2622a 50%, var(--orange));
+                box-shadow:
+                    0 0 3px rgb(255 100 40 / .55),
+                    0 0 7px rgb(255 90 30 / .2);
+                opacity: 0;
+            }
+        }
+
+        .knob-scale .led {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -3px 0 0 -3px;
+            transform: rotate(calc(-135deg + var(--k) * 13.5deg)) translateY(calc(var(--size) / -2 - .95rem));
+
+            &::after {
+                animation-timing-function: linear;
+                animation-fill-mode: both;
+                animation-timeline: --gain-thumb;
+                animation-range: entry 100% exit 0%;
+            }
+        }
+
+        /* Mode: each number lights orange as the knob reaches it */
+        .mode .mark:nth-child(1) { animation-name: mark-0; }
+        .fader .mark:nth-child(1) .num { animation-name: mark-0; }
+        .mode .mark:nth-child(2) { animation-name: mark-1; }
+        .fader .mark:nth-child(3) .num { animation-name: mark-1; }
+        .mode .mark:nth-child(3) { animation-name: mark-2; }
+        .fader .mark:nth-child(5) .num { animation-name: mark-2; }
+        .mode .mark:nth-child(4) { animation-name: mark-3; }
+        .fader .mark:nth-child(7) .num { animation-name: mark-3; }
+        .mode .mark:nth-child(5) { animation-name: mark-4; }
+        .fader .mark:nth-child(9) .num { animation-name: mark-4; }
+        .mode .mark:nth-child(6) { animation-name: mark-5; }
+        .fader .mark:nth-child(11) .num { animation-name: mark-5; }
+        .mode .mark:nth-child(7) { animation-name: mark-6; }
+        .fader .mark:nth-child(13) .num { animation-name: mark-6; }
+        .mode .mark:nth-child(8) { animation-name: mark-7; }
+        .fader .mark:nth-child(15) .num { animation-name: mark-7; }
+        .mode .mark:nth-child(9) { animation-name: mark-8; }
+        .fader .mark:nth-child(17) .num { animation-name: mark-8; }
+        .mode .mark:nth-child(10) { animation-name: mark-9; }
+        .fader .mark:nth-child(19) .num { animation-name: mark-9; }
+        .mode .mark:nth-child(11) { animation-name: mark-10; }
+        .fader .mark:nth-child(21) .num { animation-name: mark-10; }
+
+        @keyframes mark-0 { 0% { color: var(--orange); } 10%, 100% { color: var(--ink-soft); } }
+        @keyframes mark-1 { 0%, 0% { color: var(--ink-soft); } 10% { color: var(--orange); } 20%, 100% { color: var(--ink-soft); } }
+        @keyframes mark-2 { 0%, 10% { color: var(--ink-soft); } 20% { color: var(--orange); } 30%, 100% { color: var(--ink-soft); } }
+        @keyframes mark-3 { 0%, 20% { color: var(--ink-soft); } 30% { color: var(--orange); } 40%, 100% { color: var(--ink-soft); } }
+        @keyframes mark-4 { 0%, 30% { color: var(--ink-soft); } 40% { color: var(--orange); } 50%, 100% { color: var(--ink-soft); } }
+        @keyframes mark-5 { 0%, 40% { color: var(--ink-soft); } 50% { color: var(--orange); } 60%, 100% { color: var(--ink-soft); } }
+        @keyframes mark-6 { 0%, 50% { color: var(--ink-soft); } 60% { color: var(--orange); } 70%, 100% { color: var(--ink-soft); } }
+        @keyframes mark-7 { 0%, 60% { color: var(--ink-soft); } 70% { color: var(--orange); } 80%, 100% { color: var(--ink-soft); } }
+        @keyframes mark-8 { 0%, 70% { color: var(--ink-soft); } 80% { color: var(--orange); } 90%, 100% { color: var(--ink-soft); } }
+        @keyframes mark-9 { 0%, 80% { color: var(--ink-soft); } 90% { color: var(--orange); } 100%, 100% { color: var(--ink-soft); } }
+        @keyframes mark-10 { 0%, 90% { color: var(--ink-soft); } 100% { color: var(--orange); } }
+
+        /* Gain: all LEDs are off at 0. The first lights as soon as gain moves off 0;
+        after that LED k turns on at k × 5%, fading in over the 5% before it */
+        .gain .led:nth-child(1)::after { animation-name: led-0; }
+        .gain .led:nth-child(2)::after { animation-name: led-1; }
+        .gain .led:nth-child(3)::after { animation-name: led-2; }
+        .gain .led:nth-child(4)::after { animation-name: led-3; }
+        .gain .led:nth-child(5)::after { animation-name: led-4; }
+        .gain .led:nth-child(6)::after { animation-name: led-5; }
+        .gain .led:nth-child(7)::after { animation-name: led-6; }
+        .gain .led:nth-child(8)::after { animation-name: led-7; }
+        .gain .led:nth-child(9)::after { animation-name: led-8; }
+        .gain .led:nth-child(10)::after { animation-name: led-9; }
+        .gain .led:nth-child(11)::after { animation-name: led-10; }
+        .gain .led:nth-child(12)::after { animation-name: led-11; }
+        .gain .led:nth-child(13)::after { animation-name: led-12; }
+        .gain .led:nth-child(14)::after { animation-name: led-13; }
+        .gain .led:nth-child(15)::after { animation-name: led-14; }
+        .gain .led:nth-child(16)::after { animation-name: led-15; }
+        .gain .led:nth-child(17)::after { animation-name: led-16; }
+        .gain .led:nth-child(18)::after { animation-name: led-17; }
+        .gain .led:nth-child(19)::after { animation-name: led-18; }
+        .gain .led:nth-child(20)::after { animation-name: led-19; }
+        .gain .led:nth-child(21)::after { animation-name: led-20; }
+
+        @keyframes led-0 { 0% { opacity: 0; } 1%, 100% { opacity: 1; } }
+        @keyframes led-1 { 0%, 0% { opacity: 0; } 5%, 100% { opacity: 1; } }
+        @keyframes led-2 { 0%, 5% { opacity: 0; } 10%, 100% { opacity: 1; } }
+        @keyframes led-3 { 0%, 10% { opacity: 0; } 15%, 100% { opacity: 1; } }
+        @keyframes led-4 { 0%, 15% { opacity: 0; } 20%, 100% { opacity: 1; } }
+        @keyframes led-5 { 0%, 20% { opacity: 0; } 25%, 100% { opacity: 1; } }
+        @keyframes led-6 { 0%, 25% { opacity: 0; } 30%, 100% { opacity: 1; } }
+        @keyframes led-7 { 0%, 30% { opacity: 0; } 35%, 100% { opacity: 1; } }
+        @keyframes led-8 { 0%, 35% { opacity: 0; } 40%, 100% { opacity: 1; } }
+        @keyframes led-9 { 0%, 40% { opacity: 0; } 45%, 100% { opacity: 1; } }
+        @keyframes led-10 { 0%, 45% { opacity: 0; } 50%, 100% { opacity: 1; } }
+        @keyframes led-11 { 0%, 50% { opacity: 0; } 55%, 100% { opacity: 1; } }
+        @keyframes led-12 { 0%, 55% { opacity: 0; } 60%, 100% { opacity: 1; } }
+        @keyframes led-13 { 0%, 60% { opacity: 0; } 65%, 100% { opacity: 1; } }
+        @keyframes led-14 { 0%, 65% { opacity: 0; } 70%, 100% { opacity: 1; } }
+        @keyframes led-15 { 0%, 70% { opacity: 0; } 75%, 100% { opacity: 1; } }
+        @keyframes led-16 { 0%, 75% { opacity: 0; } 80%, 100% { opacity: 1; } }
+        @keyframes led-17 { 0%, 80% { opacity: 0; } 85%, 100% { opacity: 1; } }
+        @keyframes led-18 { 0%, 85% { opacity: 0; } 90%, 100% { opacity: 1; } }
+        @keyframes led-19 { 0%, 90% { opacity: 0; } 95%, 100% { opacity: 1; } }
+        @keyframes led-20 { 0%, 95% { opacity: 0; } 100%, 100% { opacity: 1; } }
+
+
+        /* ───────── Fader ───────── */
+
+        .fader {
+            --pad: 1.9rem;      /* distance from the ends to the cap's center at min/max */
+            --cap-h: 3.4rem;
+            position: relative;
+            width: 7rem;
+            height: 16rem;
+        }
+
+        .fader-slot {
+            position: absolute;
+            left: 50%;
+            top: var(--pad);
+            bottom: var(--pad);
+            width: 6px;
+            translate: -50% 0;
+            border-radius: 3px;
+            background: #0c0c0c;
+            box-shadow:
+                inset 0 1px 2px #000,
+                1px 1px 0 rgb(255 255 255 / .6);
+        }
+
+        .fader-scale {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .fader .mark {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: calc(var(--pad) + (1 - var(--k) / 20) * (100% - 2 * var(--pad)));
+            height: 0;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: -.5px;
+                width: .35rem;
+                height: 1px;
+                background: var(--ink-soft);
+            }
+
+            &::before { right: calc(50% + 1.5rem); }
+            &::after  { left:  calc(50% + 1.5rem); }
+
+            &.major::before,
+            &.major::after { width: .6rem; }
+
+            .num {
+                position: absolute;
+                top: 0;
+                right: calc(50% + 2.35rem);
+                transform: translateY(-50%);
+                color: var(--ink-soft);
+                animation-timing-function: linear;
+                animation-fill-mode: both;
+                animation-timeline: --level-thumb;
+                animation-range: entry 100% exit 0%;
+            }
+        }
+
+        /* The real slider. Its thumb is the cap, so it drags natively:
+        grab the cap to move it, or click the track to jump there. */
+        .fader-input {
+            position: absolute;
+            left: 0;
+            top: calc(var(--pad) - var(--cap-h) / 2);
+            z-index: 2;
+            width: 100%;
+            height: calc(100% - 2 * var(--pad) + var(--cap-h));
+            margin: 0;
+            padding: 0;
+            writing-mode: vertical-lr;
+            direction: rtl;
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            overflow: hidden;
+            cursor: pointer;
+
+            &::-webkit-slider-runnable-track { background: transparent; }
+            &::-moz-range-track { background: transparent; }
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 2.6rem;
+                height: var(--cap-h);
+                border: 0;
+                border-radius: 4px;
+                cursor: grab;
+                background:
+                    repeating-linear-gradient(180deg, rgb(255 255 255 / .07) 0 1px, transparent 1px 4px),
+                    linear-gradient(180deg,
+                        #575757 0%, #2e2e2e 22%, #3a3a3a 46.5%,
+                        #f2f2f2 47%, #f2f2f2 53%,
+                        #2a2a2a 53.5%, #333 78%, #1d1d1d 100%);
+                box-shadow:
+                    inset 1px 1px 1px #777,
+                    inset -1px -1px 1px #111,
+                    0 0 0 1px #000,
+                    2px 3px 5px rgb(0 0 0 / .4);
+                view-timeline: --level-thumb inline;
+            }
+
+            &::-moz-range-thumb {
+                width: 2.6rem;
+                height: var(--cap-h);
+                border: 0;
+                border-radius: 4px;
+                cursor: grab;
+                background:
+                    repeating-linear-gradient(180deg, rgb(255 255 255 / .07) 0 1px, transparent 1px 4px),
+                    linear-gradient(180deg,
+                        #575757 0%, #2e2e2e 22%, #3a3a3a 46.5%,
+                        #f2f2f2 47%, #f2f2f2 53%,
+                        #2a2a2a 53.5%, #333 78%, #1d1d1d 100%);
+                box-shadow:
+                    inset 1px 1px 1px #777,
+                    inset -1px -1px 1px #111,
+                    0 0 0 1px #000,
+                    2px 3px 5px rgb(0 0 0 / .4);
+            }
+
+            &:active::-webkit-slider-thumb {
+                cursor: grabbing;
+                box-shadow:
+                    inset 1px 1px 1px #777,
+                    inset -1px -1px 1px #111,
+                    0 0 0 1px #000,
+                    1px 1px 2px rgb(0 0 0 / .4);
+            }
+
+            &:active::-moz-range-thumb {
+                cursor: grabbing;
+                box-shadow:
+                    inset 1px 1px 1px #777,
+                    inset -1px -1px 1px #111,
+                    0 0 0 1px #000,
+                    1px 1px 2px rgb(0 0 0 / .4);
+            }
+
+            &:focus-visible { outline: none; }
+
+            &:focus-visible::-webkit-slider-thumb {
+                box-shadow:
+                    inset 1px 1px 1px #777,
+                    inset -1px -1px 1px #111,
+                    0 0 0 1px #000,
+                    0 0 0 3px var(--orange);
+            }
+
+            &:focus-visible::-moz-range-thumb {
+                box-shadow:
+                    inset 1px 1px 1px #777,
+                    inset -1px -1px 1px #111,
+                    0 0 0 1px #000,
+                    0 0 0 3px var(--orange);
+            }
+        }
+
+        /* Lamp: gets brighter and warmer as the fader rises */
+        .lamp {
+            display: block;
+            padding: .2rem;
+            border-radius: 3px;
+            background: #000;
+            box-shadow: 1px 1px 1px rgb(255 255 255 / .6);
+        }
+
+        .lamp-glass {
+            display: block;
+            width: 4.75rem;
+            height: 1.1rem;
+            border-radius: 2px;
+            animation: lamp-glow linear both;
+            animation-timeline: --level-thumb;
+            animation-range: entry 100% exit 0%;
+        }
+
+        @keyframes lamp-glow {
+            from {
+                background-color: oklch(22% .03 32);
+                box-shadow:
+                    inset 0 0 4px rgb(0 0 0 / .65),
+                    inset 1px 1px 1px rgb(255 255 255 / 0),
+                    0 0 0 0 oklch(75% .19 52 / 0);
+            }
+            to {
+                background-color: oklch(80% .16 58);
+                box-shadow:
+                    inset 0 0 4px rgb(0 0 0 / .65),
+                    inset 1px 1px 1px rgb(255 255 255 / .35),
+                    0 0 9px 1px oklch(75% .17 52 / .4);
+            }
+        }
+
+        /* White lamp variant */
+        .fader-unit.white .lamp-glass { animation-name: lamp-glow-white; }
+
+        @keyframes lamp-glow-white {
+            from {
+                background-color: oklch(22% .005 80);
+                box-shadow:
+                    inset 0 0 4px rgb(0 0 0 / .65),
+                    inset 1px 1px 1px rgb(255 255 255 / 0),
+                    0 0 0 0 oklch(98% .01 90 / 0);
+            }
+            to {
+                background-color: oklch(97% .012 90);
+                box-shadow:
+                    inset 0 0 4px rgb(0 0 0 / .35),
+                    inset 1px 1px 1px rgb(255 255 255 / .6),
+                    0 0 9px 1px oklch(90% .02 90 / .55);
+            }
+        }
+
+        /* ───────── Wave: interlocking latch buttons ───────── */
+
+        .sr-radio {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .selector {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            gap: var(--key-gap);
+        }
+
+        .sel-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .55rem;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+
+            .led::after { transition: opacity 80ms; }
+            &:has(input:checked) .led::after { opacity: 1; }
+
+            .button { display: block; }
+            .button:has(input:focus-visible) { outline: 2px solid var(--orange); outline-offset: 3px; }
+
+        }
+
+        /* ───────── Buttons ───────── */
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(4, max-content);
+            justify-content: center;
+            gap: var(--key-gap);   /* same spacing as the Wave row so the columns line up */
+            margin: auto;
+        }
+
+        .buttons-container {
+            gap: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button {
+            --black: #000;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            background-color: var(--black);
+            box-shadow: 1px 1px 1px rgb(255 255 255 / .6);
+            width: fit-content;
+            padding: 0.1rem;
+        }
+
+        .button-inside {
+            --background-color: #E8521A;
+            --background-color-active: #cc4615;
+            --light-shadow-color: #f2926f;
+            --dark-shadow-color: #7c2a0c;
+            --text-color: #fff;
+            display: flex;
+            position: relative;
+            border-radius: 4px;
+            width: var(--key-size);
+            height: var(--key-size);
+            padding: 0.3rem 0.3rem;
+            background-color: var(--background-color);
+            background-size: 4rem 4rem;
+            box-shadow:
+                inset 1px 1px 1px var(--light-shadow-color),
+                inset -1px -1px 1px var(--dark-shadow-color),
+                2px 2px 6px #000;
+            font-size: clamp(.5rem, 3vw, 1rem);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 100;
+            color: var(--text-color);
+            transition-property: transform, background-color, box-shadow;
+            transition-duration: .2s;
+            transition-timing-function: cubic-bezier(.25, .5, .5, 1);
+
+            .button:active &,
+            .sel-item:active &,
+            .button:has(input:checked) & {
+                transform: scale(.98);
+                background-color: var(--background-color-active);
+                box-shadow:
+                inset 0 0 4px var(--black),
+                inset 1px 1px 1px transparent,
+                inset -1px -1px 1px transparent,
+                2px 2px 4px transparent;
+            }
+
+            &.dark {
+                --background-color: #333;
+                --background-color-active: #282727;
+                --light-shadow-color: #777;
+                --dark-shadow-color: #212121;
+            }
+
+            &.mid {
+                --background-color: oklch(55.6% 0 0);
+                --background-color-active: oklch(46.852% 0.00127 14.895);
+                --light-shadow-color: oklch(70.8% 0 0);
+                --dark-shadow-color: oklch(35.717% 0.00136 15.584);
+            }
+
+            &.light {
+                --background-color: oklch(86.9% 0.005 56.366);
+                --background-color-active: oklch(71.821% 0.00541 48.078);
+                --light-shadow-color: oklch(97% 0.001 106.424);
+                --dark-shadow-color: oklch(44.4% 0.011 73.639);
+            }
+        }
+    `}
+/>
+
+---
+
+Thanks for reading! & as always, **happy coding**!
