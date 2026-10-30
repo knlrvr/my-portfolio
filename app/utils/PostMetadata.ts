@@ -1,6 +1,6 @@
 import fs from 'fs'
 import matter from "gray-matter";
-import readingTime from "reading-time"
+import { getReadTime } from "./read-time"
 
 export interface PostMetadata {
     title: string,
@@ -23,7 +23,7 @@ const getPostMetadata = (): PostMetadata[] => {
       const fileContents = fs.readFileSync(`./posts/${fileName}`, 'utf8');
       const matterResult = matter(fileContents);
   
-      const readTime = readingTime(matterResult.content).text;
+      const readTime = getReadTime(matterResult.content);
 
       return {
         title: matterResult.data.title,

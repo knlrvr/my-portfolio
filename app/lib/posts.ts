@@ -2,7 +2,7 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import readingTime from "reading-time"
+import { getReadTime } from "@/app/utils/read-time"
 
 export const getPostContent = (slug: string) => {
   // Absolute path against cwd — relative "posts/..." can resolve differently in prod.
@@ -11,7 +11,7 @@ export const getPostContent = (slug: string) => {
 
   const content = fs.readFileSync(file, "utf8")
   const matterResult = matter(content)
-  const readTime = readingTime(matterResult.content).text
+  const readTime = getReadTime(matterResult.content)
 
   return { ...matterResult, readTime }
 }
