@@ -54,7 +54,7 @@ export default function Work() {
                   alt={`${entry.company} logo`}
                   width={1000}
                   height={1000}
-                  className="w-5 h-fit"
+                  className="w-5 h-fit dark:invert"
                 />
                 <p className="text-sm font-medium tracking-tighter leading-none">
                   {entry.company}
