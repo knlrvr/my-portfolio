@@ -49,6 +49,13 @@ export default function Work() {
           >
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
+                <Image 
+                  src={`${entry.img}`}
+                  alt={`${entry.company} logo`}
+                  width={1000}
+                  height={1000}
+                  className="w-5 h-fit"
+                />
                 <p className="text-sm font-medium tracking-tighter leading-none">
                   {entry.company}
                 </p>

@@ -24,8 +24,9 @@ const TOP_ROW: GalleryImage[] = [
   { id: "top-5", src: "/gallery/moss-from-an-oak.jpeg", alt: "..." },
   { id: "top-6", src: "/gallery/near-the-congaree.jpeg", alt: "..." },
   { id: "top-7", src: "/gallery/sea-of-clouds.jpeg", alt: "..." },
-  { id: "top-8", src: "/gallery/sunset-over-water.jpeg", alt: "..." },
-  { id: "top-9", src: "/gallery/aurora-nc.jpeg", alt: "..."},
+  { id: "top-8", src: "/gallery/aurora-nc.jpeg", alt: "..."},
+  { id: "top-9", src: "/gallery/bird.jpg", alt: "..." },
+  { id: "top-10", src: "/gallery/chimney-and-sky.jpg", alt: "..." }
 ];
 
 // const BOTTOM_ROW: GalleryImage[] = [
