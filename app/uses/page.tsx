@@ -26,7 +26,7 @@ export default function Uses() {
                             <li>27&quot; Samsung Curved Monitor</li>
                             <li>24&quot; Dell Monitor</li>
                             <li>55&quot; Adjustable Standing Desk</li>
-                            <li>Secretlab TITAN Evo Chair</li>
+                            <li>An awful, inadequate chair that <em>just hurts</em></li>
                         </ul>
                     </Reveal>
                 </div>
