@@ -34,15 +34,14 @@ export default function Hero() {
           <Reveal delay={0.16}>
             <p className="text-[14px] leading-[1.75] text-neutral-600 dark:text-neutral-400 mb-8 blog">
               <span className="font-medium tracking-tighter text-neutral-700 dark:text-neutral-300">{greeting}</span> I&apos;m a software engineer, artist, and d&amp;d nerd living in North Carolina.
-              Currently working as a QA Engineer, building tools that help teams
-              trust what they ship.
+              Currently building tools that help teams trust what they ship.
             </p>
           </Reveal>
 
           <Reveal delay={0.24}>
             <Link 
               href="https://github.com/knlrvr"
-              className="group flex gap-2 items-center w-fit mt-12 text-xs pl-4 pr-2 py-2 border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-full"    
+              className="group flex gap-4 items-center w-fit mt-12 text-xs pl-4 pr-2 py-2 border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-full"    
             >
               <span className="font-medium tracking-tighter">Always Shipping</span>
               <div className="bg-neutral-800 dark:bg-neutral-200 text-neutral-100 dark:text-neutral-800 rounded-full p-2">

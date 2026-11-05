@@ -58,21 +58,6 @@ export default function Contact() {
                 </Link>
             </Reveal>
 
-            <Reveal delay={0.40}>
-                <Link
-                    href="https://www.twitch.tv/knlrvr"
-                    className="group flex justify-between py-6 transition-colors duration-150"
-                    target="_blank"    
-                >
-                    <div className="flex items-center gap-2 group-hover:text-neutral-400 dark:group-hover:text-neutral-500 transition-colors duration-150">
-                        <FaTwitch />
-                        <span className="">Twitch</span>
-                    </div> 
-                    <div className="flex items-center gap-2">
-                        <LuArrowUpRight className="group-hover:text-neutral-400 dark:group-hover:text-neutral-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150"/>
-                    </div>
-                </Link>
-            </Reveal>
         </div>
         </>
     )

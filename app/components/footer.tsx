@@ -6,10 +6,9 @@ const columns = [
   [
     { label: "home", href: "/" },
     { label: "writing", href: "/writing" },
-  ],
-  [
-    { label: "uses", href: "/uses" },
+    { label: "uses", href: "/uses"},
     { label: "colophon", href: "/colophon" },
+    { label: "photos", href: "/photos" },
   ],
   [
     { label: "github", href: "https://github.com/knlrvr"},
@@ -30,7 +29,7 @@ export default function Footer() {
     <footer className="max-w-md mx-auto">
       <SectionStrip label="links" number="∞" />
 
-      <div className="grid grid-cols-3 gap-8 mb-12 mt-4">
+      <div className="grid grid-cols-2 gap-8 mb-12 mt-4">
         {columns.map((col, i) => (
           <div key={i} className="flex flex-col gap-2.5">
             {col.map((link, index) => (

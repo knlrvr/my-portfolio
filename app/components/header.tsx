@@ -19,6 +19,7 @@ import {
 
 const items = [
     {label: 'writing', href: '/writing'},
+    {label: 'uses', href: '/uses'}
 ]
 
 const navItems = [

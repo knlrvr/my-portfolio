@@ -1,113 +1,28 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
-import {
-  motion,
-  useMotionValue,
-  useAnimationFrame,
-  useReducedMotion,
-  AnimatePresence,
-} from "framer-motion";
+import { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
 
 type GalleryImage = {
   id: string;
   src: string;
   alt: string;
+  width: number;
+  height: number;
 };
 
-const TOP_ROW: GalleryImage[] = [
-  { id: "top-1", src: "/gallery/clear-autumn.jpeg", alt: "..." },
-  { id: "top-2", src: "/gallery/frozen-waterfall.jpeg", alt: "..." },
-  { id: "top-3", src: "/gallery/foggy-shed.jpeg", alt: "..." },
-  { id: "top-4", src: "/gallery/grain-belt-sign.jpeg", alt: "..."},
-  { id: "top-5", src: "/gallery/moss-from-an-oak.jpeg", alt: "..." },
-  { id: "top-6", src: "/gallery/near-the-congaree.jpeg", alt: "..." },
-  { id: "top-7", src: "/gallery/sea-of-clouds.jpeg", alt: "..." },
-  { id: "top-8", src: "/gallery/aurora-nc.jpeg", alt: "..."},
-  { id: "top-9", src: "/gallery/bird.jpg", alt: "..." },
-  { id: "top-10", src: "/gallery/chimney-and-sky.jpg", alt: "..." }
+// Dimensions are post-EXIF-rotation so the masonry columns reserve the right space before load.
+const IMAGES: GalleryImage[] = [
+  { id: "clear-autumn", src: "/gallery/clear-autumn.jpeg", alt: "Clear autumn day", width: 4032, height: 3024 },
+  { id: "aurora-nc", src: "/gallery/aurora-nc.jpeg", alt: "Aurora over North Carolina", width: 3024, height: 4032 },
+  { id: "grain-belt-sign", src: "/gallery/grain-belt-sign.jpeg", alt: "Grain Belt sign", width: 3562, height: 2902 },
+  { id: "near-the-congaree", src: "/gallery/near-the-congaree.jpeg", alt: "Near the Congaree", width: 3024, height: 3024 },
+  { id: "bird", src: "/gallery/bird.jpg", alt: "Bird", width: 3024, height: 3024 },
+  { id: "chimney-and-sky", src: "/gallery/chimney-and-sky.jpg", alt: "Chimney against the sky", width: 5712, height: 4284 },
+  { id: "moss-from-an-oak", src: "/gallery/moss-from-an-oak.jpeg", alt: "Moss hanging from an oak", width: 4032, height: 3024 },
 ];
-
-// const BOTTOM_ROW: GalleryImage[] = [
-// { id: "bottom-1", src: "/gallery/...", alt: "..." },
-// ];
-
-type MarqueeRowProps = {
-  images: GalleryImage[];
-  direction: "left" | "right";
-  /** pixels per second */
-  speed?: number;
-  paused: boolean;
-  onImageClick: (image: GalleryImage) => void;
-};
-
-function MarqueeRow({
-  images,
-  direction,
-  speed = 55,
-  paused,
-  onImageClick,
-}: MarqueeRowProps) {
-  const x = useMotionValue(0);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [loopWidth, setLoopWidth] = useState(0);
-  const prefersReducedMotion = useReducedMotion();
-
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-
-    const measure = () => setLoopWidth(track.scrollWidth / 2);
-    measure();
-
-    const observer = new ResizeObserver(measure);
-    observer.observe(track);
-    return () => observer.disconnect();
-  }, []);
-
-  useAnimationFrame((_, delta) => {
-    if (paused || prefersReducedMotion || !loopWidth) return;
-
-    const moveBy = (speed * delta) / 1000;
-    let next = x.get() + (direction === "left" ? -moveBy : moveBy);
-
-    // Wrap seamlessly: both halves of the track are identical.
-    if (next <= -loopWidth) next += loopWidth;
-    if (next > 0) next -= loopWidth;
-
-    x.set(next);
-  });
-
-  const doubled = [...images, ...images];
-
-  return (
-    <div className="overflow-hidden">
-      <motion.div ref={trackRef} style={{ x }} className="flex w-max gap-3 sm:gap-4">
-        {doubled.map((image, i) => (
-          <button
-            key={`${image.id}-${i}`}
-            type="button"
-            onClick={() => onImageClick(image)}
-            className="group relative shrink-0 overflow-hidden rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
-            // Duplicate copies are decorative; hide them from AT & tab order.
-            aria-hidden={i >= images.length}
-            tabIndex={i >= images.length ? -1 : 0}
-          >
-            <img
-              src={image.src}
-              alt={image.alt}
-              loading="lazy"
-              draggable={false}
-              className="h-28 w-auto select-none object-cover transition-transform duration-300 group-hover:scale-105 sm:h-40 md:h-52 lg:h-60"
-            />
-          </button>
-        ))}
-      </motion.div>
-    </div>
-  );
-}
-
 
 type ModalProps = {
   image: GalleryImage;
@@ -151,13 +66,13 @@ function ImageModal({ image, onClose }: ModalProps) {
         <img
           src={image.src}
           alt={image.alt}
-          className="max-h-[85vh] max-w-[92vw] rounded-xl object-contain shadow-2xl"
+          className="max-h-[85vh] max-w-[92vw] object-contain shadow-2xl"
         />
         <button
           type="button"
           onClick={onClose}
           aria-label="Close image"
-          className="absolute -right-2 -top-2 flex h-9 w-9 items-center justify-center rounded-full bg-white text-black shadow-lg transition-transform hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          className="absolute -right-2 -top-2 flex h-9 w-9 items-center justify-center rounded-full bg-white text-black shadow-lg transition-transform hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
         >
           <svg
             width="14"
@@ -180,28 +95,30 @@ function ImageModal({ image, onClose }: ModalProps) {
   );
 }
 
-export default function MarqueeGallery() {
+export default function Gallery() {
   const [activeImage, setActiveImage] = useState<GalleryImage | null>(null);
   const close = useCallback(() => setActiveImage(null), []);
 
-  const paused = activeImage !== null;
-
   return (
-    <section aria-label="Image gallery" className="relative left-1/2 w-[98vw] -translate-x-1/2 overflow-x-clip py-8 mt-16">
-      <div className="flex flex-col gap-3 sm:gap-4">
-        <MarqueeRow
-          images={TOP_ROW}
-          direction="left"
-          paused={paused}
-          onImageClick={setActiveImage}
-        />
-        {/* <MarqueeRow
-          images={BOTTOM_ROW}
-          direction="right"
-          paused={paused}
-          onImageClick={setActiveImage}
-        /> */}
-      </div>
+    <section aria-label="Image gallery" className="columns-1 sm:columns-3 gap-2 sm:gap-3">
+      {IMAGES.map((image) => (
+        <button
+          key={image.id}
+          type="button"
+          onClick={() => setActiveImage(image)}
+          className="group relative mb-2 sm:mb-3 block w-full break-inside-avoid overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500"
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+            sizes="(min-width: 640px) 33vw, 100vw"
+            draggable={false}
+            className="w-full h-auto select-none transition-transform duration-300 group-hover:scale-105"
+          />
+        </button>
+      ))}
 
       <AnimatePresence>
         {activeImage && <ImageModal image={activeImage} onClose={close} />}

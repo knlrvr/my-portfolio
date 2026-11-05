@@ -49,19 +49,12 @@ export default function Work() {
           >
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
-                <Image 
-                  src={`${entry.img}`}
-                  alt={`${entry.company} logo`}
-                  width={1000}
-                  height={1000}
-                  className="w-5 h-fit dark:invert"
-                />
                 <p className="text-sm font-medium tracking-tighter leading-none">
                   {entry.company}
                 </p>
                 {entry.featured && (
-                  <span className="rounded-full ml-2 text-[0.625rem] font-mono uppercase font-bold bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 px-2 py-0.5">
-                    current
+                  <span className="rounded-sm ml-1 text-[0.625rem] font-mono uppercase font-bold bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 px-2 py-0.5">
+                    now
                   </span>
                 )}
               </div>

@@ -50,7 +50,7 @@ export default function Writing() {
         <Reveal delay={0.24}>
             <Link 
               href="/writing"
-              className="group flex gap-2 items-center w-fit text-xs pl-4 pr-2 py-2 border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-full"    
+              className="group flex gap-4 items-center w-fit text-xs pl-4 pr-2 py-2 border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-full"    
             >
               <span className="font-medium tracking-tighter">All Posts</span>
               <div className="bg-neutral-800 dark:bg-neutral-200 text-neutral-100 dark:text-neutral-800 rounded-full p-2">
