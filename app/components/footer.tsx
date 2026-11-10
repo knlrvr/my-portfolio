@@ -6,6 +6,7 @@ const columns = [
   [
     { label: "home", href: "/" },
     { label: "writing", href: "/writing" },
+    { label: "projects", href: "/projects" },
     { label: "uses", href: "/uses"},
     { label: "colophon", href: "/colophon" },
     { label: "photos", href: "/photos" },

@@ -25,7 +25,7 @@ export default function DemoFrame({ html = "", css = "" }: DemoFrameProps) {
 
     return (
         // Matches the prose-img sizing in post-content.tsx — wider than the column at md+, flush below
-        <div className="relative my-6 md:-mx-6 md:w-[calc(100%+3.25rem)] bg-neutral-200/30 dark:bg-neutral-900/50 overflow-hidden">
+        <div className="relative my-6 md:-mx-6 md:w-[calc(100%+3rem)] bg-neutral-200/30 dark:bg-neutral-900/50 overflow-hidden">
             <div ref={hostRef} />
         </div>
     )

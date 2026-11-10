@@ -9,6 +9,7 @@ import {
     BiBriefcase, 
     BiChevronRight, 
     BiCoffeeTogo, 
+    BiCodeAlt, 
     BiEnvelope, 
     BiFile, 
     BiHome, 
@@ -19,13 +20,14 @@ import {
 
 const items = [
     {label: 'writing', href: '/writing'},
-    {label: 'uses', href: '/uses'}
+    {label: 'projects', href: '/projects'},
 ]
 
 const navItems = [
     { icon: <BiHome />, href: "/" },
     { icon: <BiBriefcase />, href: "/work" },
     { icon: <BiBookAlt />, href: "/writing" },
+    { icon: <BiCodeAlt />, href: "/projects" },
     { icon: <BiImage />, href: "/photos" },
     { icon: <BiCoffeeTogo />, href: "/uses" },
     { icon: <BiEnvelope />, href: "/contact" },
