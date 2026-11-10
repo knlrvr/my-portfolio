@@ -13,7 +13,7 @@ export default function ProjectsPage() {
   return (
     <div className="max-w-md mx-auto">
       <PageTop
-        title="Projects"
+        title="Side Projects"
         description="Things I’ve built, shipped, and tinkered with."
         back={false}
       />

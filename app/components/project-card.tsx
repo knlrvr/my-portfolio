@@ -10,6 +10,8 @@ export default function ProjectCard({
     project: Project
     divider?: boolean
 }) {
+    const cover = project.images?.[0]
+
     return (
         <Link
             href={`/projects/${project.slug}`}
@@ -18,14 +20,14 @@ export default function ProjectCard({
                 ${divider ? 'border-b border-neutral-200 dark:border-neutral-800' : ''}
             `}
         >
-            {project.image && (
+            {cover && (
                 <div className="relative aspect-video w-full overflow-hidden rounded-sm border border-neutral-200 dark:border-neutral-800">
                     <Image
-                        src={project.image}
+                        src={cover}
                         alt={project.title}
                         fill
                         sizes="(max-width: 448px) 100vw, 448px"
-                        className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                        className="object-cover group-hover:scale-[1.01] transition-transform duration-300"
                     />
                 </div>
             )}

@@ -15,7 +15,8 @@ import {
     BiHome, 
     BiImage, 
     BiMessage, 
-    BiPen, 
+    BiPen,
+    BiBulb, 
 } from "react-icons/bi"
 
 const items = [
@@ -27,7 +28,7 @@ const navItems = [
     { icon: <BiHome />, href: "/" },
     { icon: <BiBriefcase />, href: "/work" },
     { icon: <BiBookAlt />, href: "/writing" },
-    { icon: <BiCodeAlt />, href: "/projects" },
+    { icon: <BiBulb />, href: "/projects" },
     { icon: <BiImage />, href: "/photos" },
     { icon: <BiCoffeeTogo />, href: "/uses" },
     { icon: <BiEnvelope />, href: "/contact" },
