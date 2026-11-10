@@ -9,26 +9,22 @@ import {
     BiBriefcase, 
     BiChevronRight, 
     BiCoffeeTogo, 
-    BiCodeAlt, 
     BiEnvelope, 
     BiFile, 
     BiHome, 
     BiImage, 
     BiMessage, 
     BiPen,
-    BiBulb, 
 } from "react-icons/bi"
 
 const items = [
     {label: 'writing', href: '/writing'},
-    {label: 'projects', href: '/projects'},
 ]
 
 const navItems = [
     { icon: <BiHome />, href: "/" },
     { icon: <BiBriefcase />, href: "/work" },
     { icon: <BiBookAlt />, href: "/writing" },
-    { icon: <BiBulb />, href: "/projects" },
     { icon: <BiImage />, href: "/photos" },
     { icon: <BiCoffeeTogo />, href: "/uses" },
     { icon: <BiEnvelope />, href: "/contact" },
