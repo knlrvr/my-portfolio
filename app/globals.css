@@ -19,7 +19,9 @@
 }
 
 :root {
-  --edge: oklch(97% 0 0);
+  --page: #f6f6f5;
+  --frame: #ffffff;
+  --rule: oklch(92.2% 0 0);
   --sh-class: #427b58;
   --sh-identifier: #3c3836;
   --sh-sign: #665c54;
@@ -37,7 +39,9 @@
 
 .dark {
   background-color: #020202;
-  --edge: #090909;
+  --page: #020202;
+  --frame: #070707;
+  --rule: #161616;
   --sh-class: #8ec07c;
   --sh-identifier: #ebdbb2;
   --sh-sign: #928374;
@@ -55,6 +59,10 @@
 
 html {
   scroll-behavior: smooth !important;
+}
+
+body {
+  background-color: var(--page);
 }
 
 .blog {

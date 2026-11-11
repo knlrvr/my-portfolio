@@ -39,7 +39,7 @@ export default async function PostPage({ params }: { params: Params }) {
   if (!post) notFound() // was `notFound;` in the original — a no-op that never triggered
 
   return (
-    <section className="pb-6 max-w-md mx-auto">
+    <section>
       <PostContent post={post} />
     </section>
   )

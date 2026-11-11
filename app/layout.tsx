@@ -22,6 +22,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // Resolves relative OG/Twitter image URLs (e.g. /opengraph-image.png) to the live domain.
+  metadataBase: new URL("https://knlrvr.dev"),
   title: "Kane Lariviere",
   description: "Kane Lariviere • Software Engineer • Portfolio",
 };
@@ -35,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased p-6`} 
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
           <ThemeProvider
             attribute="class"
@@ -46,9 +48,14 @@ export default function RootLayout({
             <Grain />
             <ConsoleAsciiArt />
 
-            <PathHeader />
-              {children}
-            <Footer />
+            {/* The frame: a single centered column with hairline rails. */}
+            <div className="mx-auto flex min-h-screen max-w-3xl flex-col bg-(--frame) sm:border-x sm:border-(--rule)">
+              <PathHeader />
+              <div className="flex-1 px-6">
+                {children}
+              </div>
+              <Footer />
+            </div>
 
             <Analytics />
             <SpeedInsights />

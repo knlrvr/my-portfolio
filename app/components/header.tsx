@@ -7,6 +7,7 @@ import { Toggle } from "./theme/toggle"
 import { 
     BiBookAlt, 
     BiBriefcase, 
+    BiBulb, 
     BiChevronRight, 
     BiCoffeeTogo, 
     BiEnvelope, 
@@ -19,12 +20,14 @@ import {
 
 const items = [
     {label: 'writing', href: '/writing'},
+    {label: 'projects', href: '/projects'},
 ]
 
 const navItems = [
     { icon: <BiHome />, href: "/" },
     { icon: <BiBriefcase />, href: "/work" },
     { icon: <BiBookAlt />, href: "/writing" },
+    { icon: <BiBulb />, href: "/projects" },
     { icon: <BiImage />, href: "/photos" },
     { icon: <BiCoffeeTogo />, href: "/uses" },
     { icon: <BiEnvelope />, href: "/contact" },
@@ -41,23 +44,23 @@ export default function PathHeader() {
         return item?.icon
     }
 
-    // On home page, just show "knlrvr.dev"
+    // On home page, show the wordmark + role
     if (pathSegments.length === 0) {
         return (
-            <header className="text-xs max-w-md mx-auto">
-                <nav className="flex justify-between items-center">
+            <header className="flex h-14 items-center border-b border-(--rule) px-6 text-xs sm:px-10">
+                <nav className="flex w-full justify-between items-center">
                     <ol className="flex flex-wrap items-center" aria-label="Breadcrumb">
                         <li className="flex items-center">
-                            <Link href="/" className="">
-                                knlrvr.dev
+                            <Link href="/" className="flex items-center gap-2.5">
+                                <span className="font-medium tracking-tight">knlrvr</span>
                             </Link>
                         </li>
                     </ol>
 
-                    <ol className="flex items-center gap-4">
+                    <ol className="flex items-center gap-5">
                         {items.map((item) => (
                             <li key={item.href} className="">
-                                <Link href={item.href} className="hover:text-neutral-400 dark:hover:text-neutral-600 transition-colors duraiton-150">
+                                <Link href={item.href} className="hover:text-neutral-400 dark:hover:text-neutral-600 transition-colors duration-150">
                                     {item.label}
                                 </Link>
                             </li>
@@ -73,8 +76,8 @@ export default function PathHeader() {
 
     // For non-home pages, show breadcrumb with icons
     return (
-        <header className="text-xs max-w-md mx-auto">
-            <nav className="flex justify-between items-center">
+        <header className="flex h-14 items-center border-b border-(--rule) px-6 text-xs sm:px-10">
+            <nav className="flex w-full justify-between items-center">
                 <ol className="flex flex-wrap items-center" aria-label="Breadcrumb">
                     {/* Home icon */}
                     <li className="flex items-center">
@@ -108,7 +111,7 @@ export default function PathHeader() {
                     })}
                 </ol>
 
-                <ol className="flex items-center gap-4">
+                <ol className="flex items-center gap-5">
                     {items.map((item) => (
                         <li key={item.href} className="">
                             <Link href={item.href} className="hover:text-neutral-400 dark:hover:text-neutral-600">

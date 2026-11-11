@@ -1,19 +1,31 @@
 import Link from "next/link";
 import { Reveal } from "./effects/reveal";
-import SectionStrip from "./section-strip";
 
 const columns = [
-  [
-    { label: "home", href: "/" },
-    { label: "writing", href: "/writing" },
-    { label: "uses", href: "/uses"},
-    { label: "colophon", href: "/colophon" },
-    { label: "photos", href: "/photos" },
-  ],
-  [
-    { label: "github", href: "https://github.com/knlrvr"},
-    { label: "linkedin", href: "https://www.linkedin.com/in/kane-lariviere"},
-  ],
+  {
+    title: "Site",
+    links: [
+      { label: "home", href: "/" },
+      { label: "writing", href: "/writing" },
+      { label: "projects", href: "/projects" },
+      { label: "photos", href: "/photos" },
+    ],
+  },
+  {
+    title: "More",
+    links: [
+      { label: "uses", href: "/uses" },
+      { label: "colophon", href: "/colophon" },
+      { label: "rss", href: "/rss" },
+    ],
+  },
+  {
+    title: "Elsewhere",
+    links: [
+      { label: "github", href: "https://github.com/knlrvr" },
+      { label: "linkedin", href: "https://www.linkedin.com/in/kane-lariviere" },
+    ],
+  },
 ];
 
 export default function Footer() {
@@ -26,54 +38,55 @@ export default function Footer() {
       : null;
 
   return (
-    <footer className="max-w-md mx-auto">
-      <SectionStrip label="links" number="∞" />
-
-      <div className="grid grid-cols-2 gap-8 mb-12 mt-4">
-        {columns.map((col, i) => (
-          <div key={i} className="flex flex-col gap-2.5">
-            {col.map((link, index) => (
-              <Reveal
-                key={link.label}
-                delay={0.08 * (index)}
-              >
-                <Link
-                  href={link.href}
-                  className="text-xs hover:text-neutral-400 dark:hover:text-neutral-600 font-base no-underline tracking-wide transition-colors duration-150 w-fit"
-                >
-                  {link.label}
-                </Link>
-              </Reveal>
-            ))}
+    <footer className="border-t border-(--rule)">
+      <div className="grid gap-10 px-6 py-12 sm:grid-cols-[10rem_1fr] sm:gap-0 sm:px-10">
+        <Reveal delay={0.08}>
+          <div className="flex sm:flex-col gap-1.5">
+            <span className="font-mono text-[11px] tracking-tighter text-neutral-400 dark:text-neutral-600">[&nbsp;∞&nbsp;]</span>
+            <span className="text-xs font-medium tracking-tight">links.</span>
           </div>
-        ))}
+        </Reveal>
+
+        <div className="grid grid-cols-3 gap-6">
+          {columns.map((col, i) => (
+            <Reveal key={col.title} delay={0.08 * (i + 1)}>
+              <div className="flex flex-col gap-2.5">
+                <span className="mb-1 font-mono text-[11px] tracking-tighter text-neutral-400 dark:text-neutral-600">
+                  {col.title}
+                </span>
+                {col.links.map((link) => (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="w-fit text-xs tracking-wide transition-colors duration-150 hover:text-neutral-400 dark:hover:text-neutral-600"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </div>
 
-      <Reveal delay={0.16}>
-        <div className="flex items-center gap-2">
-          <p className="font-mono text-[0.625rem] text-neutral-500 tracking-wider">
-            © 2026 Kane Lariviere
-          </p>
-          <p className="text-neutral-500 mb-0.5">&bull;</p>
+      <div className="flex items-center justify-between border-t border-(--rule) px-6 py-4 font-mono text-[0.625rem] tracking-wider text-neutral-500 sm:px-10">
+        <p>© 2026 Kane Lariviere</p>
 
-          {sha && (
-            commitUrl ? (
-              <Link
-                href={commitUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-mono text-[0.625rem] text-neutral-500 hover:text-neutral-400 dark:hover:text-neutral-600 tracking-wider transition-colors duration-150"
-              >
-                {shortSha}
-              </Link>
-            ) : (
-              <span className="font-mono text-[0.625rem] text-neutral-500 tracking-wider">
-                f00f00
-              </span>
-            )
-          )}
-        </div>
-      </Reveal>
+        {sha && (
+          commitUrl ? (
+            <Link
+              href={commitUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors duration-150 hover:text-neutral-400 dark:hover:text-neutral-600"
+            >
+              {shortSha}
+            </Link>
+          ) : (
+            <span>f00f00</span>
+          )
+        )}
+      </div>
     </footer>
   );
 }
