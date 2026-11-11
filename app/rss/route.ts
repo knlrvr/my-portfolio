@@ -2,6 +2,15 @@ import { baseUrl } from '@/app/sitemap'
 
 import getPostMetadata from '../utils/PostMetadata'
 
+// Frontmatter is plain text; characters like & or < would otherwise break the XML.
+const escapeXml = (value: string) =>
+  value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;')
+
 export async function GET() {
   const allBlogs = getPostMetadata();
 
@@ -15,9 +24,9 @@ export async function GET() {
     .map(
       (post) =>
         `<item>
-          <title>${post.title}</title>
+          <title>${escapeXml(post.title)}</title>
           <link>${baseUrl}/writing/${post.slug}</link>
-          <description>${post.description || ''}</description>
+          <description>${escapeXml(post.description || '')}</description>
           <pubDate>${new Date(
             post.date
           ).toUTCString()}</pubDate>

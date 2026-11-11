@@ -1,8 +1,9 @@
 import Link from 'next/link'
-import SectionStrip from './section-strip'
-import { LuArrowRight, LuArrowUpRight } from 'react-icons/lu'
+import Section from './section'
+import { LuArrowRight } from 'react-icons/lu'
 import getPostMetadata from '../utils/PostMetadata'
 import { Reveal } from './effects/reveal'
+import PostRow from './post-row'
 
 export default function Writing() {
   const posts = getPostMetadata()
@@ -11,54 +12,24 @@ export default function Writing() {
     .slice(0, 3)
 
   return (
-    <section id="writing">
-      <SectionStrip label="writing" number="03" />
-
-      {posts.map((post, i) => (
-        <Reveal key={post.slug} delay={0.16 * (i + 1)}>
-          <Link
-            href={`/writing/${post.slug}`}
-            className={`
-              flex flex-col py-8
-              transition-colors duration-150
-              group
-              ${i < posts.length - 1 ? 'border-b border-neutral-200 dark:border-neutral-800' : ''}
-            `}
-          >
-
-            <div className="">
-              <div className="flex flex-col gap-1">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium tracking-tighter group-hover:text-neutral-400 dark:group-hover:text-neutral-500 transition-colors duration-150">
-                    {post.title}
-                  </span>
-                  <span className="pt-1 shrink-0 ml-4 group-hover:translate-x-px group-hover:text-neutral-400 dark:group-hover:text-neutral-500 transition-all duration-200">
-                    <LuArrowRight />
-                  </span>
-                </div>
-                <p className="text-neutral-600 dark:text-neutral-400 text-sm blog">{post.description}</p>
-                <p className="text-[11px] font-mono text-neutral-500">
-                  {post.prevDate}&nbsp;&bull;&nbsp;{post.readTime}
-                </p>
-              </div>
-            </div>
-          </Link>
-        </Reveal>
-      ))}
-
-      <div className="py-8">
-        <Reveal delay={0.24}>
-            <Link 
-              href="/writing"
-              className="group flex gap-4 items-center w-fit text-xs pl-4 pr-2 py-2 border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-full"    
-            >
-              <span className="font-medium tracking-tighter">All Posts</span>
-              <div className="bg-neutral-800 dark:bg-neutral-200 text-neutral-100 dark:text-neutral-800 rounded-full p-2">
-                <LuArrowRight className="group-hover:translate-x-px transition-transform duration-150"/>
-              </div>
-            </Link>
-        </Reveal>
+    <Section id="writing" index="002" label="writing.">
+      <div className="flex flex-col">
+        {posts.map((post, i) => (
+          <Reveal key={post.slug} delay={0.16 * (i + 1)}>
+            <PostRow post={post} first={i === 0} last={i === posts.length - 1} />
+          </Reveal>
+        ))}
       </div>
-    </section>
+
+      <Reveal delay={0.24}>
+        <Link
+          href="/writing"
+          className="group mt-8 flex w-fit items-center gap-1.5 text-xs font-medium tracking-tighter transition-colors duration-150 hover:text-neutral-400 dark:hover:text-neutral-500"
+        >
+          All posts
+          <LuArrowRight className="transition-transform duration-150 group-hover:translate-x-0.5" />
+        </Link>
+      </Reveal>
+    </Section>
   )
 }

@@ -1,4 +1,5 @@
 import getPostMetadata from './utils/PostMetadata'
+import { projects } from './lib/projects'
 
 export const baseUrl = 'https://knlrvr.dev'
 
@@ -7,10 +8,14 @@ export default async function sitemap() {
     url: `${baseUrl}/writing/${post.slug}`,
   }))
 
-  const routes = ['', '/writing', '/uses', '/work'].map((route) => ({
+  const routes = ['', '/writing', '/projects', '/uses', '/work'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
   }))
 
-  return [...routes, ...blogs]
+  const projectRoutes = projects.map((p) => ({
+    url: `${baseUrl}/projects/${p.slug}`,
+  }))
+
+  return [...routes, ...blogs, ...projectRoutes]
 }
