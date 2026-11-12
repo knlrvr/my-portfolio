@@ -11,6 +11,7 @@ import Demo from "@/app/components/blog/demo"
 import { Reveal } from "@/app/components/effects/reveal"
 import type { Post } from "../lib/posts"
 import PageTop, { MetaItem } from "./page-top"
+import FrameImage from "./frame-image"
 
 
 const components = { code: Code, Callout, Demo, Edit, BlogLink, InlineCode, SecondaryText }
@@ -62,6 +63,12 @@ export function PostContent({ post }: PostContentProps) {
       >
         {post.data.sticker && <Sticker src={`${post.data.sticker}`} />}
       </PageTop>
+
+      {post.cover && (
+        <Reveal delay={0.24}>
+          <FrameImage image={post.cover} priority />
+        </Reveal>
+      )}
 
       <div className="-mx-6 border-t border-(--rule)">
         <div className="grid grid-cols-[minmax(0,1fr)] gap-10 px-6 py-12 sm:grid-cols-[10rem_minmax(0,1fr)] sm:gap-0 sm:px-10 sm:py-16">

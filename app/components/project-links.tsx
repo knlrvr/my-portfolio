@@ -12,7 +12,7 @@ export default function ProjectLinks({ project }: { project: Project }) {
     if (!links.length) return null
 
     return (
-        <span className="flex items-center gap-5">
+        <span className="flex items-center gap-8 sm:gap-6 sm:mt-[22.5px]">
             {links.map((l) => (
                 <Link
                     key={l.label}

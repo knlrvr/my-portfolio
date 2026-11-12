@@ -1,11 +1,11 @@
-import Image from "next/image"
 import { notFound } from "next/navigation"
 
 import PageTop from "@/app/components/page-top"
 import Section from "@/app/components/section"
+import FrameImage from "@/app/components/frame-image"
 import ProjectLinks from "@/app/components/project-links"
 import { Reveal } from "@/app/components/effects/reveal"
-import { projects, getProject, type ProjectImage } from "@/app/lib/projects"
+import { projects, getProject } from "@/app/lib/projects"
 
 type Params = Promise<{ slug: string }>
 
@@ -24,24 +24,6 @@ export async function generateMetadata({ params }: { params: Params }) {
   }
 }
 
-/** Image edge to edge within the frame at its own ratio, hairline above. */
-function FrameImage({ image, priority = false }: { image: ProjectImage; priority?: boolean }) {
-  return (
-    <div className="-mx-6 border-t border-(--rule)">
-      <div style={{ aspectRatio: `${image.width} / ${image.height}` }} className="relative w-full">
-        <Image
-          src={image.src}
-          alt={image.alt}
-          fill
-          priority={priority}
-          sizes="(min-width: 768px) 768px, 100vw"
-          className="object-cover"
-        />
-      </div>
-    </div>
-  )
-}
-
 export default async function ProjectPage({ params }: { params: Params }) {
   const { slug } = await params
   const project = getProject(slug)
@@ -57,7 +39,6 @@ export default async function ProjectPage({ params }: { params: Params }) {
         description={project.description}
         back={true}
         backHref="/projects"
-        meta={hasLinks ? [{ label: "Links", value: <ProjectLinks project={project} /> }] : undefined}
       />
 
       {cover && (
@@ -75,6 +56,14 @@ export default async function ProjectPage({ params }: { params: Params }) {
           </div>
         </Reveal>
       </Section>
+
+      {hasLinks && (
+        <Section index="002" label="links." dense>
+          <Reveal delay={0.16}>
+            <ProjectLinks project={project} />
+          </Reveal>
+        </Section>
+      )}
 
       {gallery.map((image) => (
         <Reveal key={image.src} delay={0.08}>
