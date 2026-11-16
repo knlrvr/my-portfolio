@@ -27,14 +27,19 @@ export function Toggle() {
   return (
     <div className="relative">
       <div className="">
-        <button onClick={() => {
-          setTheme("dark");
-          setShowImage(false);
-        }}>
-          <BiMoon className="inline-block dark:hidden cursor-pointer" />
+        <button 
+          aria-label="toggle dark theme"
+          onClick={() => {
+            setTheme("dark");
+            setShowImage(false);
+          }}
+          >
+          <BiMoon className="inline-block dark:hidden cursor-pointer"/>
         </button>
 
-        <button onClick={handleImage}>
+        <button 
+          aria-label="toggle light theme"
+          onClick={handleImage}>
           <BiSun className="hidden dark:inline-block cursor-pointer" />
         </button>
 
@@ -43,7 +48,7 @@ export function Toggle() {
 
       {showImage && (
         <div
-          className={`absolute z-9999 w-32 h-fit right-0 top-8 transition-opacity duration-300 ease-out ${
+          className={`absolute z-9999 w-32 h-fit right-0 top-12 transition-opacity duration-300 ease-out ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >

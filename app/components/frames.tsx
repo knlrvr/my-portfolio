@@ -65,7 +65,7 @@ export default function Frames() {
             href="/photos"
             className="group flex items-center gap-1 text-neutral-500 transition-colors duration-150 hover:text-neutral-900 dark:hover:text-neutral-100"
           >
-            More
+            More<span className="sr-only">&nbsp;Photos</span>
             <LuArrowRight className="transition-transform duration-150 group-hover:translate-x-px" />
           </Link>
         </div>
