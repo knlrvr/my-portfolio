@@ -58,7 +58,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
       </Section>
 
       {hasLinks && (
-        <Section index="002" label="links." dense>
+        <Section index="002" label="view." dense>
           <Reveal delay={0.16}>
             <ProjectLinks project={project} />
           </Reveal>
